@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>一个人畜无害的 PPT，干翻了大半个AI 圈 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI产品评测</span>
+            
+            
+            <span class="topic-chip">PPT解析</span>
+            
+            <span class="topic-chip">WMF矢量图</span>
+            
+            <span class="topic-chip">文件预处理</span>
+            
+            <span class="topic-chip">AI产品对比</span>
+            
+            <span class="topic-chip">remio</span>
+            
+            <span class="topic-chip">Agent能力</span>
+            
+            <span class="detail-reading-time">约 21 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">一个人畜无害的 PPT，干翻了大半个AI 圈</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>这不是模型更聪明，是有些活提前在工程里做完了，留给模型的就只是回答问题。 那些早晚要踩的坑，提前替用户踩平。 模型再强，也得有人把这条路先铺好。</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>文章通过一个包含WMF/EMF矢量图的PPT测试了八个AI产品的文件处理能力，揭示了AI在真实办公文档面前的普遍短板。测试中，三家产品直接放弃，三家通用Agent耗时数分钟甚至消耗大量积分才解出答案，一家国产Agent跑了20分钟无果，而remio仅用10秒便准确作答。核心差异不在于模型智能，而在于remio在文件入库阶段已将矢量图内容提前提取，让模型只需回答问题而非现场解谜。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/EaWcfrNm0ciJHFRjRNiqIQ" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章用一次精心设计的PPT压力测试，精准戳中了当前AI产品的一个集体盲区：文件预处理能力的缺失。作者没有贬低任何模型，而是将问题归因于工程层面——大多数AI产品在面对WMF/EMF这类老旧矢量图格式时，既没有提前适配，也缺乏高效的现场处理策略。通用Agent虽然展现了惊人的临场推理能力，但这种&#34;靠智能现场解题&#34;的方式注定昂贵且不可持续。相比之下，remio的思路更务实：把脏活累活做在入库之前，让模型专注于理解与回答。这个案例对AI办公产品的启示很明确——用户体验的上限，往往不取决于模型能力，而取决于工程基本功的扎实程度。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#一个人畜无害的-ppt干翻了大半个ai-圈" class="toc-link">一个人畜无害的 PPT，干翻了大半个AI 圈</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#故事是这样的" class="toc-link">故事是这样的</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#第一种反应直接放弃" class="toc-link">第一种反应：直接放弃</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#第二种反应硬磨出答案" class="toc-link">第二种反应：硬磨出答案</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#第三种反应磨到我点了取消" class="toc-link">第三种反应：磨到我点了取消</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#这道题难在哪" class="toc-link">这道题难在哪</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#remio这边" class="toc-link">remio这边</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#我们想做的就是这件事" class="toc-link">我们想做的就是这件事</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#附八家产品的反应实录" class="toc-link">附：八家产品的反应实录</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="一个人畜无害的-ppt干翻了大半个ai-圈">一个人畜无害的 PPT，干翻了大半个AI 圈</h1>
+<p>相信大家都遇到过这种情况，感觉很简单的问题，怎么AI就是给出错误的答案，或者要花老半天。这很可能不是模型或智能体做的不好，而是数据处理没花心思。</p>
+<p>我们做remio，很多时候就是在跟这类问题死磕：用户电脑里那些真实存在、但AI普遍处理不好的文件。这事我们看得太多了，多到几乎成了产品的日常。</p>
+<p>可这种"AI处理不好"的事，讲给别人听并不容易。每次想举例子，要么过于专业，要么过于零碎，听上去都像在挑刺。直到前几天，我手头有个再普通不过的PPT，顺手用它做了一次对比测试，结果意外地适合拿出来讲。八个产品的反应放在一起，不需要我多说一句话，问题就摆在那儿了。</p>
+<p>我把PPT先放上来，大家自己看一眼。</p>
+<p><img alt="图片" src="/static/article-images/recvlXaDrF1n7Q-0-e5e961eaae.webp" /></p>
+<p><img alt="图片" src="/static/article-images/recvlXaDrF1n7Q-1-5092c31aa3.webp" /></p>
+<h2 id="故事是这样的">故事是这样的</h2>
+<p>就这两页。一张讲三路召回加扩展加过滤的检索结构，一张讲在有限的上下文窗口里怎么按权重压缩内容。内容很简单，问题也很简单：</p>
+<blockquote>
+<p>Summarize the strategy remio used in organization of context.</p>
+</blockquote>
+<p>读一个PPT，总结里面讲了什么。2026年了，这应该是所有AI产品的基本功。</p>
+<p>我把同样的PPT、同样的问题，丢给了八个产品。</p>
+<h2 id="第一种反应直接放弃">第一种反应：直接放弃</h2>
+<p>三家对话型AI先表态了：一家国民级聊天助手D、一家搜索厂出品的对话AI G、一家做知识库的助手I。它们的回答几乎一模一样：</p>
+<blockquote>
+<p>"根据您提供的文档，里面只有Organization of Context这样的标题，没有正文内容，我无法总结策略。如果您能提供完整内容，我会很乐意帮您。"</p>
+</blockquote>
+<p>PPT是12MB的文件，打开后两张大图清清楚楚摆在那儿。它们的反应却像是我递了一张白纸过去，然后客客气气地还了回来。这一类反应，我们见得最多。它不是模型不够聪明，是产品在文件这一层根本没下功夫，没看见就当作没有。</p>
+<h2 id="第二种反应硬磨出答案">第二种反应：硬磨出答案</h2>
+<p>第二批的画风完全不同。虽然最终它们都答对了，但代价很大。</p>
+<p>国民级聊天助手O想了1分39秒，过程其实挺精彩。它先把幻灯片渲染成图，结果是两张黑图。又试着从EMF里直接抽字符串，抽出来是"4444 4444 MMMM"这种乱码。又换工具转PNG，还是白板。直到某一步它注意到EMF文件内部的GDI Comment记录里藏着一段以"%PDF"开头的二进制，意识到这是一个嵌在EMF里的PDF（PowerPoint在某些版本下确实会这么干），于是写了几行Python把这段PDF抠出来，再用pdftotext拿到了真正的文字内容，最后给出一份相当不错的总结。这一连串动作是真有本事，连不少做过文件解析的工程师可能都想不到去搜"%PDF" header。代价是1分39秒和一连串的尝试，但它最终找到了那条隐藏路径。</p>
+<p>海外通用Agent C的路子更曲折。先发现文本提取很稀疏，判断"这一定是图重的幻灯片"，开始一步步往下挖：转PNG、用LibreOffice渲染、解析EMF内部结构、找隐藏位图。最后从一段二进制里捞出了776×335的ARGB像素流，自己重建出图片，再喂给视觉模型。我看了看它的工具调用栏，几十步。</p>
+<p>通用Agent明星M走得最远。它的工作流和C差不多但更夸张：各种EMF解析器轮番试、装新工具、转SVG、扫ASCII字符串、读PPTX内部XML……前前后后跑了好几十轮，最后给出了完整答案。它的使用记录上留着这一笔：单这一次提问，消耗了520积分（这可真是史上最不受欢迎的520啊）。</p>
+<p>它们都解出来了。换个角度看，通用Agent能现学现卖地处理一个从没见过的格式问题，这本身就是过去两年模型和Agent进步的成果。但这种"靠通用智能现场解题"的方式，几乎注定了昂贵和漫长。</p>
+<h2 id="第三种反应磨到我点了取消">第三种反应：磨到我点了取消</h2>
+<p>还有一位国产对话Agent W，路数跟C、M类似。意识到WMF格式、调LibreOffice、解析XML……我盯着它的进度条看了20分钟，工具调用计数还在涨，答案一个字也没吐。</p>
+<p>我点了取消。</p>
+<h2 id="这道题难在哪">这道题难在哪</h2>
+<p>谜底其实很无趣：这两页PPT关键信息都在两张图里。而这两张图，存的是WMF/EMF格式，一种Windows上的老牌矢量图格式。你可能没见过这个格式，但是每次你从一页PPT里选一些内容，以图片的格式黏贴到另一页时，你就会遇到这种格式。为什么要黏贴为图片呢，因为只有这样贴过去之后才不会乱，还能无损放大。根据我们统计，大概有四分之一的PPT里有这种图片格式。</p>
+<p>绝大多数AI处理PPT的流程都差不多：PPTX当成ZIP解压，抽文本、抽图片、送给大模型。文本一抽，只剩几个标题。图片一抽，是WMF，视觉模型不认识。</p>
+<p>到这儿，三种反应就分化了。一种产品就此打住，告诉用户"没东西"。第二种产品意识到不对，临场推理着往前蹚，路上要试错、装工具、烧token、花钱。第三种产品也蹚，蹚到一半出不来。</p>
+<h2 id="remio这边">remio这边</h2>
+<p>我们把同样的PPT丢给remio，10秒左右，答案出来了，准确，完整。</p>
+<p>重点是remio一点都不绕路。PPT里会有WMF这件事，我们在工程层面提前处理过了，文件入库的时候就把矢量图里的文字、表格、架构关系提取了出来。等用户提问的时候，那两张图的内容跟任何其他文档没有区别。</p>
+<p>这不是模型更聪明，是有些活提前在工程里做完了，留给模型的就只是回答问题。</p>
+<h2 id="我们想做的就是这件事">我们想做的就是这件事</h2>
+<p>聪明模型遇到一个问题解一个问题，每解一次都得花一次代价。这件事Agent范式天然如此，没办法。但用户的真实文件世界并不在乎"范式"，它只在乎你能不能用、要不要等、要不要花钱。</p>
+<p>remio做的事情，说白了就是：那些早晚要踩的坑，提前替用户踩平。</p>
+<p>PPT里的WMF/EMF矢量图，我们解析矢量图，把它变成模型一眼就能看懂的普通图。PPT里的数学公式我们也专门处理了，能在LaTeX、MathML、OMML这些格式之间互转，让公式以文本形式被AI理解、被检索到、被点击跳转回原片。扫描版PDF走本地OCR加版面分析，让纯图像的文档也能被检索，而且会还原标题、分栏、表格的层级，不是简单地把文字拼成一团。音视频不限量本地转写，自动分说话人，还能跟你的人物库关联起来。</p>
+<p>这些事情不性感，写在产品介绍里也没人会激动，但它们就是普通人电脑里真实文件的样子。把这一层做扎实，上面的AI才谈得上发挥。</p>
+<p>那个看起来人畜无害的PPT，能让大半个AI圈集体翻车，原因正在这里。带公式的PPT、特殊编码的CSV、8小时的录音、繁简混排的字幕……每一个普通文件背后都可能藏着一道这样的题。模型再强，也得有人把这条路先铺好。</p>
+<p>风轻扬：汪源，杭州久痕科技创始人&amp;CEO，前网易副总裁、杭州研究院执行院长、网易数帆总经理，2024年6月创立久痕科技，研发首个全面记录个人办公数据的AI办公助手产品remio，点击文末「阅读原文 」可快速访问remio官网。</p>
+<h2 id="附八家产品的反应实录">附：八家产品的反应实录</h2>
+<p>出于克制，文中未点名具体产品，下面按文章里出场的顺序贴出截图，每张配一句说明。</p>
+<p>对话型AI D（国民级聊天助手 D）：直接表态文档里没有正文内容，无法总结策略。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>对话型AI G（搜索厂出品的对话 AI G）：同样判定文档只有标题，建议补充完整内容。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>对话型AI I（做知识库的助手 I）：给出的理由几乎一模一样。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>国民级聊天助手 O：活动面板里可以看到它从渲染图片、抽字符串、转PNG一路试到发现EMF里嵌着一个PDF，最后写Python抠出来读到了正文。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>海外通用 Agent C（第1段）：判断是图重幻灯片，开始挖EMF内部结构、找隐藏位图。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>海外通用 Agent C（第2段）：继续尝试转PNG、解析EMF。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>海外通用 Agent C（第3段）：最终捞出776×335的ARGB像素流，自己重建出图，给出答案。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>通用 Agent 明星 M（第1段）：先扫文本、检查嵌入资源。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>通用 Agent 明星 M（第2段）：开始转SVG、扫ASCII字符串。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>通用 Agent 明星 M（第3段）：装Inkscape、ImageMagick接着试。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>通用 Agent 明星 M（第4段）：几十轮工具调用后给出完整答案。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>通用 Agent 明星 M 的账单：单这一次提问消耗520积分。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>国产对话 Agent W：判断是WMF格式后开始调LibreOffice、解析XML。20分钟工具调用还在涨，答案一个字也没吐出来，被我取消。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>remio：10多秒给出回答。文件入库的时候矢量图里的文字和结构已经提取出来，所以提问的时候不需要现场解谜。</p>
+<p><img alt="图片" src="/static/article-images/recvlXaDrF1n7Q-2-1ef0c772dd.webp" /></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvlXaFCnNZFG.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">啊？我刚开源的 Skills 已经 7K Star 了？！</span>
+        </a>
+        
+        
+        <a href="recvkkxe42oxZm.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">我让 GLM-5.1 HighSpeed 做了一个真正能用的 AI 选题雷达和微信自动Agent</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
