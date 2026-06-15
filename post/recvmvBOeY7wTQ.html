@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>AgentGuard——面向工具调用型智能体的访问控制框架 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">智能体安全</span>
+            
+            
+            <span class="topic-chip">AgentGuard</span>
+            
+            <span class="topic-chip">智能体安全防护</span>
+            
+            <span class="topic-chip">工具调用控制</span>
+            
+            <span class="topic-chip">安全审计</span>
+            
+            <span class="topic-chip">可视化配置</span>
+            
+            <span class="topic-chip">多智能体系统</span>
+            
+            <span class="detail-reading-time">约 9 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">AgentGuard——面向工具调用型智能体的访问控制框架</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>Age</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>AgentGuard 是一款面向工具调用型智能体的轻量级访问控制框架，旨在解决智能体自主调度工具链时可能引发的安全风险。该框架通过细粒度访问控制策略、可视化安全规约配置、多种运行时行为监控与响应机制，以及无缝适配现有智能体框架等特性，有效识别和拦截未授权或高风险的工具调用，支持事后审计与安全溯源。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/Tn0FSJpjdZeDd3jiuAKNRQ" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>AgentGuard 是一个非常有前景的智能体安全防护框架，它不仅解决了当前智能体安全防护中的关键问题，还提供了灵活的配置和强大的审计能力。其客户端—服务端分离架构设计合理，低侵入式的集成方式使得现有智能体系统可以轻松接入。多种运行时行为监控与响应机制的结合，为智能体安全提供了多层次的保障。未来，随着兼容更多主流智能体框架并支持多智能体系统的防护能力，AgentGuard 有望成为智能体安全防护领域的标杆工具。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#agentguard面向工具调用型智能体的访问控制框架" class="toc-link">AgentGuard——面向工具调用型智能体的访问控制框架</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#前言" class="toc-link">前言</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#智能体安全防护现状" class="toc-link">智能体安全防护现状</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#agentguard-架构" class="toc-link">AgentGuard 架构</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#结语" class="toc-link">结语</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#项目负责人" class="toc-link">项目负责人</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#参考文献" class="toc-link">参考文献</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="agentguard面向工具调用型智能体的访问控制框架">AgentGuard——面向工具调用型智能体的访问控制框架</h1>
+<h2 id="前言">前言</h2>
+<p>智能体（Agent）具备深度语义理解与自主决策能力，可在无人工干预的前提下，自动调度工具链以执行复杂任务。当前，这一技术正加速渗透并重塑我们的日常生活。然而，过强的自主性也带来了新的安全风险。当攻击者将恶意指令嵌入 Agent 会处理的外部数据源（如网页、邮件或文档）时，大语言模型往往难以区分网页数据与指令，进而将其误认为合法请求，并在后续调用相关工具时执行恶意操作，最终导致隐私泄露甚至任意代码执行。</p>
+<p>Anthropic近期也发布了Zero Trust for AI Agents安全框架，在其中强调， Agent 访问控制和权限管理、执行轨迹可观测性和审计、和运行时行为监控与响应是确保Agent安全性的关键步骤之一。</p>
+<p>基于此，我们提出了 AgentGuard，一套面向工具调用型智能体的轻量级访问控制框架。AgentGuard 能够无缝集成到现有智能体系统中，用户可通过可视化界面，以表单化方式根据实际需求灵活配置安全规约；系统则对工具调用请求与安全规约进行匹配，对未授权或高风险调用进行识别与拦截，并完整记录执行轨迹，从而支持事后审计与安全溯源。</p>
+<p>目前，AgentGuard 已正式开源：https://github.com/WhitzardAgent/AgentGuard</p>
+<h2 id="智能体安全防护现状">智能体安全防护现状</h2>
+<p>现阶段的智能体安全防护策略主要有以下两类：</p>
+<p><strong>模型恶意意图识别与拦截</strong>：通过模型微调增强底层 LLM 的鲁棒性，或基于 LLM 的思考过程识别并拦截潜在恶意意图</p>
+<p><strong>工具调用行为拦截</strong>：在工具调用阶段，基于工具调用轨迹执行预定义安全策略，从而对高风险工具调用进行识别与拦截</p>
+<p>考虑到模型微调通常具有较高的训练与部署成本，且部分模型无法获取完整的思考过程，我们更倾向于从工具调用行为层面对 Agent 进行防护。然而，现有基于工具调用行为的防护方案虽然能够覆盖部分安全需求，但仍缺乏一套统一框架，能够同时满足 Anthropic Zero Trust for AI Agents 安全框架中提出的访问控制、行为监控与执行审计等多方面需求。</p>
+<p>基于上述问题与需求，我们提出了 AgentGuard，其具有如下核心特性：</p>
+<ul>
+<li><strong>细粒度访问控制策略，覆盖多种安全风险</strong>：基于属性的访问控制策略，同时支持单工具调用风险检测，与多工具链调用过程中的潜在安全威胁识别</li>
+<li><strong>可视化安全规约与审计能力</strong>：提供可视化界面用于安全规约配置，并完整记录 Agent 执行轨迹，从而支持事后审计与安全溯源</li>
+<li><strong>支持多种运行时行为监控与响应机制</strong>：支持基于规则的检测、基于 LLM 的语义审计，以及人工审计三种方式协同工作</li>
+<li><strong>无缝适配现有智能体框架</strong>：支持 LangChain、AutoGen、OpenAI SDK 等主流 Agent 框架，可低成本集成到现有系统中</li>
+</ul>
+<h2 id="agentguard-架构">AgentGuard 架构</h2>
+<p>如下图所示，AgentGuard 采用客户端—服务端分离架构：客户端负责捕获智能体的工具调用请求，并将相关上下文发送至服务端；服务端则负责对这些请求进行安全审计与策略决策。</p>
+<ol>
+<li>在客户端，AgentGuard以低侵入方式集成到不同智能体中，仅需插入少量代码即可完成接入，无需修改智能体运行逻辑</li>
+<li>在服务端，AgentGuard提供可视化前端界面，用户可以通过表单填写形式灵活配置安全策略，并对智能体运行状态进行实时审计</li>
+<li>在运行时，AgentGuard结合规则检测、大模型检测与人工审核等多种机制，对单工具与跨工具安全风险进行识别与拦截</li>
+</ol>
+<h2 id="结语">结语</h2>
+<p>AgentGuard 现已正式开源，欢迎各位开发者与研究人员进行体验、交流，并提出宝贵意见。未来，我们计划兼容更多的主流智能体框架并支持多智能体系统的防护能力。</p>
+<p>项目地址：https://github.com/WhitzardAgent/AgentGuard</p>
+<h2 id="项目负责人">项目负责人</h2>
+<p>戴嘉润老师，研究方向为智能系统安全，在IEEE S&amp;P、USENIX Security、ACM CCS、NDSS等国际顶级会议上发表多篇论文，面向多类型智能系统研制安全测评、安全攻防与安全治理工具，在大模型智能体、智能设备等关键目标上累计挖掘千余例零天漏洞和缺陷，研究工作得到美国福布斯、英国独立报等媒体报道，获多项国内外安全攻防赛事冠军、上海市技术发明奖一等奖、上海市决策咨询研究成果奖一等奖等奖项，长期服务上海市数字政务系统的安全治理。</p>
+<p>联系邮箱：jrdai@fudan.edu.cn</p>
+<h2 id="参考文献">参考文献</h2>
+<p>[1] Zero Trust for AI agents https://claude.com/blog/zero-trust-for-ai-agents<br />
+[2] ClawSentry, https://github.com/AI45Lab/ClawSentry<br />
+[3] AgentBound: Securing Execution Boundaries of AI Agents. FSE'26<br />
+[4] Defeating prompt injections by design. Arxiv'25<br />
+[5] Taming Various Privilege Escalation in LLM Based Agent Systems: A Mandatory Access Control Framework. Arxiv'26<br />
+[6] Agent Governance Toolkit, https://github.com/microsoft/agent-governance-toolkit<br />
+[7] Progent: Programmable privilege control for llm agents. Arxiv'25<br />
+[8] Agentspec: Customizable runtime enforcement for safe and reliable llm agents. ICSE'26</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBOmrYqRR.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">如何构建你自己的 Agent Harness？超越 Cursor/Codex/Claude Code，告别一次性 SDK 选型，15项职责独立各自可替换升级</span>
+        </a>
+        
+        
+        <a href="recvmvBNTwF0Yd.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">六一宠粉节：氪200刀，乔帮主开源8个工具、5个精选Skill，统统免费！</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

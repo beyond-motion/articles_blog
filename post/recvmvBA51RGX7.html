@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>飞书 CLI 的画板 skill，终结了各类图表的绘制 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI 工具</span>
+            
+            
+            <span class="topic-chip">飞书 CLI</span>
+            
+            <span class="topic-chip">画板 skill</span>
+            
+            <span class="topic-chip">AI 图表</span>
+            
+            <span class="topic-chip">流程图</span>
+            
+            <span class="topic-chip">架构图</span>
+            
+            <span class="topic-chip">原型图</span>
+            
+            <span class="topic-chip">可编辑图表</span>
+            
+            <span class="detail-reading-time">约 10 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">飞书 CLI 的画板 skill，终结了各类图表的绘制</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>飞书</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>飞书 CLI 推出画板 skill，可一键生成流程图、架构图、原型图、海报等任意图表，并直接插入飞书文档，支持后续编辑，终结了以往多 skill 分散、样式不统一、不可修改的痛点。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/Oqakaoh94homoLNYl9OEkQ" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>飞书 CLI 的画板 skill 将 AI 画图工作流推向新高度。过去需要多个 skill 才能覆盖 30 多种图表，且样式混乱、不可编辑；如今一个 skill 即可生成任意图表，并直接嵌入飞书文档，双击即可修改。这不仅提升了效率，更让飞书从「人用工具」进化为「人+Agent 协同工具」，为 SaaS 生态的重生提供了新范式。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#飞书-cli-的画板-skill终结了各类图表的绘制" class="toc-link">飞书 CLI 的画板 skill，终结了各类图表的绘制</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#01-持续被颠覆的-ai-画图表工作流" class="toc-link">01 持续被颠覆的 AI 画图表工作流</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#02-画图-skill-的改变" class="toc-link">02 画图 skill 的改变</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#03-看几个真实的例子" class="toc-link">03 看几个真实的例子</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#04-飞书成了为-agent-而设计的工具" class="toc-link">04 飞书成了为 Agent 而设计的工具</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#05-安装方法" class="toc-link">05 安装方法</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="飞书-cli-的画板-skill终结了各类图表的绘制">飞书 CLI 的画板 skill，终结了各类图表的绘制</h1>
+<p>原创 空格丶</p>
+<p>2026年5月26日 08:00</p>
+<p>最近发现飞书 CLI出一个画板skill，可以绘制任意图表，</p>
+<p>试用了几天，我觉得以后所有的图表都可以用它来画了。</p>
+<p>先看几张我用它随手画的图：</p>
+<p>流程图、架构图、原型图、海报.... 几乎所有图表都能它来画。而且样式美观，支持修改。</p>
+<p>说一句不夸张的话，我之前自己做过 5 个画图的 skill（图表绘制 Skill），加起来顶多覆盖 30 多种图表。</p>
+<p>到了飞书这里，基本上你能想到的图表，Agent 都能给你画出来。</p>
+<p>直接插到飞书文档的画板里，用 skill 画完不支持修改的痛点也被解决了。</p>
+<h2 id="01-持续被颠覆的-ai-画图表工作流">01 持续被颠覆的 AI 画图表工作流</h2>
+<p>我一直在折腾画图这件事，尤其是在 AI 技术飞速发展的这几年，画图的工作流每隔几个月，就被重塑一次。</p>
+<p>现在这些都可以交给 AI。</p>
+<p>我们可以回顾下这两年模型进化，画图的工作方式跟着怎么变。</p>
+<p><strong>传统做法</strong>：打开 draw.io 或者 Figma，找模板、拖控件、对齐、配色、改字号......一个能看的架构图至少半小时起步。</p>
+<p><strong>24 年</strong>：模型的代码能力提升，SVG 卡片开始流传很广。为此我还做了一个文生图的产品，用户输入文字就能拿到一张 SVG 卡片。</p>
+<p><strong>25 年</strong>：模型的 coding 能力再次提升，HTML 比 SVG 能承载更多信息，还能做交互。配图从静态卡片变成可交互页面。</p>
+<p><strong>26 年</strong>：Agent 的能力起来了，SVG、HTML 的产出全部 skill 化。各种垂类的画图 skill 冒出来：原型图、流程图、架构图、逻辑图......</p>
+<p>我自己就做了好几个skill：文图图产品、chart-craft、text-logic-diagram、image-studio、pm-image2proto......</p>
+<p>每个 skill 各自能搞定一类图。能用，但是有几个问题：</p>
+<ol>
+<li><strong>样式不统一</strong>。有些是 mermaid 默认风格，有些是 SVG 拼起来，放在一起就是大杂烩。</li>
+<li><strong>生成完就是死的</strong>。想改一个字、挪一个框，都得重新跑一遍。</li>
+<li><strong>图表种类有限</strong>。我前后凑出来 30 多种，但真到要画某些奇怪的图（比如四象限叠加时间轴），还是抓瞎。</li>
+</ol>
+<p>直到我用了飞书的画板 skill。</p>
+<p>可以说它结束了这场比赛，所有图都融合到了飞书生态，便于后续修改、分享和归档。</p>
+<h2 id="02-画图-skill-的改变">02 画图 skill 的改变</h2>
+<p>以前我画一张需求文档配图的流程：</p>
+<p>打开 Figma → 想布局 → 拖框 → 连线 → 配色 → 截图 → 插到文档里 → 发现要改一个字段 → 回 Figma → 改 → 截图 → 替换。</p>
+<p>一张图来回折腾 40 分钟。</p>
+<p><strong>现在的流程：</strong></p>
+<p>我把 Agent 直接集成到了飞书里，在飞书里跟它对话。</p>
+<p>一句话：「帮我画一个 XX 流程的泳道图，生成到飞书画板里，插入到 XX 文档。」</p>
+<p>几十秒之后，文档生成好了，画板已经躺在里面，点一下就能预览。整个过程在飞书内部闭环，不用切窗口、不用复制粘贴、不用导出导入。</p>
+<p>非常丝滑。</p>
+<p>双击进入编辑态，每一个元素都是可编辑的 vector 对象。改字、改色、加节点，随手就能动。</p>
+<h2 id="03-看几个真实的例子">03 看几个真实的例子</h2>
+<p><strong>例 1：写需求文档时配一个泳道图</strong></p>
+<p>我在写一个埋点上报链路的需求，给 Agent 的指令是：</p>
+<p>帮我把客户端→网关→Kafka→数仓→看板这条上报链路画成泳道图，每条泳道里列出关键动作和异常分支，生成到飞书画板，插到这篇需求文档里。</p>
+<p>输入是一段文字描述，输出是一张结构清晰、配色协调的泳道图。</p>
+<p><strong>例 2：写完文章之后配几张逻辑图</strong></p>
+<p>文章写完，我经常想配几张图把核心观点可视化。</p>
+<p>以前要么手画，要么找模板。现在直接把文章丢给 Agent：</p>
+<p>根据这篇文章的核心观点，分别画几张逻辑图，风格保持一致，都生成到飞书画板。</p>
+<p>下面就是它根据我这篇文章，Agnet 自己拆观点、自己定结构、自己配色。三张图风格统一，能直接当公众号配图用。</p>
+<p><strong>例 3：根据文章生成 PPT，用作演讲或者短视频录制</strong></p>
+<p>现在我把文章丢给 Agent：</p>
+<p>根据这篇文章的结构，生成一份演讲用的 PPT，每一页一张飞书画板，风格统一，要适合录短视频用。</p>
+<p>它会自动拆分章节、提炼要点、配图配色，一页一张画板生成好。</p>
+<p>讲的时候直接全屏播放，录短视频的时候每一张就是一个分镜。</p>
+<p>哪页讲不顺，双击进去修改再继续。</p>
+<h2 id="04-飞书成了为-agent-而设计的工具">04 飞书成了为 Agent 而设计的工具</h2>
+<p>我用完之后有一个明显的感觉：飞书自从 CLI 化之后，整个产品的思路变了。</p>
+<p>飞书里的工具，不再只是给人用的，而是给「人+Agent」一起用的。</p>
+<p>画板有了 Agent 参与，就有了承载万物的能力。</p>
+<p>以前我用飞书画板，最多画个流程图、架构图，而且基本都是草草两笔就收工。</p>
+<p>我懒得在画板里精雕细琢，太费时间。</p>
+<p>现在所有的环节交给 Agent。我只负责描述要什么，等着给我成品再修改。</p>
+<p>我能想到的任何图：泳道图、用户旅程图、状态机、ER 图、C4 架构、价值链、SWOT、四象限、桑基图、热力图、组织架构、时间线......全部能在一个画板里实现。</p>
+<p>而且都是可编辑的。</p>
+<p>可以预见，因为Agent 的加持，saas 产品不会消亡，而是迎来重生，skill 可以代替 saas 的一个小功能点，但是它提供不了 saas 产品拥有的完整生态体验，飞书就是个很好的例子。</p>
+<h2 id="05-安装方法">05 安装方法</h2>
+<p>最简单的方式是使用飞书原生的 Agent：飞书 aily 智能伙伴。</p>
+<p>飞书 aily 内置了CLI，CLI 里就能调用画板的技能，不用自己额外搞 Agent。</p>
+<p>可以在这个网站体验：https://aily.feishu.cn/，添加完之后就能在飞书里和aily 智能伙伴对话，调用飞书 CLI。</p>
+<p>另一种方式是给你的 Agent 装上最新的飞书 CLI 就能用，不需要在指令里指定 skill 名字，Agent 会自动调用。你只要在指令里说清楚「生成飞书画板」就行。</p>
+<p>飞书 CLI 的安装方式，在终端跑一行命令：</p>
+<pre><code>npx @larksuite/cli@latest install
+</code></pre>
+<p>或者让 Agent 自己装，把下面这句话发给你的 Agent：</p>
+<p>帮我安装飞书 CLI：https://open.feishu.cn/document/no_class/mcp-archive/feishu-cli-installation-guide.md</p>
+<p>它会自己读文档、自己装好。</p>
+<p>装完之后，你就拥有了飞书 CLI 的所有能力，包含上述画任意图表的画板能力。</p>
+<p>飞书 CLI 的能力还在持续扩张中，后续有新的玩法也会持续跟大家分享</p>
+<p>我是空格，持续分享 AI 产品的思考与实践。</p>
+<p>你最近有用 Agent 画过什么有意思的图？欢迎评论区分享。有用的话点赞转发支持一下。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBBMaIJ6a.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">改变一切的 18 个 Claude 设置</span>
+        </a>
+        
+        
+        <a href="recvmvBzDKh39u.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">Obsidian官方同步贵？在NAS上自建服务器，实现多端笔记完美同步</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

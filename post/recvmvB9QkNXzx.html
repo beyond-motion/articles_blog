@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>Nano Banana 2 震撼上线实测 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI图像生成</span>
+            
+            
+            <span class="topic-chip">Lovart</span>
+            
+            <span class="topic-chip">NanoBanana2</span>
+            
+            <span class="topic-chip">AI图像生成</span>
+            
+            <span class="topic-chip">工具测评</span>
+            
+            <span class="topic-chip">AI工作流</span>
+            
+            <span class="topic-chip">中文海报渲染</span>
+            
+            <span class="detail-reading-time">约 4 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">Nano Banana 2 震撼上线实测</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>速度翻</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>Nano Banana 2 正式发布，主打速度翻倍、价格腰斩，并在中文文字渲染、复杂指令跟随、世界知识联网查询等方面大幅升级。配合 Lovart 平台，支持100张连续分镜、精准区域编辑、文字分离编辑等功能，极端比例如1:4、4:1也正式开放，适合电商包装、手机沉浸视觉等场景。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/P_NoBZ4pn1cl2zKyuoISnw" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>Nano Banana 2 的升级方向非常务实：降本增效是第一优先级，中文文字渲染的改善直击国内设计师痛点。世界知识联网查询是真正的差异化能力，让 AI 生成不再依赖训练数据截止时间。Lovart 平台的协同编辑功能值得关注，精准区域编辑和文字分离编辑如果真能稳定运行，将大幅缩短海报、包装类商业设计的后期修改周期。不过，极端比例生成和多轮编辑的稳定性仍需大量实测验证，建议设计师先在小范围业务中试水。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#nano-banana-2-震撼上线实测" class="toc-link">Nano Banana 2 震撼上线实测</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#核心升级点6大杀手锏" class="toc-link">核心升级点（6大杀手锏）</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#关键发现" class="toc-link">关键发现</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#世界知识优化" class="toc-link">世界知识优化</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#lovart-平台协同" class="toc-link">Lovart 平台协同</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#极端比例应用场景" class="toc-link">极端比例应用场景</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#印象深刻的案例" class="toc-link">印象深刻的案例</a>
+                </li>
+                
+                <li class="toc-item level-1">
+                    <a href="#发芽分析" class="toc-link">🌱 发芽分析</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#知识关联" class="toc-link">知识关联</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#可深挖的方向" class="toc-link">可深挖的方向</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#行动启发" class="toc-link">行动启发</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#标签" class="toc-link">标签</a>
+                </li>
+                
+                <li class="toc-item level-1">
+                    <a href="#ai图像-nanobanana-lovart-工具测评-ai工作流" class="toc-link">AI图像 #NanoBanana #Lovart #工具测评 #AI工作流</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <blockquote>
+<p>原文链接：https://mp.weixin.qq.com/s/P_NoBZ4pn1cl2zKyuoISnw<br />
+来源：优设AIGC<br />
+发布日期：2026年2月28日</p>
+</blockquote>
+<h1 id="nano-banana-2-震撼上线实测">Nano Banana 2 震撼上线实测</h1>
+<h2 id="核心升级点6大杀手锏">核心升级点（6大杀手锏）</h2>
+<ol>
+<li><strong>速度翻倍、价格腰斩</strong> — 极致性价比，适合高频业务</li>
+<li><strong>文字拼写变准</strong> — 中文海报渲染提升明显</li>
+<li><strong>复杂指令跟随极强</strong> — 通过地狱级测试案例（红酒杯+时钟）</li>
+<li><strong>世界知识支持</strong> — 实时拉取 Google 搜索+图片 Grounding</li>
+<li><strong>极端图片比例</strong> — 新增 1:4、4:1 等极端比例支持</li>
+<li><strong>多模型联动</strong> — 与 Lovart 平台无缝衔接</li>
+</ol>
+<h2 id="关键发现">关键发现</h2>
+<h3 id="世界知识优化">世界知识优化</h3>
+<ul>
+<li>Nano Banana 2 生成图片时支持后台联网查询真实信息</li>
+<li>实测：将 2D 谷歌地图截图转为 3D 粘土风 Apple Park，完美还原标志性建筑</li>
+</ul>
+<h3 id="lovart-平台协同">Lovart 平台协同</h3>
+<ul>
+<li><strong>超长上下文</strong>：支持100张连续分镜生成</li>
+<li><strong>精准编辑（Touch Edit）</strong>：Ctrl+选中区域直接修改，无需重新生成</li>
+<li><strong>文字编辑（Text Edit）</strong>：一键分离海报文字为可编辑文本</li>
+<li><strong>分层编辑（Edit Elements）</strong>：一键拆解复杂图为独立素材</li>
+<li><strong>样机（Mockup）</strong>：直接将平面图套到真实物体上（咖啡杯曲面）</li>
+</ul>
+<h3 id="极端比例应用场景">极端比例应用场景</h3>
+<ul>
+<li><strong>1:4 竖向叙事</strong> — 手机端沉浸式视觉体验</li>
+<li><strong>4:1 横向包装</strong> — 电商包装平铺设计</li>
+</ul>
+<h2 id="印象深刻的案例">印象深刻的案例</h2>
+<ol>
+<li>短剧分镜100连抽：主角光头、胡渣、眼镜全程锁定</li>
+<li>苹果总部3D重构：2D地图转赛博朋克/粘土风</li>
+<li>复杂摄影图编辑：酒杯+时钟精准还原</li>
+<li>咖啡杯包装展开图：极宽画幅无畸变</li>
+</ol>
+<hr />
+<h1 id="发芽分析">🌱 发芽分析</h1>
+<h2 id="知识关联">知识关联</h2>
+<p>这篇文章是 <strong>AI图像生成</strong> 领域的实测评测，与以下知识有关联：</p>
+<ul>
+<li><strong>提示词工程</strong>：复杂指令的撰写方法</li>
+<li><strong>AI 工作流</strong>：生成 → 编辑 → 交付的完整流程</li>
+<li><strong>工具评测方法</strong>：如何全面评估一个图像生成模型</li>
+</ul>
+<h2 id="可深挖的方向">可深挖的方向</h2>
+<ol>
+<li><strong>Nano Banana 2 vs Midjourney v7</strong>：文字生成能力对比</li>
+<li><strong>Lovart 平台深度测评</strong>：是否真的能替代传统 PS 工作流？</li>
+<li><strong>极端比例的实际商业应用</strong>：电商海报、包装设计的效率提升</li>
+<li><strong>世界知识的边界</strong>：哪些场景能用，哪些依然会翻车？</li>
+</ol>
+<h2 id="行动启发">行动启发</h2>
+<ul>
+<li>尝试用 Nano Banana 2 生成中文海报，测试文字准确率</li>
+<li>体验 Lovart 的精准编辑功能，验证是否如文章所说那么神</li>
+<li>测试 1:4 或 4:1 极端比例的实际效果</li>
+</ul>
+<h2 id="标签">标签</h2>
+<h1 id="ai图像-nanobanana-lovart-工具测评-ai工作流">AI图像 #NanoBanana #Lovart #工具测评 #AI工作流</h1>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBhy8XkJf.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">用 Markdown 写公众号，这个 CLI 工具凭什么拿到 2100+ Star</span>
+        </a>
+        
+        
+        <a href="recvmvvJvV0ZKF.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">抖音一键入 Obsidian——打工人刷到好视频，3 步沉到自己的内容库</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

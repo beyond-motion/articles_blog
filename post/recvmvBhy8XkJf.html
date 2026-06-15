@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>用 Markdown 写公众号，这个 CLI 工具凭什么拿到 2100+ Star — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">效率工具</span>
+            
+            
+            <span class="topic-chip">md2wechat</span>
+            
+            <span class="topic-chip">Markdown 转公众号</span>
+            
+            <span class="topic-chip">CLI 工具</span>
+            
+            <span class="topic-chip">排版自动化</span>
+            
+            <span class="topic-chip">公众号草稿箱</span>
+            
+            <span class="topic-chip">AI 辅助写作</span>
+            
+            <span class="detail-reading-time">约 5 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">用 Markdown 写公众号，这个 CLI 工具凭什么拿到 2100+ Star</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>md2</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>md2wechat 是一个 Go 语言 CLI 工具，可将 Markdown 直接转换为微信公众号排版并上传草稿箱，GitHub 获 2100+ Star。支持 40+ 主题、43 个排版模块，可接入 Claude Code 等 AI 助手。免费 AI 模式适合个人创作者，付费 API 模式提供确定性输出和完整能力，适合团队协作与批量发布。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/eEHNYcMvMOb6woIIIHxBnw" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>md2wechat 精准切中了 Markdown 写作者发布到微信公众号时的排版痛点，把写作和排版彻底解耦。43 个模块化排版语法让非设计人员也能快速产出专业级排版，40+ 主题覆盖多种风格。免费 AI 模式降低了个人创作者的使用门槛，而 API 模式的确定性输出则为团队批量发布提供了工程级可靠性。对于长期运营公众号、尤其是用 AI 辅助写稿的创作者来说，这是一个值得十分钟试用的效率工具。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#用-markdown-写公众号这个-cli-工具凭什么拿到-2100-star" class="toc-link">用 Markdown 写公众号，这个 CLI 工具凭什么拿到 2100+ Star</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#小白先看懂这项目是干什么的" class="toc-link">小白先看懂：这项目是干什么的</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#一个-cli包揽公众号全流程" class="toc-link">一个 CLI，包揽公众号全流程</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#43-个排版模块意味着什么" class="toc-link">43 个排版模块意味着什么</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#免费够用吗" class="toc-link">免费够用吗</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#值不值得试" class="toc-link">值不值得试</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="用-markdown-写公众号这个-cli-工具凭什么拿到-2100-star">用 Markdown 写公众号，这个 CLI 工具凭什么拿到 2100+ Star</h1>
+<p><strong>来源</strong>：极客BIM设计工坊 | 2026年5月9日 14:58</p>
+<hr />
+<p>▌ <strong>核心结论</strong><br />
+md2wechat 是一个 Go 语言写的 CLI 工具，把 Markdown 直接转换成微信公众号排版并上传草稿箱。GitHub 2100+ Star，支持 40+ 主题、43 个排版模块，可接入 Claude Code / Codex / OpenClaw 等 AI 助手。免费模式够用，API 模式解锁完整能力。</p>
+<hr />
+<h2 id="小白先看懂这项目是干什么的">小白先看懂：这项目是干什么的</h2>
+<p>如果你运营公众号，应该经历过这种场景：在微信编辑器里排两小时版，换个手机预览全崩。或者你在用 Typora / Obsidian 写稿，但发布时得把 Markdown 复制到编辑器里一点点调样式。</p>
+<p>md2wechat 就是解决这个痛点的。你继续用 Markdown 写作，它负责把 Markdown 转成带排版的公众号文章，然后直接上传到你的微信草稿箱。全程命令行，不需要打开浏览器。</p>
+<p><strong>适合谁：</strong><br />
+长期运营公众号的创作者、技术团队的内容运营、用 AI 辅助写稿但被排版困扰的人。不适合只在手机上写作、对排版没有要求的用户。</p>
+<hr />
+<h2 id="一个-cli包揽公众号全流程">一个 CLI，包揽公众号全流程</h2>
+<p>安装很简单，macOS 用户一行命令：<code>brew install geekjourneyx/tap/md2wechat</code>。其他平台也提供了 npm、go install、install.sh 等方式。</p>
+<p>基本工作流：用 Markdown 写完文章，运行 md2wechat 转换，排版自动生成，上传到微信草稿箱。整个过程在终端完成，不需要打开公众号后台编辑器。</p>
+<p>和市面其他转换工具相比，md2wechat 的差异在于：API 模式下同样 Markdown 永远输出同样排版（确定性），不是每次让 AI 重新生成。这对需要批量发布、团队协作的场景很关键。</p>
+<hr />
+<h2 id="43-个排版模块意味着什么">43 个排版模块意味着什么</h2>
+<p>项目提供了 43 个结构化排版模块，通过 <code>:::block hero</code>、<code>:::block callout</code>、<code>:::block timeline</code> 这类语法在 Markdown 里直接调用。想加个醒目引用块，写一行 <code>:::block callout</code> 就行，不用手动调样式。</p>
+<p>40+ 主题分为 Minimal、Focus、Elegant、Bold 四个系列，每个都在微信渲染环境里精调过。可以在官网预览效果再决定用哪个。</p>
+<hr />
+<h2 id="免费够用吗">免费够用吗</h2>
+<p>项目分两种模式。AI 模式免费，由你的 Claude / Codex 处理排版，提供 3 个基础主题。适合个人创作者、偶尔发文的场景。</p>
+<p>API 模式是付费服务，解锁完整 40+ 主题和 43 个排版模块，秒级响应，确定性输出。适合团队协作、自动化发布、对排版一致性有高要求的场景。</p>
+<p>对大多数个人创作者来说，免费 AI 模式已经能大幅提升效率。只有当你需要批量发布、团队协作、或对排版有极致追求时，才需要考虑 API 模式。</p>
+<hr />
+<h2 id="值不值得试">值不值得试</h2>
+<p>如果你符合下面任意一条，值得花十分钟试试：<br />
+- 你在用 Markdown 写公众号文章，每次排版耗时超过写稿时间<br />
+- 你在用 AI 辅助写稿，想把写和排彻底分离<br />
+- 你运营多个公众号，需要批量发布模板化的内容</p>
+<p>如果只是偶尔发一篇个人随笔，排版直接用微信编辑器默认样式就够了，不需要额外装工具。</p>
+<p><strong>上手建议：</strong> 先 <code>brew install</code>，用 AI 模式跑一篇文章看看效果。觉得好用再决定要不要申请 API。项目作者是极客杰尼，GitHub 上搜 <code>md2wechat-skill</code> 就能找到，2100+ Star 的项目社区活跃度不错。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBhHFGPBb.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">读了十几篇Dan Koe之后，我倒吸一口凉气：他是不是读过《实践论》？</span>
+        </a>
+        
+        
+        <a href="recvmvB9QkNXzx.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">Nano Banana 2 震撼上线实测</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

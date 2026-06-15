@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>我做了一款开源免费的Markdown公众号排版神器 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">工具推荐</span>
+            
+            
+            <span class="topic-chip">内容创作</span>
+            
+            <span class="topic-chip">效率工具</span>
+            
+            <span class="topic-chip">Markdown编辑器</span>
+            
+            <span class="topic-chip">公众号排版</span>
+            
+            <span class="topic-chip">开源免费</span>
+            
+            <span class="topic-chip">富文本生成</span>
+            
+            <span class="detail-reading-time">约 6 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">我做了一款开源免费的Markdown公众号排版神器</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>好的排</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>作者基于 Markdown 开发了一款开源免费的公众号排版编辑器，支持图片增强、文字修饰、卡片组件和主题切换等功能，三步即可完成排版，无需任何基础。工具完全开源免费，无会员、无广告、无隐私担忧，文章编辑全在浏览器本地进行，旨在让公众号排版变得简单。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/OEzyTDbKMZWEquqkkFwrrw" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这款工具切中了公众号创作者的核心痛点——排版耗时耗力、门槛过高。作者用三天时间做出这款编辑器，思路清晰：Markdown 语法极简，实时预览所见即所得，三步完成发布，大幅降低了排版的技术门槛。开源免费、本地处理的设计理念也值得肯定，没有套路，干净利落。唯一遗憾的是目前仅支持 PC 端，移动端用户暂时无法使用。整体来说，这是一款诚意之作，适合内容创作者提升文章颜值。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#我做了一款开源免费的markdown公众号排版神器" class="toc-link">我做了一款开源免费的Markdown公众号排版神器</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#01-排版到底有多让人头疼" class="toc-link">01 · 排版到底有多让人头疼</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#02-这个编辑器能做什么" class="toc-link">02 · 这个编辑器能做什么</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#03-怎么用" class="toc-link">03 · 怎么用</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#04-为什么开源免费" class="toc-link">04 · 为什么开源免费</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#05-写在最后" class="toc-link">05 · 写在最后</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <blockquote>
+<p><strong>原文链接</strong>：https://mp.weixin.qq.com/s/OEzyTDbKMZWEquqkkFwrrw<br />
+<strong>来源</strong>：五味杂陈杂货铺<br />
+<strong>作者</strong>：五味杂陈<br />
+<strong>发布日期</strong>：2026年5月20日<br />
+<strong>标签</strong>：#公众号排版 #开源免费 #Markdown #工具推荐</p>
+</blockquote>
+<hr />
+<h1 id="我做了一款开源免费的markdown公众号排版神器">我做了一款开源免费的Markdown公众号排版神器</h1>
+<p>告别丑陋排版，让你的公众号文章颜值翻倍。</p>
+<hr />
+<p><strong>阅读路线</strong></p>
+<p>5 个章节：</p>
+<p>01 — 排版到底有多让人头疼<br />
+02 — 这个编辑器能做什么<br />
+03 — 怎么用<br />
+04 — 为什么开源免费<br />
+05 — 写在最后</p>
+<blockquote>
+<p>本文封面使用 AI 生成，仅供参考。本文使用了 R-Markdown 编辑器排版生成。</p>
+</blockquote>
+<hr />
+<h2 id="01-排版到底有多让人头疼">01 · 排版到底有多让人头疼</h2>
+<p>你有没有遇到过这种情况？写公众号文章时，排版总是丑得让人崩溃。花了一下午写的内容，发出去却像一堆乱码，读者根本看不下去。</p>
+<p>我以前也是这样，直到我做了一个开源免费的公众号排版编辑器。</p>
+<p>很多人想做公众号，却卡在了排版这一步。最后只能用最原始的方式——纯文字堆砌。结果就是：内容再好，读者也看不下去。</p>
+<p>尤其是那些想分享生活感悟、职场经验的人，明明心里有一肚子话，却被排版劝退。我身边就有好几个朋友，公众号注册了两年，一篇文章都没发出来。问原因，回答都一样：排版太麻烦了，不会弄。</p>
+<hr />
+<h2 id="02-这个编辑器能做什么">02 · 这个编辑器能做什么</h2>
+<p>我花了三天时间，做了一个基于 Markdown 的公众号排版编辑器。开源免费，即点即用。</p>
+<p>这是我自用的工具，完全按照我喜欢的简约风格来设计和定制化，拒绝花里胡哨。它支持多种排版组件，让你的文章瞬间高大上。</p>
+<p><strong>01 图片增强</strong></p>
+<p>你可以限制图片高度，避免长图刷屏。也可以让多张图片横向并排，告别单调的图片堆砌。读者滑到图片区域时，可以左右滑动查看，不会占用太多屏幕空间。</p>
+<p><strong>02 文字修饰</strong></p>
+<p>支持渐变背景、胶囊文字、靛青强调、柔光重点等多种文字修饰效果。关键金句用上渐变背景，读者一眼就能看到重点。好的排版不是花哨，而是让读者舒服地读完你的每一个字。</p>
+<p><strong>03 卡片组件</strong></p>
+<p>突发新闻卡片、提示框、步骤流、案例展示……还有 Before/After 对比组件，适合做经验分享类文章。</p>
+<p><strong>04 主题切换</strong></p>
+<p>内置多套主题配色，一键切换，不用自己调颜色，或者自定义自己喜欢的主题配色。</p>
+<hr />
+<h2 id="03-怎么用">03 · 怎么用</h2>
+<p>三步搞定：</p>
+<p><strong>第一步</strong>：打开编辑器，左边写 Markdown，右边实时预览排版效果。</p>
+<p><strong>第二步</strong>：满意后点击复制富文本或保存图片。</p>
+<p><strong>第三步</strong>：粘贴到公众号后台，直接发布。</p>
+<p>就这么简单，不需要任何排版基础。Markdown 语法也很简单，五分钟就能上手。不会写？没关系，编辑器自带示例模板，照着改就行。</p>
+<p>💡 <strong>小技巧</strong>：把你的文章和编辑器示例发送给AI，让AI学习编辑器语法帮你排版，你甚至都不用自己写或只需做少量改动。</p>
+<hr />
+<h2 id="04-为什么开源免费">04 · 为什么开源免费</h2>
+<p>我一直相信，好的工具应该让每个人都能用得起。</p>
+<p>所以这个编辑器完全开源，代码托管在 GitHub 上。任何人都可以免费使用，甚至参与开发。</p>
+<p>没有会员制度，没有隐藏收费，没有广告弹窗，没有隐私担忧，你的文章编辑全都在浏览器本地进行。就是单纯地想让公众号排版这件事变得简单一点。</p>
+<hr />
+<h2 id="05-写在最后">05 · 写在最后</h2>
+<p>如果你喜欢这样的排版风格，也想让自己的公众号文章变得更好看，不妨试试这个工具。获取网址可以在后台回复：Markdown 或 编辑器</p>
+<p>不过目前只支持PC端使用，移动端不支持。如有问题和建议，可以在公众号后台给我留言哦。</p>
+<p>好的排版，是对读者最基本的尊重。与其花时间在排版上纠结，不如把精力放在内容创作上。毕竟，好内容才是公众号的核心竞争力。</p>
+<p>既然看到这里了，如果觉得有用，随手点个赞、推荐、转发三连吧。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBx6FyH0a.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">这个 Skill 提前实现了聊天的 AI 能力</span>
+        </a>
+        
+        
+        <a href="recvmvBwLe2pag.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">微信读书 Skill，把我做了 3 年的产品干没了</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

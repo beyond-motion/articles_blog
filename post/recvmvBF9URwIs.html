@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>编程、写作、AI 短剧，Opus 4.8 的 effort 怎么选 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI 工具使用经验</span>
+            
+            
+            <span class="topic-chip">Claude</span>
+            
+            <span class="topic-chip">AI写作</span>
+            
+            <span class="topic-chip">AI短剧</span>
+            
+            <span class="topic-chip">推理档位</span>
+            
+            <span class="topic-chip">max模式</span>
+            
+            <span class="topic-chip">代码开发</span>
+            
+            <span class="topic-chip">场景选择</span>
+            
+            <span class="topic-chip">token优化</span>
+            
+            <span class="detail-reading-time">约 13 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">编程、写作、AI 短剧，Opus 4.8 的 effort 怎么选</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>高档不</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>作者分享了一年多使用 Claude 的推理档位经验，从盲目迷信 max 档位到理解不同档位适用于不同场景的转变。文章详细拆解了 low 到 max 各档位的特点，指出 max 适合强逻辑校验和代码复核，而创作类任务反而需要低档位保持灵气，并给出按场景选档的实用速查建议。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/2ZQePAlktI_8LnCwksoVpQ" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章的核心洞察在于打破了&#39;推理档位越高越好&#39;的常见误区。作者用亲身踩坑经历说明，max 档位是为强对齐、强校验设计的，用在写作上反而会抹杀灵气；而代码复核、AI 短剧规划等需要严密一致性的场景，高档位才是正确选择。文章还厘清了推理档位、ultracode 会话模式和 temperature 三个常被混淆的概念，信息密度高，实操性强，对 Claude 用户具有很高的参考价值。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-2">
+                    <a href="#推理档调的不是模型是投入度" class="toc-link">推理档调的不是模型，是&#34;投入度&#34;</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#写代码和做产品别在该较真的地方省" class="toc-link">写代码和做产品：别在该较真的地方省</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#文章剧本创作我吃过的最大的亏" class="toc-link">文章/剧本创作：我吃过的最大的亏</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#ai-短剧漫剧规划跟写作正好反过来" class="toc-link">AI 短剧/漫剧规划：跟写作正好反过来</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#钱和速度也得算进去" class="toc-link">钱和速度，也得算进去</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#一句话判断标准和一张速查表" class="toc-link">一句话判断标准，和一张速查表</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <blockquote>
+<p>原文链接：https://mp.weixin.qq.com/s/2ZQePAlktI_8LnCwksoVpQ</p>
+</blockquote>
+<p>用 Claude 这一年多，我只有一个习惯，推理能拉多高就拉多高。打从有了 max 这档起，更是雷打不动，一直开着。</p>
+<p>逻辑特别简单，推理能力调到最高，模型不就最强吗。所以不管写代码、写小说，还是给 AI 做分镜，我都把档位顶到头，而且深信不疑。这个信仰从 3.7 那会儿一路用到 4.6，几乎没出过错。</p>
+<p>直到 4.7。</p>
+<p>那阵子拿它写东西，总觉得文笔很拉，干、僵、没灵气。我第一反应是模型退化了。后来才慢慢回过味来，可能不怪模型，是我一直没搞明白一件事，max 这个档，根本就不是为文笔设计的。</p>
+<p>它是为强对齐、强校验、强检查、强逻辑设计的。</p>
+<p>我让一个专门负责"较真"的档，去干一件需要松弛和灵气的活，它当然别扭。这不怪它，是我用错了。</p>
+<p>真正让我把这件事彻底捋清楚的，是今天凌晨 Opus 4.8 发布、我上手测试那会儿。</p>
+<p>Anthropic 把 4.8 说成现在最强的正式模型，主打长时间的 agentic 编程、更稳的长上下文、还有该调工具的时候别漏掉。我的第一反应还是老习惯，手就往 max 上伸。但这次我多停了一下，认真去看它的推理档位到底怎么分，从低到高排下来是这么几级。</p>
+<p>[配图：Opus 4.8 推理档位示意图，low / medium / high / xhigh / max]</p>
+<p>这张图你扫一眼就记住了，low、medium、high、xhigh，再加最高的 max。可它只告诉你有这么几档，不告诉你每一档到底在调什么，更不告诉你手上这个活儿该挑哪一档。这才是真正让人犯难的地方，也是我这篇想替你捋清楚的。</p>
+<h2 id="推理档调的不是模型是投入度">推理档调的不是模型，是"投入度"</h2>
+<p>它调的不是模型，是同一个模型上，你让它为这件事花多少力气。力气花在三个地方，想得有多深，查得有多严，还有它有多愿意主动动手，比如自己去翻资料、跑工具、反复验证。档位越高，这三样给得越足。</p>
+<p>我以前最大的误会，是把低档当成了缩水版。一直觉得低档就是为了省钱，能开高的干嘛开低的。这个想法是错的。低档不是阉割，是有些活儿根本不需要那么较真，你非让它较真，它反而把简单事想复杂，绕远路，又慢又贵。我绕了好久才想通一句话，<strong>高档不是更聪明，是更舍得花力气；活儿要是不需要这份力气，硬拉高反而帮倒忙。</strong></p>
+<p>这里还得顺手分清楚三样老被搞混的东西。从 low 到 max 这几档，是同一个模型的投入度，max 是其中最高那档，一个回合里把一件事想到最透。</p>
+<p>还有一个叫 ultracode 的，经常被当成比 max 还高的档，其实它压根不是推理档，是 Claude Code 里的一个会话模式，底层用的是 xhigh，额外让 Claude 自己去编排一批 agent 并行干活，那是另一个维度的事，待会儿单说。</p>
+<p>另一个得知道的变化，4.8 把这几档重新校准过了。官方的说法是，medium 比以前想得更多，high 略微少一点，xhigh 明显更多。意思是你要是从 4.6、4.7 一路用过来，凭老感觉选档，现在多半不准了。还有个细节让我当时愣了一下，<strong>4.8 默认挂的是 high，不是 max</strong>。我自己一直默认 max，原来连官方都没把 max 当默认。</p>
+<h2 id="写代码和做产品别在该较真的地方省">写代码和做产品：别在该较真的地方省</h2>
+<p>先说代码这块，也是我现在分得最清楚的地方。</p>
+<p>小修小补，改个明确的小函数、解释个报错，medium 就够了，图快。日常开发、写个普通功能、做点局部重构，我用 high，这也是 4.8 的默认档，质量、速度、成本最平衡的一档。真要往上走，是碰到跨文件的 bug、测试一直挂、或者接口迁移这种活儿，我会上 xhigh。官方建议也是这样，写代码和那种高自主的任务，直接从 xhigh 起步，别从 high 起。</p>
+<p>xhigh 对这种活儿有用，<strong>关键不在它想得更深，在它愿不愿意动手</strong>。档位低的时候，它倾向于少调工具、少跑命令，你一问它就直接答了。档位高了，它才肯去把相关文件翻一遍，把测试跑一跑，把几种实现比一比，把边界情况查一查。写代码这行，质量经常就藏在这个来回里，读一遍、跑一下、看结果、改假设、再跑一遍。你把档压低，它就懒得走这个来回，看着答得飞快，坑全埋在你没让它检查的地方。</p>
+<p>做产品也是一个道理。我写代码之前习惯先把 PRD 想清楚，要什么功能、交互怎么走、边界在哪，都想明白再动手。这种把你容易漏掉的地方替你想全的活儿，本身就得 high 往上，它才会主动帮你补上那些你没想到的。</p>
+<p>max 在代码里，我现在只拿它当最后一道复核。极难的 bug，或者一个改动牵连面特别大、错了代价很高，我会让 max 专门再过一遍挑逻辑漏洞。但它真不适合做日常档，官方自己都提醒，max 容易想太多、绕远路，收益还递减。4.8 在这点上有个我挺在意的改进，它比前代更少把自己写的、其实有毛病的代码当成搞定了蒙混过去，更愿意主动说这块我没把握。档位开得高，等于给了它更多空间去做这种自我检查。</p>
+<p>至于全仓迁移、整个代码库审计、几百个文件一起改这种，才轮到 ultracode 出场。它不是把一个问题答得更认真，是直接开一批 agent 并行去干，分头理解、修改、验证，再互相检查、汇总，体量能到几十上百个。这是把一个人的活拆成一个临时小组的活，代价是更慢、更烧 token，日常小修小补用它纯属浪费。</p>
+<h2 id="文章剧本创作我吃过的最大的亏">文章/剧本创作：我吃过的最大的亏</h2>
+<p>写作就完全是另一回事了，也是我开头说那个坑的正主。</p>
+<p>剧本、小说、公众号推文，我以前是全程 max 的，结果就是越写越觉得文字僵。想明白之后才知道，<strong>文章/剧本创作恰恰是少数几个推理不是越高越好的场景</strong>。档位拉高，它会特别想把结构、逻辑、受众、每一处伏笔都论证到位，这对严谨是好事，对文采是灾难。文字会变得过度规整、过度安全，哪儿都挑不出错，就是不鲜活。你要的那点意外，那点口语里的毛刺，它在高档下反而会一点点帮你抹平。</p>
+<p>所以现在要灵气的活，初稿和发散我用 medium，让它别那么端着。说到底，<strong>真正决定文字好坏的不是档位，是你喂给它的东西</strong>。给它风格样例、给它节奏、给它口吻、告诉它什么不许写，比你把档位拉满管用得多。还得说清一个常被误会的点。真正管文字发散程度的那个参数叫 temperature，它一直只能在调 API 的时候设，平时你在客户端里用根本碰不到这个旋钮；从 4.7 起，连 API 都不收它的非默认值了，4.8 也一样，官方直接让你用提示词来控制。所以在创作上，推理档从来就不是那个调发散的钮，别指望把它拧高，文字就能活。</p>
+<p>文章/剧本创作里也不是没有该用高档的地方。长篇的前后一致、人物动机不崩、几万字里埋的伏笔不掉线，这种偏结构的活，high 甚至 xhigh 是有用的。我现在大概是这么分的，写得野、要灵气的时候用低档，梳结构、查一致性、挑逻辑硬伤的时候换高档。同一篇东西，不同阶段用不同档，这是我以前压根没想过的用法。</p>
+<h2 id="ai-短剧漫剧规划跟写作正好反过来">AI 短剧/漫剧规划：跟写作正好反过来</h2>
+<p>跟文章/剧本创作正好反过来的，是我做 AI 短剧/漫剧规划的时候。</p>
+<p>做 AI 短剧/漫剧，我要规划分镜、写提示词、还要管服化道这些的提示词。这些活儿表面看也是创作，可它的命门是一致性和精确，不是灵气。分镜得连贯，这一镜到下一镜得接得住。服化道的提示词，同一个角色从头到尾的发型、衣服、质感不能飘。每一条提示词的措辞都得精确，差一个词，出来的画面就跑偏。</p>
+<p>这恰恰是高档擅长的，强对齐、强校验、前后一致。<strong>同样是创作，文章/剧本创作我躲着 max，AI 短剧/漫剧规划我反而愿意往高了开</strong>，让它帮我把几十个镜头的设定对齐，把每条提示词抠精确，把我自己没发现的前后矛盾挑出来。</p>
+<p>这两块摆在一起，我才算真正想明白开头那件事。<strong>档位选得对不对，本身就是一个变量，跟模型强不强是两码事</strong>。我一直信的那句拉满就最强，错就错在把一个变量当成了常量。</p>
+<h2 id="钱和速度也得算进去">钱和速度，也得算进去</h2>
+<p>除了干不干得好，推理档还顺带改几样东西，简单说一下。</p>
+<p>最直接的是钱和速度。档越高，它想得越多、跑得越多，思考和输出的 token 全涨，钱跟着涨，速度也慢下来。低档快，还更省你的调用额度。批量的、重复的、简单的活儿挂着高档，基本就是白烧钱。输出的详略也跟着变，高档爱写得长、写得周全、处处给你加提醒，低档干脆利落。你就要个标题、要段摘要，给它 max，它能给你交一篇小作文回来。</p>
+<h2 id="一句话判断标准和一张速查表">一句话判断标准，和一张速查表</h2>
+<p>绕了这么大一圈，我自己的判断标准，其实缩成了一句话。</p>
+<p>一件事，失败的代价越高、要读的上下文越长、需要反复验证的地方越多、越得靠它主动去查去跑，就越往 high、xhigh、max 这边走；反过来，越短、越明确、越是批量重复、越要松弛和灵气，就越往 medium、low 这边走。</p>
+<p>我一直默认的 max 不算错，是用错了地方。它在代码复核、在 AI 短剧/漫剧规划这种要较真的活儿上，到今天还是我最信任的档。可在写小说、写推文这种要活气的活儿上，它一直在帮倒忙，我却怪了模型这么久，说它文笔差。</p>
+<p>这回 4.8，我打算第一次认真地按场景去配档，而不是一个 max 开到黑。下面这张表是我自己理的一份对照。可能还有确认的空间，但是整体框架还是可以参考的。</p>
+<p>[配图：场景-档位速查表]</p>
+<p>开 max 开到现在，我总算学会了，希望之后可以节省点 Tokens。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBIXkQEpM.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">你抛弃的n8n工作流，Claude Code捡回来了，但最让我意外的不是这个</span>
+        </a>
+        
+        
+        <a href="recvmvBDM2XVft.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">支付宝又推开了一扇门</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

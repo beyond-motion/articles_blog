@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>小红书支持上传 skill 了，AI 创作者赚钱的时机到了 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI工具</span>
+            
+            
+            <span class="topic-chip">小红书</span>
+            
+            <span class="topic-chip">Skill</span>
+            
+            <span class="topic-chip">Claude Code</span>
+            
+            <span class="topic-chip">Cursor</span>
+            
+            <span class="topic-chip">AI创作者</span>
+            
+            <span class="topic-chip">内容变现</span>
+            
+            <span class="detail-reading-time">约 9 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">小红书支持上传 skill 了，AI 创作者赚钱的时机到了</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>ski</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>小红书上线了笔记内上传和关联 Skill 的功能，用户可一键复制口令在 Claude Code / Cursor 中安装使用。文章分析了 Skill 相比提示词更易交付、传播和变现，大厂密集入场说明其将持续盛行。小红书天然适合承载 Skill 内容，因其内容生态能直观展示使用场景和效果。Skill 作为内容资产，可为创作者带来粉丝、流量、变现和品牌价值，小红书补齐了技术博主触达普通用户的场景闭环。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/lZ1i371u643t1L9gWi5Fbw" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章敏锐地捕捉到 Skill 正在成为 AI 内容生态中增长最快的形态。作者从大厂密集入场、小红书内容生态的天然优势、用户侧的便捷体验、创作者侧的上传流程和变现路径四个维度展开分析，逻辑清晰。尤其值得肯定的是，文章点出了 Skill 与提示词的本质区别——Skill 是可执行、可交付、可复用的内容资产，而非静态的文本指令。小红书将 Skill 嵌入笔记生态，让技术内容从
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#小红书支持上传-skill-了ai-创作者赚钱的时机到了" class="toc-link">小红书支持上传 skill 了，AI 创作者赚钱的时机到了</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#01-大厂正在密集入场-skill-这件事" class="toc-link">01 大厂正在密集入场 skill 这件事</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#02-为什么小红书来做这件事特别合理" class="toc-link">02 为什么小红书来做这件事，特别合理</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#03-用户视角复制口令几秒装好" class="toc-link">03 用户视角：复制口令，几秒装好</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#04-创作者视角怎么上传一个-skill" class="toc-link">04 创作者视角：怎么上传一个 skill</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#05-小红书-skill可能真的让创作者开始赚钱" class="toc-link">05 小红书 skill，可能真的让创作者开始赚钱</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#06-ai-对社区平台的价值" class="toc-link">06 AI 对社区平台的价值</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="小红书支持上传-skill-了ai-创作者赚钱的时机到了">小红书支持上传 skill 了，AI 创作者赚钱的时机到了</h1>
+<p>原创 空格丶</p>
+<p>2026年5月28日 13:27</p>
+<p>小红书悄悄上线了一个新能力：上传 skill 在笔记里直接挂上。</p>
+<p>用户可以上传自己原创或收藏的 skill，关联到笔记，读者看到 skill，一键复制口令，扔给自己的 Claude Code / Cursor，几秒钟就装好用上。</p>
+<p>这是继腾讯推出 SkillHub 之后，又一家大厂下场做 skill 社区。</p>
+<p>现在，Skill 被小红书做成了一个标准功能，</p>
+<p>这似乎没什么惊讶的，毕竟用户已经习惯在小红书讨论 AI。</p>
+<p>但要是今天知乎、B 站把支持把 skill 挂在内容下，反而让人觉得奇怪。</p>
+<p>所以，今天我更想聊一下，为什么小红书能做成 AI 讨论度最高的社区。</p>
+<h2 id="01-大厂正在密集入场-skill-这件事">01 大厂正在密集入场 skill 这件事</h2>
+<p>去年这个时候，提示词特别火。</p>
+<p>那波热度里，大厂动静比较小。我印象里只有火山引擎认真做了个提示词管理工具，剩下大部分大厂都在隔岸观火。</p>
+<p>到了今年，skill 明显不一样了。</p>
+<p>腾讯先出了 SkillHub。现在小红书也跟上了。</p>
+<p>skill 比提示词更受重视，skill 的<strong>能力大得多</strong>。<strong>更容易交付</strong>。<strong>更容易传播</strong>。<strong>更容易变现</strong>。</p>
+<p>从大厂密集入场这件事看，至少未来一段时间 skill 会持续盛行。</p>
+<p>并且 skill 会变得越来越规范，安全性、原创保护提升，也能给创作者带来关注量以外的收入。</p>
+<p>哪怕模型能力继续进化，skill 还是会像提示词一样，发挥很长一段时间的余热。</p>
+<h2 id="02-为什么小红书来做这件事特别合理">02 为什么小红书来做这件事，特别合理</h2>
+<p>小红书在我看来一直是一个跟进用户需求技术发展、有创新的社区产品。</p>
+<p>我经常在即刻发帖称赞小红书的一些亮点新功能，很多功能可以说是社区类产品首创，就像这次的 skill 上传，就是响应社区用户热点内容而来的。</p>
+<p>他能兼容任何形式的创作，让创作者持续的发光发热，</p>
+<p>GitHub、SkillHub 这种地方上传一个 skill，是一个冷冰冰的文件夹。你点进去，看到的是 readme、是代码、是几个 md。</p>
+<p>但同一个 skill 放到小红书：</p>
+<ul>
+<li>博主可以发<strong>视频</strong>、配<strong>图文</strong>讲清楚使用场景</li>
+<li>评论区有真实用户<strong>讨论翻车点、Tips、二创玩法</strong></li>
+</ul>
+<p>你能直接看到一个 skill 在不同人手里被玩出什么花样</p>
+<p>小红书的内容生态刚好就是干这件事的。</p>
+<h2 id="03-用户视角复制口令几秒装好">03 用户视角：复制口令，几秒装好</h2>
+<p>先看看这个 skill 在用户侧是怎么用的。下面是归藏老师的笔记截图。</p>
+<p>复制下来是这样一段话：</p>
+<p>请先检查是否已安装 RedSkill 商店，若未安装，请根据https://fe-video-qc.xhscdn.com/fe-platform-file/104101b8320fbtcp4620653u0hejenq0004pf88gk8rtde.md安装 RedSkill 商店，但是只安装 CLI，然后安装 space-weread-analyzer 技能。若已安装，则直接安装 space-weread-analyzer 技能。</p>
+<p>你把这段口令扔给你的 Claude Code / Cursor，它会自己读文档、装好 CLI、再装上对应的 skill。</p>
+<p>从这段口令也能看出来小红书的实现思路：自建了一个 skill 文件仓库，博主上传 skill 文件，用户通过 skill 唯一标识名定位安装。整套架构其实不复杂，但用户体感非常顺。</p>
+<h2 id="04-创作者视角怎么上传一个-skill">04 创作者视角：怎么上传一个 skill</h2>
+<p>再讲一下创作者怎么上传。</p>
+<p>上传必须在<strong>网页端</strong>完成，App 暂时不行。</p>
+<p>步骤是这样的：</p>
+<ol>
+<li>进入小红书创作���务平台</li>
+<li>选择「Red Skill」入口</li>
+<li>上传一个 skill.md 文件，或者一个包含 markdown 的文件夹</li>
+<li>系统自动解析名称、介绍、md 内容，填一个编号</li>
+<li>提交审批</li>
+</ol>
+<p>审批通过之后，你在发笔记的时候会多出一个组件，可以关联你已经审核通过的 skill。</p>
+<p>笔记发出去，读者就能看到复制按钮。</p>
+<p>目前只能解析 markdown 文件，脚本类的文件会被过滤掉。</p>
+<p>如果你的 skill 是纯 md 工作流，问题不大。如果你的 skill 依赖 Python / Node 脚本，就只能等小红书后续放开了。</p>
+<p>上传 skill 的功能目前还在灰度，但<strong>复制口令功能每个人都能用</strong>。</p>
+<p>我自己已经传了几个 skill 上去，配套笔记也发了。官方说现在有流量支持。</p>
+<h2 id="05-小红书-skill可能真的让创作者开始赚钱">05 小红书 skill，可能真的让创作者开始赚钱</h2>
+<p>我做 skill 内容做了两个月，体感非常明显</p>
+<p>小红书一篇 skill 笔记，几千点赞、几万阅读是常态，私信和评论里全是真实用户在交流怎么用、用出了什么效果。</p>
+<p>它天然把"效果"放在最前面。视频、图文、评论区的真实案例——你是先被效果打动，才去装的。</p>
+<p>并且有完整的<strong>创作者激励体系，比如店铺门槛做的很低</strong>。</p>
+<p>skill 本质上是一种内容资产。它和图文、视频一样，可以带来：</p>
+<ul>
+<li><strong>粉丝</strong>：你的 skill 用过的人会关注你</li>
+<li><strong>流量</strong>：好 skill 会被官方推到更大的池子</li>
+<li><strong>变现</strong>：粉丝沉淀下来之后，接广告、做付费内容、做服务都是顺理成章</li>
+<li><strong>品牌</strong>：你的 skill 用得人越多，你在这个垂类里的影响力越大</li>
+</ul>
+<p>过去两年我看到很多技术博主有好东西但变不了现，最大的问题是：</p>
+<p><strong>好工具没有好场景去触达普通用户</strong>。</p>
+<p>小红书把这个创作者需要的场景闭环了。</p>
+<h2 id="06-ai-对社区平台的价值">06 AI 对社区平台的价值</h2>
+<p>AI 行业的技术迭代速度是真的快。一个模型更新，连带着各个大厂、我们平常用的服务、整个行业都跟着动一遍。</p>
+<p>新鲜事多、信息密度高、讨论热度永远不减。</p>
+<p>这就是 GitHub、X、Reddit 这些海外社区，靠着 AI 这一波又兴盛了一次，甚至很多不用这些社区的小白用户因为 AI 也开始使用了。</p>
+<p>到了国内，<strong>公众号、小红书这样的平台，是 AI 原创内容和信息丰富度最好的地方</strong>。</p>
+<p>这一波 AI 的讨论度，让平台、创作者、用户三方都拿到了红利：</p>
+<ul>
+<li><strong>平台</strong>：拿到内容、活跃度、下一代用户</li>
+<li><strong>创作者</strong>：拿到流量、粉丝、变现机会</li>
+<li><strong>用户</strong>：拿到信息、工具、���实可用的经验</li>
+</ul>
+<p>而像 skill 这种<strong>能直接被使用、被复用、被二创的内容资产</strong>，会是下一波 AI 内容里增长最快的形态。被用的东西，传播力远超过被读的东西。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBDM2XVft.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">支付宝又推开了一扇门</span>
+        </a>
+        
+        
+        <a href="recvmvBBMaIJ6a.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">改变一切的 18 个 Claude 设置</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

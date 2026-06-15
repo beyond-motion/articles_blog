@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>如何用AI快速复刻一种海报风格？ — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI设计</span>
+            
+            
+            <span class="topic-chip">AI海报</span>
+            
+            <span class="topic-chip">风格复刻</span>
+            
+            <span class="topic-chip">提示词模板</span>
+            
+            <span class="topic-chip">设计拆解</span>
+            
+            <span class="topic-chip">豆包AI</span>
+            
+            <span class="topic-chip">GPT图片分析</span>
+            
+            <span class="detail-reading-time">约 3 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">如何用AI快速复刻一种海报风格？</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>首先，</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>文章介绍了利用AI快速复刻海报风格的方法：先收集样图，再用提示词让AI拆解海报的设计逻辑（风格、构图、配色、排版等），生成可复用的提示词模板，最后替换关键元素即可批量生成同类海报。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/tF0MieLR_Uz7-gy86ZyXOA" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章提供了一个非常实用的AI海报设计工作流，核心思路是
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#如何用ai快速复刻一种海报风格" class="toc-link">如何用AI快速复刻一种海报风格？</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#复古文学电影海报" class="toc-link">复古文学电影海报</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#苏联构成主义融合风格" class="toc-link">苏联构成主义融合风格</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#故障艺术风格" class="toc-link">故障艺术风格</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#新中式传统节日海报" class="toc-link">新中式传统节日海报</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#新中式极简海报-东方建筑美学" class="toc-link">新中式极简海报 + 东方建筑美学</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#极简插画儿童涂鸦设计" class="toc-link">极简插画儿童涂鸦设计</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="如何用ai快速复刻一种海报风格">如何用AI快速复刻一种海报风格？</h1>
+<blockquote>
+<p>原文链接：https://mp.weixin.qq.com/s/tF0MieLR_Uz7-gy86ZyXOA</p>
+</blockquote>
+<hr />
+<p>最近看了很多海报设计，今天写篇短文，来看看小编是怎么制作海报设计的。</p>
+<p>首先，做AI图片小编一般都会去看样图，有了样图才会有一个大概的提示词设计方向。</p>
+<p>提示词放在最后</p>
+<h2 id="复古文学电影海报">复古文学电影海报</h2>
+<h2 id="苏联构成主义融合风格">苏联构成主义融合风格</h2>
+<h2 id="故障艺术风格">故障艺术风格</h2>
+<h2 id="新中式传统节日海报">新中式传统节日海报</h2>
+<h2 id="新中式极简海报-东方建筑美学">新中式极简海报 + 东方建筑美学</h2>
+<h2 id="极简插画儿童涂鸦设计">极简插画儿童涂鸦设计</h2>
+<p>这些海报怎么制作的呢？首先是去学习一下海报的风格，比如极简主义，拼图风格，故障艺术，复古文学等等。</p>
+<p>把了解到的海报风格去GPT或者支持图片识别的模型，国内建议使用豆包。使用下面这段提示词：</p>
+<pre><code>请作为资深海报设计师，分析我上传的这张海报。
+
+重点不要只描述画面，而要拆解它的设计方法。请从以下角度输出：
+
+1. 这张海报属于什么风格？
+2. 它最核心的视觉创意是什么？
+3. 它的构图结构是什么？
+4. 它如何使用文字、字体和排版？
+5. 它的配色方法是什么？
+6. 它的光影和空间关系是什么？
+7. 它如何通过比例反差制造视觉冲击？
+8. 它传达了什么情绪和隐喻？
+9. 这种方法适合迁移到哪些主题？
+10. 最后请提炼一个&quot;同类海报生成提示词模板&quot;。
+
+要求：
+语言口语化、清晰、有设计判断，不要空泛形容。重点分析&quot;为什么这样设计&quot;和&quot;怎么复用这种方法&quot;。
+</code></pre>
+<p>让AI帮你提炼图片中的相关信息，这时候你就会得到一个模版信息。</p>
+<p>你只需要在模版信息里面，对括号中的关键元素进行填充。最后把完整的提示词丢给AI即可。</p>
+<p>海报风格有很多，我们只需要关注制作方法，技巧。剩下的交给AI就行了。</p>
+<p>因为提示词比较多我这里整理了一个文档。</p>
+<p>需要提示词的同学只需要一个点赞加关注就可以正常访问了：</p>
+<p>https://ocnk927jjhl3.feishu.cn/wiki/QD1Cw0OgmiGftvkt4ZBcfCIcnwf</p>
+<p>不点赞其实也可以正常访问</p>
+<hr />
+<p><em>来源：小钗AIGC | 2026-05-15</em></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBqoIbCUd.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">我用 Codex 整理 AI 视频素材，终于不用到处翻电脑文件了！</span>
+        </a>
+        
+        
+        <a href="recvmvBnf2qxS4.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">花叔不公开的写作 Skill，我逆向出来了</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

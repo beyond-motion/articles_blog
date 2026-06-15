@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>解决方案在这儿！——伊朗战争的终局设想 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">地缘政治</span>
+            
+            
+            <span class="topic-chip">伊朗战争</span>
+            
+            <span class="topic-chip">霍尔木兹海峡</span>
+            
+            <span class="topic-chip">核能力博弈</span>
+            
+            <span class="topic-chip">美伊冲突</span>
+            
+            <span class="topic-chip">现实主义外交</span>
+            
+            <span class="topic-chip">苏伊士运河时刻</span>
+            
+            <span class="detail-reading-time">约 25 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">解决方案在这儿！——伊朗战争的终局设想</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>得霍尔</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>本文基于现实主义逻辑推演伊朗战争的终局方案，核心围绕霍尔木兹海峡控制权与伊朗核能力的博弈。作者提出最可能的方案是：伊朗放弃核最大主义诉求，换取对霍尔木兹海峡的合法管控权。该方案可满足美伊双方各自的核心利益，是双方相向而行的务实出路。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/XuMkGFaqMw7ltvyL5cpEvg" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>文章以清晰的博弈逻辑分析了美伊冲突的终局可能，提出以海峡换核能力的务实方案。作者将霍尔木兹海峡定位为比核武器更有效的经济武器，论证了伊朗获取海峡管控权的战略价值远超核能力。同时从美国国内政治、以色列诉求、中国视角等多维度分析了各方得失，指出美国将面临苏伊士运河时刻式的战略挫折，而中国则成为最大受益者。整体推演逻辑严密，但方案能否落地仍取决于美伊双方的政治意愿与战略克制。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#解决方案在这儿伊朗战争的终局设想" class="toc-link">解决方案在这儿！——伊朗战争的终局设想</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="解决方案在这儿伊朗战争的终局设想">解决方案在这儿！——伊朗战争的终局设想</h1>
+<p><strong>兔主席</strong>/tuzhuxi 20260513</p>
+<p>在中美北京峰会期间，全球最关心的议题，不仅是中美关系，还有美伊战争：这场陷入僵局的冲突如何收场，中美对话，是否有可能促成各方和解。</p>
+<p>现在，笔者将基于公开信息、历史经验及现实主义逻辑，推演一个最务实、最可能的收尾方案。各方力量都可以朝着这个方向去努力，因为它确实是最有可能的出路。</p>
+<p>当前最核心的话题，不是伊朗的弹道导弹，不是代理人网络，不是美军基地，而是两个问题：霍尔木兹海峡，以及伊朗的核能力。伊朗要求从此管控霍尔木兹海峡，美国要求伊朗放弃核能力，同时交出霍尔木兹海峡。</p>
+<p>全球都已清楚看到，霍尔木兹海峡要道，不是核武器，但胜似核武器，且力量更大——它是真正意义的经济核武器。</p>
+<p>伊朗既然用了霍尔木兹海峡这张王炸，就不会再轻易把它收回。如果能够管控霍尔木兹海峡，也就等同于拥有核武器，且还能带来更多实实在在的好处。</p>
+<p>所以，自然终局是，伊朗获得对海峡的实际控制权，进行收费管控，但保障通行，换取在核问题上对美国进行更大让步。</p>
+<p>一言蔽之<strong>，得霍尔木兹海峡，失核能力。这是方案一</strong>。</p>
+<p>当然，另一种方案也有可能，即<strong>交出霍尔木兹海峡，换得所有其他条件。这是方案二</strong>。</p>
+<p>两种方案，本质都是美国的失败，但如何选择，取决于特朗普认为哪种方案更难接受：是让伊朗拥有核浓缩能力、承诺安全保障、放弃美国在中东的军事存在、解除制裁、经济赔偿，等等等等，还是让伊朗保有一个有限收费的海峡？</p>
+<p>恐怕是<strong>方案一</strong>。因为核能力才是固有议题，是战争本来的目标，也是以色列最关心的话题。</p>
+<p>而且方案一可以被各方包装成胜利：伊朗放弃了“核最大主义”，通过海峡，得到经济喘息。最重要的是，海峡的经济价值远超核能力。归根结底，核设施引来的是轰炸、暗杀、战争，海峡则可以创造外汇、影响全球能源定价，塑造同每个通行国家的双边关系，同时和以色列的直接关系最小。<strong>如果我是伊朗，非要二选一，我会选择海峡，而非核能力，也就是方案一。</strong></p>
+<p>下面我们进一步分析。</p>
+<p><strong>一、</strong><strong>战争背景：从</strong><strong>“</strong><strong>最大压力</strong><strong>”</strong><strong>到</strong><strong>“</strong><strong>霍尔木兹僵局</strong><strong>”</strong></p>
+<p>回顾历史。2015年，奥巴马主导的《联合全面行动计划》（JCPOA）曾是伊、美、中、俄、英、法、德、欧盟多方经过数年博弈的产物。最终，确定伊朗将铀浓缩上限锁定在3.67%、离心机数量大幅削减、库存压缩97%、钚路径关闭，以此换取核相关制裁的解除。协议还有“日落条款”，规定相关约束在10~15年后逐步松绑。</p>
+<p>这个协议被以色列视为眼中钉、肉中刺。与奥巴马有个人恩怨的特朗普在第一任政府期间（2018年）单方面将其撕毁，转而启动“最大压力”制裁，想逼迫伊朗全面让步，彻底废除核能力。</p>
+<p>结果呢？伊朗非但没有退让，反而逐步突破，直接浓缩到了60%（接近武器级），库存激增，把核武器突破时间从一年缩短到数周，以此威慑美以。于是，就有了去年6月到现在的中东冲突：美以打击伊朗核设施与代理人网络，伊朗封锁霍尔木兹海峡，报复性袭击美军资产及海湾资产。双方最后陷入了“双重封锁”的僵局，美国海军在海峡外对伊朗封锁，伊朗则控制海峡咽喉，并进一步扩大范围，开始触及海底电缆，似乎要对电缆也收费。</p>
+<p>战争打到现在，各方都付出了巨大代价，而且是全球一起买单。</p>
+<p><strong>美国方面：</strong>高端军事装备库存消耗极大、印太资源东移、特朗普国内经济议程被严重干扰、反战声浪高涨、MAGA基本盘分崩离析、共和党在中期选举面临惨败、特朗普个人威信扫地、美国盟友伙伴关系受到严重破坏，国际地位一落千丈。特朗普真心需要一个退出通道，避免伊朗战争变成另一个永久战争。</p>
+<p><strong>伊朗方面：</strong>波斯人顽强抵抗，但毕竟军事打击是惨烈的，经济也雪上加霜，石油出口锐减，海峡封锁这张牌更让全球（尤其是亚洲经济体）感到巨痛。伊朗固然把自己的生存摆在第一位，但也因此承担了很大的国际舆论压力。经济核武器也是有代价的。伊朗同样需要一个退出通道，结束战争，进入战后重建。</p>
+<p><strong>美国最大的挑战，是特朗普的面子和虚荣；伊朗最大的挑战，是波斯人的自尊自重及固执（“轴”、教条）。</strong></p>
+<p>但美伊两方也有共识：结束一切，回到正常生活。既然有共识，就可以相向而行。</p>
+<p>既然是相向而行，那么最终协议不可能是任何一方的“最大主义”（maximalist）诉求。伊朗不会同时放弃核能力和海峡，美国也不会直接撤军，交出海峡，并放任伊朗发展核能力。协议的基础，是务实的交换：伊朗更多的放弃核能力，但得到海峡的有限控制权（保障通行、合理收费）。美国得到一个更好的核协议，同时接受伊朗控制海峡的现实。</p>
+<p><strong>二、</strong><strong>协议框架：得霍尔木兹，放核能力</strong></p>
+<p>我们结合各方的得与失，分析一下这个方案。</p>
+<p><strong>1.</strong><strong>伊朗的收获（海峡实质且合法的掌控、获得经济红利）：</strong></p>
+<p>美国及国际社会默许，或通过明确机制承认伊朗对海峡的管理角色。基于此，伊朗可以通过公开的、正式的、合法的手段，在原则保障通行的基础下，对过往船只收取费用。类比苏伊士运河和巴拿马运河等的管理。对伊朗的好处，包括但不限于：</p>
+<p>1）<strong>获得大量额外经济收入</strong>，可以缓解制裁压力，获取变相赔偿收入、进行战后重建等。通过海峡收费获取收入是现实的，让美国政府掏钱赔偿是不现实的。</p>
+<p><strong>2）</strong><strong>获得对所有通行国家地区的地缘政治经济影响力</strong>——所有通航国家都要维护和伊朗的一对一关系。</p>
+<p><strong>3）</strong><strong>通过“合法持有经济核武器”，获得了实质上的安全保障</strong>。一旦发生冲突，伊朗可以迅速通过管控海峡震慑美以，而这一招远比核武器更灵。事实上，两个核武器国家（美国和以色列）开战几个月来都对伊朗的海峡封锁无可奈何。</p>
+<p><strong>4）</strong><strong>在国内宣布重大胜利。</strong>波斯人历史性地打退美国，让美帝国经历了“苏伊士运河时刻”，并得到了海峡这个比真正核武器更加管用的经济杠杆。</p>
+<p><strong>2.</strong><strong>伊朗的让步（放弃最大主义诉求、</strong><strong>“</strong><strong>战略克制</strong><strong>”</strong><strong>）：</strong></p>
+<p>1）<strong>放弃最大主义政治诉求：</strong>不再坚持要求美国解除中东军事基地、提供安全保障等形式上的承诺。</p>
+<p><strong>2）</strong><strong>放弃最大主义经济诉求：</strong>不再要求美以对伊朗进行大额战争赔偿、全面无条件解除制裁、解冻所有资产等。</p>
+<p>3）<strong>核领域实质让步：</strong>恢复类似JCPOA的限制，例如浓缩上限3.67%或更低、库存压缩、离心机数量受限、IAEA全面准入，接受15~20年核心限制期（“日落条款”）、放弃钚路径，重水设施接受整改等。此前，特朗普就已对伊朗明确，美国可以接受20年的日落条款——原因很简单，奥巴马的JCPOA限制期为15年，特朗普希望加5年，得到一个优于奥巴马的条款。这是大统领的面子问题，他很纳闷，为什么伊朗人这么轴，就不给这个面子呢？如果伊朗的海峡管控权得到确认，按说应当在这个基础上做出更大让步。</p>
+<p><strong>4）</strong><strong>不再寻求安全保障：</strong>伊朗不能强迫美国在军事上退出中东，或许还得承诺限制向代理人提供先进导弹/无人机、减少灰色地带行动。</p>
+<p><strong>5）</strong><strong>海峡管控本身也要克制：</strong>伊朗要公开承诺或通过多边机制保障航行自由，停止无差别封锁、扣船或导弹威胁。伊朗保留对海峡两岸的主权监控权，但不得动辄长期中断全球能源通道。关键在于，伊朗一旦获得海峡的合法掌控，就必须保持克制，不能出现这样的情形，如以色列一轰炸黎巴嫩，或者阿联酋推进美以军事合作，伊朗就又进行全面或有针对性的海峡封锁。简言之，海峡武器化这张牌要慎用，并通过机制保障。</p>
+<p><strong>3.</strong><strong>美国的收获（更好的核协议、免除满足其他条件）：</strong></p>
+<p>1）<strong>拿到一个</strong><strong>“</strong><strong>比奥巴马更好</strong><strong>”</strong><strong>的核协议：</strong>降低浓缩上限、延长日落期（例如20年以上）、强化验证机制，阻止伊朗短期“突破”。核心在于：特朗普也不关心20年以后会发生什么，他只要拿到一个看上去比奥巴马核协议更好，让自己下得了台的协议。这就是特朗普的“赢学”，波斯人必须加以配合。</p>
+<p>2）<strong>默认保留中东军事存在：</strong>不需要正式撤军，不需要对伊朗提供安全保障，但实际情况是，美国本来就会长久撤离在这次战争里被伊朗摧毁的许多美军基地，短中期内不会再有大规模的修复和部署。一切已是既成事实。美伊都不要纠结。</p>
+<p>3）<strong>维持对伊朗的部分经济制裁</strong>，这既是形式和面子需要，也是长期大棒和杠杆。</p>
+<p>4）<strong>在国内宣传</strong><strong>“</strong><strong>大胜</strong><strong>”</strong><strong>：</strong>特朗普宣布，解决了伊朗核问题、实现了战争目标、降低了油价，并可以重回解决美国本土问题。同时，特朗普还可以把注意力重新投放到西半球（古巴、格陵兰、加拿大等）。放心，特朗普一定可以包装胜利叙事。</p>
+<p><strong>4.</strong><strong>美国的让步（给予伊朗对霍尔木兹海峡的合法管控权）：</strong></p>
+<p>1）<strong>事实承认并制度化伊朗对海峡的管控角色：</strong>承认伊朗对海峡的合法管理、监控、一定的流量调节、对通行船只收取相关费用、实施“安全检查”等权利。只要在合理范围内，就不会被美国单方面定性为“封锁”。</p>
+<p>2）<strong>作为和平协议的一部分</strong>，美国停止对伊朗海峡管控权的一切军事对抗姿态。</p>
+<p>3）<strong>接受一个类似但略优于</strong><strong>JCPOA</strong><strong>，但可能有限的核协议。</strong>关键在于，美国很难说服伊朗完全放弃核浓缩能力，无法实现以色列主张所灌输的“零浓缩”概念（即伊朗连民用核能力都不能发展）。对于波斯人来说，坚持核浓缩能力是基本原则，是国家主权的象征。这是最有挑战的争议点。</p>
+<p>4）<strong>制裁松绑：</strong>解除部分经济制裁，允许伊朗合法石油出口与一定的经济、金融往来。关键在于，如果美国给予伊朗海峡收费权，则应当鼓励美元结算才对，不是坐看伊朗通过海峡扩大人民币体系。<strong>这必然意味着美国要重新将伊朗融入美元体系，也必然意味着部分解除制裁。</strong></p>
+<p><strong>5.</strong><strong>方案的好处：满足双方交集，相向而行，各取所需</strong></p>
+<p>1）伊朗和美国要分别放弃自己的“最大主义”条款，不要逼着对方全面投降</p>
+<p>2）达成协议后，伊朗和美国可以分别在国内宣称历史性胜利。</p>
+<p>3）为了给协议增信、背书，提供协调与保障机制，需要更多参与者，例如引入中国、俄罗斯、欧洲等大国，以及联合国、海合会、金砖国家等机制。</p>
+<p><strong>6.</strong><strong>以色列的诉求，以及美以伊三方交集</strong></p>
+<p>1）以色列是一个必须考量的因素，因为如果它不满意，就随时可以破坏这个协议。</p>
+<p>2）而对以色列来说，伊朗对霍尔木兹海峡管控并不是它的生存威胁，核武器才是它的生存威胁。因此，相对来说，以色列更关心限制伊朗的核能力</p>
+<p>3）因此，美国让渡海峡管控权，要求伊朗放弃核能力，相对来说更能满足以色列的需求。当然，以色列比美国门槛更高，会纠结于“零浓缩”问题。</p>
+<p>4）最终，美国要对以色列说，伊朗已经在核问题上做了最大退让，请以色列接受协议</p>
+<p>5）而这时，<strong>伊朗控海峡，最大化放弃核能力，成了美以伊三国的交集。</strong></p>
+<p><strong>三、</strong><strong>为什么霍尔木兹海峡比核武器</strong><strong>“</strong><strong>更好用</strong><strong>”</strong></p>
+<p>为什么霍尔木兹海峡比核武器更有用？</p>
+<p>伊朗战争已经让全世界看到，这条海峡控制了全球五分之一的天然气，五分之一的原油，三分之一的化肥，超过一半的硫磺，近四成的氦气。海峡不能正常通行，对全球能源、供应链、粮食安全都会形成广泛影响。海峡问题再不解决，进入六月，我们将看到重大负面经济影响。</p>
+<p>得到了对海峡的合法管控权后，伊朗可以每天创造外汇，还能持续影响全球能源定价、供应链、买家政策，是一个超级地缘影响工具。</p>
+<p>相比之下，核能力的符号性意义太强，风险太高，它只是看上去威慑作用强，但实际使用概率极低，甚至几乎无法使用（参考俄罗斯的案例）。而且，所有国家都反对伊朗发展核武器——因为伊朗发展核武器几乎势必导致海湾国家及全球核扩散。<strong>伊朗也早已认识到，在核浓缩上寻求突破，升级核设施，非但不能通过震慑获得和平，相反招致全面的制裁、孤立、甚至战争，代价极大。而伊斯兰共和国自己本来也不希望真的发展核武器。</strong></p>
+<p><strong>既然如此，那还不如追求合法掌控海峡</strong>。只要海峡在手，就足以实施有力震慑，同时可以体面放弃美国撤军、提供安全保障、全面赔偿等最大主义要求，给谈判留下空间。关键在于，海峡天天收租，在海峡经济的支持下，伊朗可以融入全球经济，快速重建及发展，扩大地区影响力，甚至打造世界强国。而伊朗也可以从原来的外交孤立，成为全球地缘政治参与者。</p>
+<p>芝加哥大学政治学教授Richard Pape的观点，<strong>伊朗获得海峡，将成为继美国、俄罗斯、中国以后的世界第四大全球性力量。</strong>所以，明眼人都能看出，海峡比一堆离心机要值钱得多，而它已经在伊朗的手里，下一步的要害其实是正名。</p>
+<p>核心在于，要让各方安心，伊朗必须保持<strong>战略克制</strong>：把海峡合理通行作为基本原则，可以收取一定的经济费用，但不能任意作为武器化的工具。</p>
+<p>只要让各国安心，那大家还会乐意选择海峡方案。简单的比喻：各国都会反对埃及发展核武器，但没人会反对埃及控制苏伊士运河并合理收取费用。</p>
+<p>因此，对于国际社会来说，如果二选一，那不如接受伊朗合理管控海峡。实际上，国际社会也并没有更好的选择。谁也无法改变伊朗管控海峡的物理现实。</p>
+<p>作为世界第一强国的美国，面临同样的境遇和选择。既然如此，特朗普不如顺水推舟，放弃海峡，但要求伊朗在其他条款上的让步，等波斯人退让得差不多之后，就宣布胜利走人。</p>
+<p><strong>四、</strong><strong>伊朗拿到海峡、放弃核能力的各方得失分析（含中国视角）</strong></p>
+<p><strong>伊朗：</strong>战争已让经济濒临崩溃，拖下去也不是办法，把海峡管控合法化，获取经济收益与杠杆，以及一定的安全威慑，就是最大的胜利。波斯人要克服自己的固执和教条，不能无限追求“核最大主义”。要看到，你的核技术知识是无法抹除的。总有一天你是可以发展正常的核能力的。只是一个战略先后的问题。眼前，关键要给特朗普台阶下。</p>
+<p><strong>中东国家：</strong>海湾国家、以色列，出于各种角度，可能会不满，也担心伊朗复苏，但他们只能接受伊朗作为区域强国的存在。这是过去几千年的一个地缘政治现实。1948年建国的以色列和贝都因部落们不能改变这个现实。海湾阿拉伯国家必须重新考虑将伊朗融入海湾经济，只有区域稳定，才能保障大家的共同发展。</p>
+<p><strong>特朗普</strong><strong>/</strong><strong>美国：历史性的战略挫折</strong></p>
+<p>美国平头老百姓，既不关心海峡，也不关心伊朗核武器<strong>。</strong>特朗普需要的是体面收场，只要结束战争、油价回落、核威胁缓解、股价创新高，就足够包装他的胜利叙事了，选民都会照单全收，皆大欢喜。但美国的战略代价也是真实的：桥水基金创始人雷·达利奥的观点很有代表性：一切都取决于谁控制霍尔木兹海峡”。他认为，赢得海峡控制权的一方，就等于赢得这场战争；如果美国最终让伊朗保留对海峡的实质控制权，那美国就“将被判定为输掉战争，伊朗被判定为获胜。如果美国输掉，那就是美国的“苏伊士运河时刻”（1956年英国在苏伊士危机中颜面尽失，标志着大英帝国全球霸权的终结）。达利奥还指出，过去五百年里，大国博弈反复出现类似的模式：主导帝国被新兴挑战力量在关键贸易咽喉上“卡脖子”，而一旦显露出军事、经济、金融的弱点，无法保护这个节点，盟友的信心就会崩盘、主导秩序坍塌，进而影响资金流动、储备货币地位，整个世界经济政治格局。<strong>这就是为什么他认为伊朗战争及霍尔木兹海峡正是</strong><strong>“</strong><strong>最终一战</strong><strong>”</strong><strong>（</strong><strong>Final Battle</strong><strong>）</strong>。<strong>而在我们的最终解决方案里，美国需要放弃海峡控制权，如此，自然意味着美国输掉战争，全球领导力遭受永久性打击，单极秩序的加速瓦解。</strong></p>
+<p><strong>中国：最大的战略受益者。</strong></p>
+<p>第一，中国反对核扩散——因为同样的趋势也会在其他地区发生（例如东亚）。</p>
+<p>第二，中国希望看到海峡稳定，因为海峡稳定意味着能源稳定、全球经济稳定。中国的发展需要全球经济稳定。</p>
+<p>第三，中国在战后可以扩大在中东的基建、人民币结算、绿色能源出口等。尤其是能源出口：这次海湾能源危机，势必带来新一轮的全球能源结构重组。各国将重新发展煤电、核能，并大力发展可再生能源，进而扩大中国在全球能源版图的相对优势。</p>
+<p>第四，伊朗在战后势必加深绑定中国和俄罗斯的关系。如美国学者所说，如果伊朗成为全球第四大力量（中、俄、美、伊），四国里的中俄伊三国如成为深度伙伴关系，则国际格局将与今天完全不同。</p>
+<p><strong>五、结语</strong></p>
+<p>美伊冲突，美国承认伊朗对海峡的实质掌控权，伊朗放弃对核能力的最大主义追求，有可能是双方各让一步，相向而行后的终结和平解决方案，可能也是最优解。双方早认识到这一点，则冲突也可以早日结束。作为外部调停方，这可能就是努力的方向。</p>
+<p><em>【如您觉得本文不错，欢迎点赞打赏以资鼓励（</em><em>1</em><em>元即可）！】</em></p>
+<p><strong>【希望加入读者交流群的，请添加徐老师微信</strong><strong>deepthought_xu</strong><strong>】</strong></p>
+<p><strong>【</strong><strong>tuzhuxi</strong><strong>视频号已经绑定了</strong><strong>tuzhuxi</strong><strong>新平台，请大家关注</strong><strong>~</strong><strong>】</strong></p>
+<p>欢迎加入「<strong>全球特讯</strong><strong>|</strong><strong>兔主席的宝藏</strong>」，兔主席的精华内容分享圈。共同学习，共同进步！</p>
+<p><strong>数量：</strong>2024年11月上线至今，超过3,500篇文章、1,500万字</p>
+<p><strong>内容</strong>：国际期刊、杂志、报纸、播客甄选及快评</p>
+<p><strong>标签</strong>：宏观、地缘政治、中美关系、科技竞争、大国博弈、AI、商业财经、思想理论</p>
+<p><strong>持续</strong>：坚持二十年创作（持续更新有保障） </p>
+<p><strong>平台：</strong>知识星球、小鹅通/鹅圈</p>
+<p><strong>订阅请扫码（两个平台同步更新，知识星球习惯用户推荐知识星球；新用户推荐小鹅通）</strong></p>
+<p><strong>1.</strong><strong>小鹅通（鹅圈子）【新用户推荐！】</strong></p>
+<p>2.<strong>知识星球</strong></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBlTUMacR.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">Skill结合哩布哩布LibTV，轻松做出AI实机视频！</span>
+        </a>
+        
+        
+        <a href="recvmvBj5fBsIT.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">编程智能体的核心组件【译】（重发，补图）</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>微信读书 Skill，把我做了 3 年的产品干没了 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI工具</span>
+            
+            
+            <span class="topic-chip">Skill开发</span>
+            
+            <span class="topic-chip">知识图谱</span>
+            
+            <span class="topic-chip">开源项目</span>
+            
+            <span class="topic-chip">微信读书</span>
+            
+            <span class="topic-chip">阅读笔记</span>
+            
+            <span class="topic-chip">个人成长</span>
+            
+            <span class="detail-reading-time">约 9 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">微信读书 Skill，把我做了 3 年的产品干没了</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>很多S</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>微信读书开源了官方Skill，功能覆盖书架、阅读时长、热门划线等，直接碾压了许多第三方产品。作者原产品Readecho面临淘汰，但他顺势基于官方Skill开发了三个开源Skill：导出划线笔记、生成十维度阅读画像报告、以及让划线参与日常工作（推荐、引用、回顾），形成完整的读书数据使用链路。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/uaifLILSYWPjVd2hmM2LiQ" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章最打动人的地方在于作者面对产品被官方碾压时的坦然与创造力。他没有抱怨，而是迅速找到新定位——做官方Skill的上层应用。三个Skill的设计思路清晰：导出解决数据归档，分析解决自我认知，使用解决知识活化。尤其是「每天推送一条旧划线」这个设计，把静态笔记变成动态提醒，真正打通了「读」与「用」之间的最后一公里。对重度读者和内容创作者来说，这套工具链值得尝试。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#微信读书-skill把我做了-3-年的产品干没了" class="toc-link">微信读书 Skill，把我做了 3 年的产品干没了</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#三个-skill-的设计思路" class="toc-link">三个 Skill 的设计思路</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#1-导出把划线变成可归档的资产" class="toc-link">1. 导出：把划线变成可归档的资产</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#2-分析一份-10-维度的阅读画像" class="toc-link">2. 分析：一份 10 维度的阅读画像</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#3-使用让划线真正参与日常工作" class="toc-link">3. 使用：让划线真正参与日常工作</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="微信读书-skill把我做了-3-年的产品干没了">微信读书 Skill，把我做了 3 年的产品干没了</h1>
+<blockquote>
+<p>原文链接：https://mp.weixin.qq.com/s/uaifLILSYWPjVd2hmM2LiQ</p>
+</blockquote>
+<p>前几天，微信读书把自己的 Skill 开源了。</p>
+<p>我看完它的使用案例，第一反应是：我和搭档做了两年的产品，可以下线了。</p>
+<p>readecho 是我和搭档两年前开始做的小产品。功能不复杂，Readecho 可以把你微信读书里的划线和笔记同步出来，再用 AI 帮你做一些分析和洞察。</p>
+<p>上线到现在做了一千多个用户，也有一点微薄的收入。</p>
+<p>市面上还有一大批围绕微信读书非公开接口做的第三方插件和 App。大家都是依赖微信之前开放的划线笔记 API，拿到用户的划线笔记，再包装成一个能用得上的产品。</p>
+<p>而这次官方 Skill，微信把之前开放的笔记和划线，扩大到了书架、阅读时长、章节目录、热门划线、个人想法、阅读统计、推荐书单。</p>
+<p>它的安装方式也非常简单，访问微信读书网页版，到 Skill 页面，只需要操作下面两步就能在 Agent 里调用了。</p>
+<p>之前我还一直在说<strong>很多 Skill 的开放让一些 sass 产品没有存在的价值了</strong>。没想到这句话在今天也伤到了自己。自己亲手做的产品被官方的一个更新就碾压了。</p>
+<p>不过我并没太多情绪变化，Readecho 有一年没更新了，这次微信读书 skill 的开放，让 readecho 获得了新生，也就是下面我做的几个 skill。</p>
+<p>在我看来，微信读书的 Skill 最大的门槛不是安装，而是使用。这个 Skill 要依赖用户会问、会拼，会把零散的回答串成有用的产出，对大多数用户，包括我在内，我第一时间拿到它问了几次我读了哪些书，有什么笔记内容，之后就再也没去使用了。</p>
+<p>我现在想解决的问题，和 Readecho 当年想解决的一样。<strong>我们应该如何把微信开放的数据做成标准化的使用场景？</strong></p>
+<p>结合我在微信读书这块做了不少产品分析，我是有不少发言权的。于是花了几天时间，磨出了这三个 Skill ，对应导出、分析、使用三个场景，把微信读书 Skill 用到极致。免费开源，文末附链接，能够更好的帮你用好微信读书。</p>
+<h2 id="三个-skill-的设计思路">三个 Skill 的设计思路</h2>
+<p>我把使用微信读书这件事，拆成了一条用户路径：</p>
+<p>| 阶段 | 想做什么 | Skill |<br />
+|------|----------|-------|<br />
+| 导出 | 把所有划线和笔记拿出来归档 | space-weread-export |<br />
+| 分析 | 看看自己到底是什么阅读类型 | space-weread-analyzer |<br />
+| 使用 | 让读过的书真的影响后续的工作 | space-weread-coach |</p>
+<p>三个 Skill 顺着「读完书之后我想干什么」这条线设计，构成一个完整的链路。</p>
+<p>下面分别说说每一个效果如何。</p>
+<h3 id="1-导出把划线变成可归档的资产">1. 导出：把划线变成可归档的资产</h3>
+<p>第一个 Skill 叫 <strong>space-weread-export</strong>。</p>
+<p>你只需要说一句：「导出我的微信读书划线」。它会先问你两件事：要 Markdown 还是 PDF，要全部书还是指定一本。</p>
+<p>回答完就开始干活，自动调用接口，把所有笔记按书籍和章节排序，每条划线带上时间，生成排版整洁的文件。</p>
+<p>我自己跑了一遍，87 本书、436 条划线、48 条想法，几分钟跑完，输出一份 158KB 的 Markdown 和一份 2.9MB 的 PDF。</p>
+<p>导出之后能干什么？我自己的用法有两个：</p>
+<p><strong>一是放进知识库。</strong> 我的 Obsidian 里有专门一个目录存读书笔记，导出的文件直接进去，搜索和回顾都方便。</p>
+<p><strong>二是精读热门划线。</strong> 如果你指定的某本书你自己没读过，Skill 会问你要不要导出这本书的热门划线，也就是其他读者的高频划线。我以前的习惯，就是先看一本书的热门划线，再决定要不要读全书。这相当于下载一本书的精华部分。</p>
+<h3 id="2-分析一份-10-维度的阅读画像">2. 分析：一份 10 维度的阅读画像</h3>
+<p>第二个 Skill 叫 space-weread-analyzer。</p>
+<p>它会拉取你的全量阅读数据，从十个维度做分析：阅读画像、兴趣变化、知识结构与盲区、阅读质量诊断、高价值内容提炼、书籍关系网络、行动建议、选题建议、缺失知识类型、补充推荐。</p>
+<p>最后输出一个 9:16 比例的白底简约 HTML 报告，11 张卡片，可以截屏发小红书。</p>
+<p>我自己用数据跑了一次，有几个发现挺扎心：</p>
+<ul>
+<li>完成率 54%，但有 25 本书完成度低于 30%，属于焦虑式收藏。</li>
+<li>近一年阅读时长 4.8 小时，比前一年 33 小时下降了 85%。这反应了我这一年的精力管理问题。</li>
+<li>Skill 还会基于阅读偏好猜一个 MBTI，给我的判断是 INFJ，差一个字母就猜中了，整体看完觉得挺准。</li>
+</ul>
+<p>这份报告最大的价值，在于让你面对自己的真实阅读状态，为自己的阅读查漏补缺。</p>
+<h3 id="3-使用让划线真正参与日常工作">3. 使用：让划线真正参与日常工作</h3>
+<p>第三个 Skill 叫 space-weread-coach，它解决的是「划线吃灰」的最后一公里。它有三个用法：</p>
+<p><strong>1）推荐书籍</strong> — 结合我书架上已经读过的书来判断我的段位，结合我的兴趣来推荐。</p>
+<p><strong>2）引用</strong> — 根据我在写的某个主题的文章，推荐一些热门划线。它会从我的 436 条划线里筛出最相关的几条，附上原话、书名、章节，并给出使用建议。</p>
+<p><strong>3）回顾</strong> — 每天推送一条我过去划过的笔记。它会自动去重，保证不会反复看到同一条，越老的划线越优先被翻出来。推送方式：你主动问「今天给我推一条」，或者用 Claude Code 的 <code>/loop</code> 定时触发，每天早 8 点通知一条划线笔记。</p>
+<p>把你过去的阅读，重新变成一种持续的精神资源。</p>
+<p>所有 Skill 都已经开源放到 GitHub 上：github.com/zephyrwang6/space-weread</p>
+<p>如果你符合下面任何一种情况，都值得一试：</p>
+<ul>
+<li>微信读书重度用户，划线几百条以上，但很少回顾</li>
+<li>内容创作者，写作的时候需要引用读过的书</li>
+<li>想做个人知识管理，但缺一个把读书数据结构化的入口</li>
+<li>对 Claude Code Skill 感兴趣，想看看一个完整的 Skill 体系长什么样</li>
+</ul>
+<p>微信读书的 Skill 是我目前看到的价值含量最高的，只是针对一本书去挖掘都有不少场景去做，建议使用微信读书的朋友们都可以去试试。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBwT6RgkN.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">我做了一款开源免费的Markdown公众号排版神器</span>
+        </a>
+        
+        
+        <a href="recvmvBs5NuSao.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">用 AI 三年多，我发现这 6 种交付物可以完全交给 AI 了</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

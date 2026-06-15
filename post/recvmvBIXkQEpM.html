@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>你抛弃的n8n工作流，Claude Code捡回来了，但最让我意外的不是这个 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">效率工具</span>
+            
+            
+            <span class="topic-chip">Claude Code</span>
+            
+            <span class="topic-chip">多模态</span>
+            
+            <span class="topic-chip">n8n工作流</span>
+            
+            <span class="topic-chip">multi-agent</span>
+            
+            <span class="topic-chip">Step 3.7 Flash</span>
+            
+            <span class="topic-chip">代码重构</span>
+            
+            <span class="topic-chip">Flash模型</span>
+            
+            <span class="topic-chip">阶跃星辰</span>
+            
+            <span class="detail-reading-time">约 16 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">你抛弃的n8n工作流，Claude Code捡回来了，但最让我意外的不是这个</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>一个</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>作者用 Claude Code 的 /workflows 功能重构了一个插图生成项目，将693行大杂烩代码拆成6个职责单一的文件，并用5个 Agent 做 code review，揪出1个 critical bug 和6个其他问题并全部修复。多模态任务中，模型仅凭几张参考图就自动分析风格、生成模板并完成代码改动。驱动这一切的底层模型是阶跃星辰的 Step 3.7 Flash，作者对其在 Agent 场景中的表现感到意外。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/Tj1gn4GcGuK0jxo7IDT4qA" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章最有价值的地方在于用真实项目验证了 Flash 级别模型在 Agent 场景下的实用性。重构任务展示了从分析、规划到执行的完整 Agent 链路，multi-agent review 环节更是亮点——5 个 Agent 各司其职，揪出了开发者自己都没注意到的 critical bug，说明 AI 辅助 review 已经具备了真正的工程价值。多模态任务则证明了 Flash 模型在图片风格理解和代码生成上的双重能力。作者提出的核心观点
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#你抛弃的n8n工作流claude-code捡回来了但最让我意外的不是这个" class="toc-link">你抛弃的n8n工作流，Claude Code捡回来了，但最让我意外的不是这个</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#先说说-workflows-是什么" class="toc-link">先说说 /workflows 是什么</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#我拿什么项目来试" class="toc-link">我拿什么项目来试？</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#任务一重构-provider-架构" class="toc-link">任务一：重构 Provider 架构</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#真正让我意外的是这个" class="toc-link">真正让我意外的是这个</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#任务二看图说话多模态扩充插图风格" class="toc-link">任务二：看图说话——多模态扩充插图风格</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#两个任务跑完我的感受" class="toc-link">两个任务跑完，我的感受</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#写在最后" class="toc-link">写在最后</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="你抛弃的n8n工作流claude-code捡回来了但最让我意外的不是这个">你抛弃的n8n工作流，Claude Code捡回来了，但最让我意外的不是这个</h1>
+<p>关注 「<strong>林月半子的AI笔记</strong>」，设为「<strong>星标</strong>」</p>
+<p>我是林月半子，教你用AI干掉90%的重复劳动<strong>！</strong></p>
+<p>去年 n8n 很火，我平时的工作流基本都是拿它搭的，甚至给客户定制了不少智能体。后来随着 Skills、Hermes 这些 AI 原生方案越来越成熟，我自己的个人工作流已经逐步迁移过去了，n8n 主要留给企业项目。</p>
+<p>前几天刷推的时候发现 Claude Code 居然支持了 /workflows，作为工作流的古早玩家，这必须试试。</p>
+<p>然后我就拿手头一个一直想重构的项目开刀了。</p>
+<h2 id="先说说-workflows-是什么">先说说 /workflows 是什么</h2>
+<p>简单来说，/workflows 就是你给 Claude Code 一个目标，它自己现场编排出一套执行方案，然后调度一堆子智能体分工跑完。不是你提前画好流程让它照着走，而是它自己规划、拆解、执行，一条链路跑到底。</p>
+<p>你可以把它理解成 n8n 的 AI 原生版，不用拖节点、不用配连线，你用自然语言描述流程，它自己编排执行。</p>
+<p>这个功能目前是研究预览版，Pro 用户在 /config 里打开就能用，需要 Claude Code v2.1.154 或更高版本。</p>
+<p>我试了一下，确实能跑，具体效果后面会看到。</p>
+<p>但今天这篇的重点不是 /workflows。</p>
+<p>试完之后我顺手就拿 Claude Code 干了点正事，手头有个老项目一直想重构，正好趁这个机会搞一搞。跑这些任务时底层用的模型，才是真正让我意外的。</p>
+<h2 id="我拿什么项目来试">我拿什么项目来试？</h2>
+<p>我之前做过一个插图 Skill，专门用来给技术文章生成插图。核心逻辑是调用不同的图片生成 API（我管它叫 provider），根据文章内容自动出图。</p>
+<p>生成逻辑我用 Python 脚本写的，没有全做成 .md 配置，主要是方便 debug，脚本出问题可以直接跑、直接调。</p>
+<p>项目跑了挺久，但有个问题一直困扰我：所有 provider 的逻辑全塞在一个文件里。A平台、B平台、X平台，全挤在一起，代码越来越臃肿，每次加新 provider 都要在一堆 if-else 里面找位置。</p>
+<h2 id="任务一重构-provider-架构">任务一：重构 Provider 架构</h2>
+<p>直接在 Claude Code 里下了一条指令：</p>
+<p>分析当前项目中 ./skills/linyuebanzi-image-gen/scripts/generate.py的代码结构。这个文件里所有provider的逻辑全部挤在一起，我需要你做一次完整的重构：1.先通读整个项目，理解现有的架构和每个provider的差异2.把通用逻辑（HTTP请求、轮询等待、错误处理）抽成一个base模块3.每个provider拆成独立文件，只保留自己特有的逻辑（请求构造、响应解析、payload构建）4.创建一个工厂函数统一调度，主入口generate.py只负责调度5.确保重构后所有provider 的功能跟之前完全一致，包括环境变量读取、默认配置、轮询逻辑</p>
+<p>这个任务考验的不是"能不能写代码"，任何模型都能写代码。关键是它能不能理解现有的代码架构，搞清楚哪些逻辑是通用的、哪些是各 provider 独有的，然后规划出一个合理的拆分方案。这是典型的 Agent 任务：需要先分析、再规划、再执行，不是一句话就能搞定的。</p>
+<p>然后它开始跑了。</p>
+<p>它自己把这个重构拆成了 3 个子任务：<br />
+1. Create providers package with base class and 3 provider implementations<br />
+2. Refactor generate.py to use the new provider modules<br />
+3. Verify refactored code works correctly</p>
+<p>4 分 19 秒，跑完了整个重构。</p>
+<p>重构前：generate.py 一个文件，693 行，所有 provider 的逻辑用 if/elif 分支混在一起。</p>
+<p>重构后：主入口 generate.py 只剩调度逻辑，每个 provider 独立一个文件，通用逻辑抽到 base 模块。职责清晰，加新 provider 再也不用翻几百行代码找位置了。</p>
+<p>693 行的大杂烩拆成了 6 个职责单一的文件，架构一目了然。</p>
+<p>但重构只是第一步。代码写完了，谁来 review？</p>
+<p>我把这个重构提了一个 PR，然后让 Claude Code 的 /workflows 来做 code review。</p>
+<p>它直接启动了一个 multi-agent review workflow，5 个 agent 分 5 个阶段依次跑：Architecture Review、Bug Hunt、Parity Check、Code Quality、Synthesis。</p>
+<p>每个 Agent 各司其职。</p>
+<p>有的专门审架构设计，有的专门找 bug，有的专门做行为一致性校验。而驱动这 5 个 Agent 的底层模型，全部都是 Step 3.7 Flash。</p>
+<p>5 个 Agent 跑完之后，还真让它揪出了一个 critical bug——重构的时候 run_single() 函数的签名改了，但调用处传参没跟着改，导致 --aspect-ratio 和 --resolution 两个 CLI 参数被直接丢弃了。单张模式下永远用默认值 16:9 / 2K，CLI 传什么都没用。</p>
+<p>除了这个 critical bug，它还列了一张完整的问题清单——--provider 的 choices 硬编码了、BaseProvider 没用 abc.ABC + @abstractmethod、异常类型不一致……从 Critical 到 Info 分了四个等级，条理很清楚。</p>
+<p>我直接说了句"修复一下吧"，它不光修了那个 critical bug，把 Medium 和 Low 级别的问题也全部修完了。最后给了一张修复总结表，7 个问题修了 6 个，剩下 1 个 Info 级别的标注了"设计层面，暂不改动"。</p>
+<p>四笔提交，所有 review 发现的问题都修完了，PR 干干净净。</p>
+<p>这个过程让我印象很深，重构本身跑得很顺，但 review 环节还是抓到了遗漏。一个 Agent 写代码，另外 5 个 Agent 审代码，审完直接修，互相兜底。</p>
+<p>这才是 multi-agent 的真实价值。</p>
+<p>而驱动这一切的，都是同一个 Flash 级别的模型。</p>
+<h2 id="真正让我意外的是这个">真正让我意外的是这个</h2>
+<p>看到这里你可能觉得，Claude Code 用的是 Claude 自家的模型，这效果好也正常。</p>
+<p>其实不是。</p>
+<p>我跑这个重构任务的时候，底层模型用的是阶跃星辰的 Step 3.7 Flash。</p>
+<p>没错，不是 Claude Sonnet，不是 Opus，是一个 Flash 级别的模型。</p>
+<p>Step 3.7 Flash 是阶跃星辰面向生产级 Agent 场景专门优化的模型。它不是那种"跑个 benchmark 分数好看"的模型，而是真的在 Agent loop 里——规划、搜索、工具调用、代码生成、多轮修正——每一步都做了效率优化。</p>
+<p>开源、可本地部署，而且是 Flash 级别的成本。</p>
+<h2 id="任务二看图说话多模态扩充插图风格">任务二：看图说话——多模态扩充插图风格</h2>
+<p>重构搞定了，接下来换个维度，我们来试试 Step 3.7 Flash 的多模态能力。</p>
+<p>我平时刷技术博客的时候，偶尔会看到一些插图风格特别好看的文章，就顺手把图存下来。存多了之后就想，能不能把这些风格也加到我自己的插图 Skill 里？</p>
+<p>不过在干活之前，我先想确认一个事：Step 3.7 Flash 作为一个 Flash 级别的模型，它的图片理解能力到底怎么样？</p>
+<p>分析得还挺准的——配色方案、线条风格、构图特点、质感、整体氛围，每个维度都拆得很细。不是那种泛泛的"这是一张手绘风格的图"就完事了，它能具体到"手绘素描风，线条有轻微不规则抖动""背景有细微纸张纹理，增加手绘真实感"这种程度。</p>
+<p>行，识图能力没问题，那就让它干正经活吧。</p>
+<p>我的这个插图 Skill 目前支持 6 种插图风格，每种风格都有一个 .md配置文件，定义了 prompt 模板和视觉参数。</p>
+<p>styles/<br />
+├── cartoon-infographic.md<br />
+├── cozy-handdrawn.md<br />
+├── executive-tech.md<br />
+├── infographic.md<br />
+├── notebook.md<br />
+└── tech-doodle.md</p>
+<p>我想再扩充一种新风格，但手动写 prompt 模板太费劲。你得精确描述配色、线条、构图、质感，还得确保生成出来的图跟你脑子里想的一样。</p>
+<p>所以我就把刚才那几张参考图放到项目目录里，让 Step 3.7 Flash 自己搞定所有的事。分析图片风格、生成 prompt 模板、读懂项目结构、改好所有需要改的代码。</p>
+<p>简单来说就是：你先看看现有风格文件怎么写的，再读一遍项目代码搞清楚加一种新风格需要动哪些地方，然后分析参考图、起个名字、把所有改动一步到位。</p>
+<p>1 分 31 秒，全部搞定。</p>
+<p>不光分析了风格、生成了 prompt 模板，还自己判断出需要改哪些文件，一次性全改完了。</p>
+<p>整个过程就是丢几张图进去，它自己搞定剩下所有的事，不用额外配视觉 MCP 或者其他什么东西。</p>
+<h2 id="两个任务跑完我的感受">两个任务跑完，我的感受</h2>
+<p>说实话，跑之前我对 Flash 级别的模型没抱太大期待。</p>
+<p>之前听到"Flash"这个词，下意识觉得就是"便宜版""能用但糙"。但实际跑下来，它在 Agent 场景里的表现完全不糙——代码重构的架构理解到位，多模态的图片风格分析也准确，而且都能自己判断需要改哪些文件、怎么改。</p>
+<p>而且速度确实快。两个任务跑下来，整个流程的响应很流畅，没有那种"等半天才出结果"的感觉。对于 Agent 这种需要多轮调用的场景，每一步快一点，累积下来体验差异很大。</p>
+<p>当然也不是一步到位的。</p>
+<p>重构那个任务，first-pass 写出来的代码结构没问题，但 5 个 Agent 审完还是揪出了 1 个 critical bug 和 6 个中低级问题。不过话说回来，发现 bug 的是 Step 3.7 Flash，修 bug 的也是 Step 3.7 Flash——5 个 Agent 分工审查，7 个问题修了 6 个，全是同一个 Flash 模型干的。互相兜底，最终交付的代码质量是过关的。</p>
+<p>对于 Agent 场景来说，Flash 级别的成本才是能在生产环境里用得起的。一个 Agent 任务跑下来可能调几十次模型，如果每次都是旗舰模型的价格，很多场景根本撑不住。Step 3.7 Flash 刚好卡在"用得起 + 搞得定"这个位置。</p>
+<p>再加上开源可部署，对于做企业项目的人来说，客户经常要求数据不出内网，这一点很实际。</p>
+<h2 id="写在最后">写在最后</h2>
+<p>工作流这个东西，形态一直在变。从 Zapier 到 n8n，从拖拽到自然语言，从单模型到 multi-agent。</p>
+<p>但核心没变过，你定义目标，机器去执行。</p>
+<p>变的只是"执行"这件事，越来越不需要你操心了。</p>
+<p>Claude Code 的 /workflows 是一个信号。</p>
+<p>而 Step 3.7 Flash 让我看到，驱动这一切的，不一定非得是最贵的模型。</p>
+<p>够快、够稳、用得起。</p>
+<p>在 Agent 时代，这三个字可能比"最强"更重要。</p>
+<p>Step 3.7 Flash 是开源的，感兴趣的可以搜一下阶跃星辰。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBNTwF0Yd.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">六一宠粉节：氪200刀，乔帮主开源8个工具、5个精选Skill，统统免费！</span>
+        </a>
+        
+        
+        <a href="recvmvBF9URwIs.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">编程、写作、AI 短剧，Opus 4.8 的 effort 怎么选</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

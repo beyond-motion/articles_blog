@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>我用 Codex 整理 AI 视频素材，终于不用到处翻电脑文件了！ — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI视频制作</span>
+            
+            
+            <span class="topic-chip">Codex</span>
+            
+            <span class="topic-chip">AI视频</span>
+            
+            <span class="topic-chip">素材库</span>
+            
+            <span class="topic-chip">文件整理</span>
+            
+            <span class="topic-chip">内容资产管理</span>
+            
+            <span class="topic-chip">废片复用</span>
+            
+            <span class="detail-reading-time">约 15 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">我用 Codex 整理 AI 视频素材，终于不用到处翻电脑文件了！</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>模型越</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>文章介绍了如何利用 Codex 手机端联动功能来整理 AI 视频素材库。作者指出，随着 AI 视频项目增多，素材管理变得混乱，Codex 可以通过只读扫描、生成索引和整理目录的方式，帮助团队高效管理素材，实现素材复用，提升内容生产效率。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/BpAsJp0vttEoe51ahQy5mA" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章为 AI 视频创作者提供了一种实用的素材管理方案。通过 Codex 手机端联动，用户可以远程指挥电脑端的 Codex 进行素材扫描、索引生成和目录整理，特别适合处理大量角色图、分镜参考、提示词和废片等素材。作者强调先只读扫描再逐步整理的安全做法，以及保留废片作为经验积累的建议，对 AI 视频团队具有较高的实操参考价值。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#我用-codex-整理-ai-视频素材终于不用到处翻电脑文件了" class="toc-link">我用 Codex 整理 AI 视频素材，终于不用到处翻电脑文件了！</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="我用-codex-整理-ai-视频素材终于不用到处翻电脑文件了">我用 Codex 整理 AI 视频素材，终于不用到处翻电脑文件了！</h1>
+<p>最近 Codex 的手机端联动终于能用了。</p>
+<p>我这两天试下来，第一反应就是，这东西最适合拿来干脏活。</p>
+<p>尤其是电脑的素材管理。</p>
+<p>我们做 AI 视频时间越久，越能感觉到一个问题。</p>
+<p>模型越来越强，生成越来越快，但项目文件也越来越乱。</p>
+<p>角色图、分镜参考、提示词、废片、成片、学员案例、课程 SOP，经常散在下载目录、桌面、飞书、网盘、Obsidian 和各种临时文件夹里。</p>
+<p>有时候最烦的不是重新生成一条视频，是明明以前做过，结果现在找不到了。</p>
+<p>这篇不讲很硬核的技术，就讲大家现阶段非常有用的。</p>
+<p>我直接拿 AI 视频素材库 这个场景，讲一下我会怎么用 Codex 来整理。</p>
+<p>你如果也在做 AI 视频、AI 短剧、AI 漫剧，或者团队里已经攒了一堆素材，可以先照着跑一遍。</p>
+<p>这次更新，真正有用的地方在哪里</p>
+<p>现在手机上的 ChatGPT 可以连接电脑里的 Codex。</p>
+<p>电脑端和手机端登录同一个账号，更新到最新版本以后，按照提示授权就行。</p>
+<p>设置好以后，你在手机上也能继续看 Codex 的任务。</p>
+<p>它跑到一半要你确认，你可以在手机上回。</p>
+<p>它需要你判断某个文件该不该移动，你也可以在手机上看。</p>
+<p>它整理到一半遇到不确定的素材，你不用立刻坐回电脑前。</p>
+<p>这个体验放在写代码里当然有用，但我更关心它放到内容团队里能干什么。</p>
+<p>因为 AI 视频的素材管理，真的很适合交给 Codex 做第一轮。</p>
+<p>这件事人工做很烦，AI 做反而刚好。</p>
+<p>做 AI 视频，素材乱起来特别快</p>
+<p>如果你只是偶尔玩一条视频，素材乱一点没事。</p>
+<p>但团队一旦开始做课程、做案例、做学员点评、做商单交付，文件量会膨胀得很快，像我文章开头这个文件夹里面，不知不觉就有这么多文件了...</p>
+<p>一个角色，可能有首图、参考图、统一风格图、失败图、不同模型生成的版本。</p>
+<p>一个镜头，可能有提示词、分镜描述、参考图、生成视频、剪辑工程、废片和最终成片。</p>
+<p>一个学员案例，可能有原始作品、修改建议、二次优化结果、群聊反馈、适合写成文章的截图。</p>
+<p>这些东西如果没有素材库，过两周就会变成一堆我好像见过，但不知道在哪的文件。</p>
+<p>下面是我让 Codex 给我整理好之后的多媒体文件夹。</p>
+<p>我最近越来越觉得，AI 视频团队的素材库，应该像剪辑团队的素材盘一样重要。</p>
+<p>它不是为了看起来整洁，主要是为了复用。</p>
+<p>能复用，团队才会越做越快。</p>
+<p>不能复用，每个项目都像第一天上班。</p>
+<p>让 Codex 做只读扫描</p>
+<p>那至于具体怎么操作，我这里给大家分享一些方法。</p>
+<p>第一步一定不要急着让 Codex 移动文件，先让它只读扫描。</p>
+<p>这个顺序很重要。</p>
+<p>AI 再聪明，也不要一上来就给它删除、覆盖、批量移动的权限。</p>
+<p>尤其是 AI 视频素材里，可能有客户文件、学员作品、课程资料和商单素材，先看懂，再整理。</p>
+<p>我会这样下指令：</p>
+<p>text</p>
+<p>请只读扫描这个 AI 视频素材文件夹，不要删除、移动、覆盖任何文件。  请帮我生成一份素材索引，按下面几类整理： 1. 角色资产 2. 场景与镜头参考 3. 提示词与参数 4. 成片与废片 5. 学员作品案例 6. 课程 SOP 与项目复盘  </p>
+<p>每一项都写清楚：文件名、原始路径、可能用途、适合复用的场景、是否需要人工确认。</p>
+<p>这一步跑完，你先看报告，不要让它马上改文件。</p>
+<p>如果它把角色图识别成场景图，或者把废片当成成片，你就在手机上告诉它怎么改。</p>
+<p>现在手机能接上 Codex，这种小指令就不用一直守电脑了。</p>
+<p>素材库目录可以先这样建</p>
+<p>如果你现在没有现成结构，可以先用一个简单版本。</p>
+<p>这里面我最建议单独保留“废片与失败案例”。</p>
+<p>很多人只留好结果，失败版本随手删掉。其实对 AI 视频来说，废片很值钱。</p>
+<p>哪种镜头容易飘，哪种动作容易穿帮，哪种人物一换角度就崩，废片里全是经验。</p>
+<p>你把失败原因写清楚，下次团队就少踩一次坑。</p>
+<p>这也是素材库和普通文件夹最大的区别。</p>
+<p>普通文件夹只告诉你东西在哪。素材库要告诉你，这个东西下次能怎么用。</p>
+<p>让 Codex 继续生成索引</p>
+<p>目录有了以后，再让 Codex 生成一份可以长期维护的索引。</p>
+<p>我建议索引至少包含这些字段：</p>
+<p>|<br />
+字段</p>
+<p>|</p>
+<p>用途</p>
+<p>|<br />
+| --- | --- |<br />
+|</p>
+<p>文件名</p>
+<p>|</p>
+<p>快速定位素材</p>
+<p>|<br />
+|</p>
+<p>原始路径</p>
+<p>|</p>
+<p>防止移动后找不到来源</p>
+<p>|<br />
+|</p>
+<p>素材类型</p>
+<p>|</p>
+<p>角色、场景、提示词、成片、废片、案例</p>
+<p>|<br />
+|</p>
+<p>适合场景</p>
+<p>|</p>
+<p>AI短剧、口播视频、产品视频、课程案例</p>
+<p>|<br />
+|</p>
+<p>复用建议</p>
+<p>|</p>
+<p>下次怎么用，不只记录在哪</p>
+<p>|<br />
+|</p>
+<p>风险备注</p>
+<p>|</p>
+<p>是否涉及客户、学员、版权、隐私</p>
+<p>|</p>
+<p>给 Codex 的指令可以这样写：</p>
+<p>text</p>
+<p>请基于刚才的扫描结果，生成一份 Markdown 素材索引。  要求： 1. 用表格整理，不要改动原文件。 2. 每个素材都补一列“复用建议”。 3. 涉及客户、学员、商单、未公开课程素材的内容，统一标记“需人工确认”。 4. 最后单独列出 10 个最适合做公众号案例拆解的素材。</p>
+<p>这一步做完以后，素材就开始变成内容资产了。</p>
+<p>因为它不再只是躺在电脑里的文件。</p>
+<p>它能被搜索，能被复盘，能被拿去写文章，能变成课程案例，也能让团队新人更快接手。</p>
+<p>如果你用 Obsidian，可以再往前走一步</p>
+<p>我们自己会更习惯把素材索引放进 Obsidian。</p>
+<p>原因很简单，Obsidian 更适合做人看的总控台。</p>
+<p>你可以在里面放素材索引、项目复盘、课程 SOP、公众号选题和学员案例。</p>
+<p>后面如果接 LLM Wiki，也能让 AI 更容易读懂这些知识之间的关系。</p>
+<p>比如一个学员作品，不只是一张图或一条视频。</p>
+<p>它可以关联到：这个学员原始问题是什么、我们给了什么修改建议、修改后提升在哪里、适合写成哪篇公众号文章、能不能变成训练营里的案例等等。</p>
+<p>这一步做完，素材管理才开始和内容生产连起来。</p>
+<p>如果你只把文件分类放好，它只是整理电脑。</p>
+<p>如果你把素材和案例、文章、课程、项目复盘连起来，它才开始变成内容工厂。</p>
+<p>建议你先跑一个小文件夹</p>
+<p>别一上来把整个电脑都交给 Codex。</p>
+<p>先找一个小项目试试。</p>
+<p>比如一个 AI 视频项目文件夹，里面有 20 到 50 个素材就够了。</p>
+<p>让 Codex 只读扫描，生成索引，人工确认，再小范围整理。</p>
+<p>跑通以后，再扩展到团队素材库。</p>
+<p>我的建议是，先用这三条指令：</p>
+<p>text</p>
+<p>第一步：请只读扫描这个文件夹，不要做任何修改，只输出素材分类报告。  第二步：请根据报告生成一份 AI 视频素材索引，标注每个素材的用途和复用建议。  第三步：请根据索引提出目录整理方案，但先不要移动文件，等我确认后再执行。</p>
+<p>这三步很简单，但已经能解决很多团队的真实问题。</p>
+<p>尤其是做 AI 视频的人，素材越积越多以后，最怕的就是做过但找不到、踩过坑但没记录、改过但没复盘。</p>
+<p>Codex 适合先帮我们把这些脏活接过去。</p>
+<p>人不用消失，也不会被替代。</p>
+<p>人要做的是判断素材有没有价值、能不能公开、适合放到哪个项目里、能不能变成下一篇内容。</p>
+<p>最后说一句实话</p>
+<p>ChatGPT 手机端接入 Codex 以后，我觉得确实值得大家试一下。</p>
+<p>但我不建议大家只把它当远程控制工具，远程控制只是表面功能，真正有价值的是，你可以让 Codex 在电脑里持续处理那些重复、琐碎、但很重要的工作。</p>
+<p>整理素材、生成索引、归档提示词、标记废片、汇总学员案例，这些活以前都要人慢慢弄。</p>
+<p>现在可以先让 Codex 干第一轮。</p>
+<p>如果你也在做 AI 视频，我建议先从一个项目文件夹开始试。</p>
+<p>别追求一步到位。</p>
+<p>先把你已经做过的东西整理出来。</p>
+<p>很多团队真正值钱的东西，其实早就在电脑里了，只是一直没人把它们捞出来。</p>
+<p>作者 | 小石学长</p>
+<p>编辑 | 小石学长</p>
+<hr />
+<p>觉得有收获可以一键三连，转发给需要的小伙伴</p>
+<p>推荐阅读</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDU5MTk3OA==&amp;mid=2247537958&amp;idx=1&amp;sn=a8743ce2e171ba2b88a94fca7e875c9f&amp;scene=21#wechat_redirect">字节Seedance2.0 更新，AI 变天了！</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDU5MTk3OA==&amp;mid=2247529966&amp;idx=1&amp;sn=8526b93cfe8a4421977c0d03b9aa0496&amp;scene=21#wechat_redirect">第一批不找工作的年轻人，靠AI半年赚几十万</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDU5MTk3OA==&amp;mid=2247537425&amp;idx=1&amp;sn=a05b3df8c953490cced7038cc8c3bb2a&amp;scene=21#wechat_redirect">AI漫剧这么火，却没人讲透实操？这篇万字复盘，手把手带你复刻</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDU5MTk3OA==&amp;mid=2247537512&amp;idx=1&amp;sn=4743a422adb3a547f50c66c24244b55a&amp;scene=21#wechat_redirect">2026复盘：00后第一批创业者已经秃了</a></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBqznTFcO.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">Obsidian+Claude Code：我是如何把虚拟产品内容生产变成全自动的</span>
+        </a>
+        
+        
+        <a href="recvmvBoOqN3i3.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">如何用AI快速复刻一种海报风格？</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

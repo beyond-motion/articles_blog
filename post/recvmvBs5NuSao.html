@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>用 AI 三年多，我发现这 6 种交付物可以完全交给 AI 了 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI工具应用</span>
+            
+            
+            <span class="topic-chip">Agent自动化</span>
+            
+            <span class="topic-chip">AI交付物</span>
+            
+            <span class="topic-chip">多模态生成</span>
+            
+            <span class="topic-chip">Skill化办公</span>
+            
+            <span class="topic-chip">天工超级智能体</span>
+            
+            <span class="topic-chip">知识工作者效率</span>
+            
+            <span class="detail-reading-time">约 12 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">用 AI 三年多，我发现这 6 种交付物可以完全交给 AI 了</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>cha</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>文章分享了作者使用AI三年多的经验，提出AI交付能力的五级进阶框架，并以天工超级智能体为例，详细介绍了PPT、调研文档、图片、表格、网页、视频六种可完全交给AI的交付物场景，以及如何通过Skill化、定时任务和飞书集成实现自动化办公。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/kqJEciYf4J3jaDLWBs-PEw" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章对AI应用场景的梳理非常清晰，五级进阶框架从手动操作到全自动化，层层递进，具有很强的实操指导性。作者以天工超级智能体为案例，完整展示了从PPT制作到视频生成的多模态交付能力，尤其Skill化和定时任务的设计思路值得借鉴。不过文章后半段有明显的产品推广倾向，天工的功能介绍占了较大篇幅，削弱了方法论的普适性。整体而言，对想提升AI使用效率的读者仍有参考价值。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#用-ai-三年多我发现这-6-种交付物可以完全交给-ai-了" class="toc-link">用 AI 三年多，我发现这 6 种交付物可以完全交给 AI 了</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#第一层这些任务可以完全交给-agent" class="toc-link">第一层：这些任务可以完全交给 Agent</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#1-ppt" class="toc-link">1 PPT</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#2-调研文档" class="toc-link">2 调研文档</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#3-图片" class="toc-link">3 图片</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#4-表格" class="toc-link">4 表格</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#5-网页" class="toc-link">5 网页</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#6-视频" class="toc-link">6 视频</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#第二层把常做的事沉淀成-skill" class="toc-link">第二层：把常做的事沉淀成 Skill</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#1-拿来即用版本" class="toc-link">1 拿来即用版本</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#2-自定义-skill描述就能生成" class="toc-link">2 自定义 Skill，描述就能生成</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#3-skill-会越用越懂你" class="toc-link">3 Skill 会越用越懂你</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#第三层给-skill-套上定时器和飞书-im" class="toc-link">第三层：给 Skill 套上定时器和飞书 IM</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#1-对于定时任务" class="toc-link">1 对于定时任务</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#2-接入飞书移动化办公" class="toc-link">2 接入飞书移动化办公</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="用-ai-三年多我发现这-6-种交付物可以完全交给-ai-了">用 AI 三年多，我发现这 6 种交付物可以完全交给 AI 了</h1>
+<blockquote>
+<p>原文链接：https://mp.weixin.qq.com/s/kqJEciYf4J3jaDLWBs-PEw</p>
+</blockquote>
+<p>最近问了身边十几个朋友怎么用 AI。</p>
+<p>绝大多数还是同一个模式：自己先写一版，然后丢给 chatbot 改写润色。</p>
+<p>Agent 是最近几个月才发展起来的，很多人还没有把习惯切换过来。 chatbot 干不了 Agent 的活，比如让模型端 100% 交付PPT、文档、Excel、视频、图片、网页。基本覆盖知识工作者里的全部场景。</p>
+<p>为了让大家把 Agent 用好，我把用 AI 的方式，大致分成了五级。</p>
+<p><strong>第一级</strong>：自己操作 PPT 这类软件，让 AI 帮着填每一页、每一段的内容。</p>
+<p><strong>第二级</strong>：完全通过对话和 AI 交互，让它直接输出指定格式的交付物。</p>
+<p><strong>第三级</strong>：把日常稳定产出的内容 Skill 化，让 AI 用 Skill 一句话产出。</p>
+<p><strong>第四级</strong>：多个 Skill 串联或并行，让 AI 在一次任务里调动多个能力组合交付。</p>
+<p><strong>第五级</strong>：套上自动化工具（Agent 自带的定时、n8n、openclaw 这些），让上述场景移动化、自动化执行。</p>
+<p>大多数人用户还停在第一级和第二级之间。从第三级开始，就要依赖 Agent 的能力了。</p>
+<p>这篇文章用最近刚刚大更新的天工超级智能体，演示下从第三级到第五级的全过程。</p>
+<p>使用天工的原因很简单，它有 Agent 的框架，支持图片视频多模态能力，还有 openclaw 接入飞书的能力。方便我演示 Agent 制作不同场景下的交付物。</p>
+<p>天工这次大版本升级，把 OpenClaw 那套完整的智能体能力整个搬上了云端：不用本地部署、不用配 API、不用单配主机，注册就能用。</p>
+<p>多模态能力全面覆盖：视频、图片、文档、表格、网页、PPT，一个对话框统一派发。</p>
+<p>是我目前用过的门槛最低，多模态能力最强的 Agent 产品，这也方便我给大家演示 PPT、视频、图片的制作。</p>
+<p>下面就把Agent的三级应用场景、边界能力，使用效果给大家讲透了。</p>
+<h2 id="第一层这些任务可以完全交给-agent">第一层：这些任务可以完全交给 Agent</h2>
+<p>下面列 6 个手里几乎 100% 可以丢给 AI 的任务。</p>
+<p>整个过程就是，描述任务，天工出第一版，我在用他们这次也更新的多模态编辑器，做最后判断和精修。</p>
+<p>每个任务先把使用场景写清楚。天工就能调用相关的 Skill，来输出和我们日常工作一致的交付物，方便我们修改和分享。</p>
+<h3 id="1-ppt">1 PPT</h3>
+<p>假设你临时接到一个任务：明天要给新来的产品经理做一场 AI 工具培训。在对话框里输入这句：</p>
+<blockquote>
+<p>🪄 根据我过去写的文章，给产品经理做一份关于在工作中有效使用 AI 工具的培训 PPT，10 页左右，要有工作流示意图和分步骤布局</p>
+</blockquote>
+<p>出来的版式审美和配图协调度是目前我用过最舒服的中文格式。</p>
+<p>每个文字、每张图都可以在线编辑器里改，可以导出 PPTX、PDF、HTML 。</p>
+<h3 id="2-调研文档">2 调研文档</h3>
+<p>假设你要给甲方交一份 AI Agent 赛道的市场调研报告，发送下面提示词：</p>
+<blockquote>
+<p>🪄 做一份 AI Agent 行业 2026 年的市场调研，重点看竞争格局、商业模式、未来 3 年的机会点，输出 PDF + Docx</p>
+</blockquote>
+<p>天工的 Agent 在云端服务器里跑，每个用户都有一个自己的虚拟电脑来做网页深度搜索、抓资料、做验证。</p>
+<p>最后交付回来一份竞争格局梳理清楚、商业模式拆解到位、机会点有理有据的稿子。</p>
+<p>最好用的还是，文档编辑器直接划词就能编辑，改个标题，开头结尾，就可以直接交付了。</p>
+<h3 id="3-图片">3 图片</h3>
+<p>我给这篇文章制作了一个封面，就是用的天工Agent。在对话框里输入这个：</p>
+<blockquote>
+<p>🪄 制作一个简约手绘风格，2.35：1 的封面图，必须包含文字"用 AI 三年多，我发现这 6 种交付物可以完全交给 AI 了，"</p>
+</blockquote>
+<p>然后，天工给了张构图干净、文字排版到位的封面就出来了。不满意的地方可以直接在画布编辑器里改字、抠图、换素材，出图和定稿在一个窗口完成。</p>
+<p>我对上面图片觉得不是很满意，少了一些icon 的点缀，于是提了点优化，最后得到下面那张图。</p>
+<h3 id="4-表格">4 表格</h3>
+<p>把一堆上千行的 CSV 变成可洞察的结论。</p>
+<blockquote>
+<p>🪄 按利润表、资产负债表、现金流量表分别拆，找 3 条亮点和 3 条风险，最后给一句话结论</p>
+</blockquote>
+<p>接着还能把下面的表格，让它做成可视化的 HTML 财务分析，一站式输出所有想要的内容形式。</p>
+<p>天工内置的 Microsoft Excel 形式的编辑器还能让你实现线上编辑，AI辅助修改。</p>
+<h3 id="5-网页">5 网页</h3>
+<p>假设你想做一个能挂在简历里、放在社交平台 bio 里的个人介绍页</p>
+<p>比如我就让 天工 根据我在即刻上发布的一些动态，生成了一份关于我的个人介绍。</p>
+<p>这块依赖的模型代码能力，以及调用的 Skill，让整体设计审美水平完胜大模型直出的效果。</p>
+<h3 id="6-视频">6 视频</h3>
+<p>有一些时候，新品发布的物料包，里面要塞一支 15 秒预告片。</p>
+<p>这次我直接在天工出视频。生成完不用导去剪映，内置的时间线编辑器里就能改剪辑、加字幕、调滤镜，一个画布从头改到出片。</p>
+<p>天工 AI 接入了 Seedance 2.0、Kling 3.0、Pixverse V6，按需切旗舰模型和轻量模型。还可以根据需求选择你想要的模型。</p>
+<p>这六种交付物是绝大多数知识工作者会使用到的。</p>
+<p>以前要在 好几个软件之间反复横跳，飞书写文档、Keynote 做 PPT、Figma 画图、Excel 跑数、剪映剪视频。</p>
+<p>现在这些文件的输全在天工的对话框下就能实现。</p>
+<p>把这步跑顺了，效率提升至少 3 倍。</p>
+<p>但它还不是终点。</p>
+<h2 id="第二层把常做的事沉淀成-skill">第二层：把常做的事沉淀成 Skill</h2>
+<p>Skill 可以让你每次都不需要输出有多有长的提示词来获得交付物，天工提供了三种使用 skill 的方式。</p>
+<h3 id="1-拿来即用版本">1 拿来即用版本</h3>
+<p>天工本身提供了很多开源的 Skill，在Skill 广场可以安装。</p>
+<p>官方挑了一批打磨过的 Skill 放在广场。</p>
+<p>我上面演示的就是这六个官方的Skills，Agent 会根据你的描述自动调用相关的 Skill，搞定你工作中常用的文件。</p>
+<p>下面这两个用 html 搞定 PPT、数据可视化、网站、流程图的设计的 Skill，推荐大家可以常用。</p>
+<h3 id="2-自定义-skill描述就能生成">2 自定义 Skill，描述就能生成</h3>
+<p>最好用的还是自己制作的 Skill，你可以使用下面这个技能生成器来给自己制作Skill。</p>
+<p>把日常重复做的事用自然语言描述给天工，我每周都要写一份小红书选题，要看最近三天的热点、对照我的账号定位、产出 5 条带切入点的选题。</p>
+<p>Skill Agent 直接帮我打包成一个固定流程，下次只要喊"跑选题 Skill"就能调用。</p>
+<p>天工还可以根据你日常的对话，为你建立专门属于你的Skills。</p>
+<h3 id="3-skill-会越用越懂你">3 Skill 会越用越懂你</h3>
+<p>Skill 跑多了，你自然会对它输出的内容，提出意见，你的意见就是对 Skill 下一次的优化，用的越多，Skill 就优化的越好。</p>
+<p>我改过的版本、我倾向的风格、我删过的部分，它都在学。</p>
+<p>一个 Skill 跑两周以后，输出的东西基本不用改了。</p>
+<p>但 Skill 还有一个局限。</p>
+<p>它依然要我主动来操作指挥它。</p>
+<p>我希望它在我没喊的时候也能干活。</p>
+<h2 id="第三层给-skill-套上定时器和飞书-im">第三层：给 Skill 套上定时器和飞书 IM</h2>
+<p>这是最爽的一层。</p>
+<p>天工现在支持下发定时任务，并且能直接接入飞书。</p>
+<h3 id="1-对于定时任务">1 对于定时任务</h3>
+<p>每天早上 8 点，天工自动跑一次"过去 24 小时 AI 行业动态"的搜集，按大模型发布、产品更新、行业融资、论文突破、政策动态分类，挑 5-8 条最重要的，按固定排版推送到飞书。一觉醒来打开飞书就能看完。</p>
+<h3 id="2-接入飞书移动化办公">2 接入飞书移动化办公</h3>
+<p>接入飞书后，和养龙虾的体验是一样的，走在路上，躺在沙发上也能指挥Agent 来干活。这个功能用了就会回不去了。</p>
+<p>电脑不在身边的时候，发一句"帮我分析这个 CSV 的数据趋势"，云端立刻跑起来，结果回传到飞书里。</p>
+<p>到这一层，工作模式就彻底变了。Agent 不单纯是 AI 工具的状态，是一支 7×24 小时上班的云端团队。</p>
+<p>天工过去一年在国内没怎么发声，他们一直在全球最卷的 AI 市场上竞争。</p>
+<p>这次升级把打磨成熟的全球旗舰架构直接接入国内版本，有了"跨代际"的感觉。</p>
+<p>体感上的差别就是：别家还在小步迭代功能，天工直接交付了一个满级形态。</p>
+<p>旗舰模型这块尤其爽。DeepSeek V4 Pro、GLM-5.1、K2.6、Qwen3.6-Plus 全都支持，可以手动切，也可以让它"智能调度"自己挑。</p>
+<p>我以前要同时订几家图片、视频模型厂商的 token plan，现在在这里一个账号全包了。</p>
+<p>价格方面是按积分来扣的，用多少，扣多少。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBwLe2pag.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">微信读书 Skill，把我做了 3 年的产品干没了</span>
+        </a>
+        
+        
+        <a href="recvmvBqznTFcO.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">Obsidian+Claude Code：我是如何把虚拟产品内容生产变成全自动的</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

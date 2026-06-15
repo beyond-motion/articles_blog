@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>六一宠粉节：氪200刀，乔帮主开源8个工具、5个精选Skill，统统免费！ — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">开源工具</span>
+            
+            
+            <span class="topic-chip">开源项目</span>
+            
+            <span class="topic-chip">效率工具</span>
+            
+            <span class="topic-chip">Chrome插件</span>
+            
+            <span class="topic-chip">提示词管理</span>
+            
+            <span class="topic-chip">AI音乐制作</span>
+            
+            <span class="topic-chip">论文解读</span>
+            
+            <span class="detail-reading-time">约 12 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">六一宠粉节：氪200刀，乔帮主开源8个工具、5个精选Skill，统统免费！</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>最近</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>乔帮主在六一宠粉节开源了8个工具和5个精选Skill，涵盖Chrome插件、网站、Skill等多个类别，全部免费。包括乔木快捷提示词、乔木Tab、乔木X发布器、乔木单词学习、艺术家风格网、乔木音乐网、乔木论文解读、Suno音乐制作等，旨在提升开发者和内容创作者的工作效率与创作体验。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/Om4w4PJBCUMukGkAyH3S_g" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>乔帮主此次开源的工具和Skill覆盖了从提示词管理、浏览器增强、内容发布到AI辅助阅读和音乐制作的多个场景，实用性强且全部免费，体现了开源精神和对社区的回馈。尤其是乔木快捷提示词和乔木Tab，解决了日常使用中的痛点，而Suno音乐制作和论文解读等Skill则展示了AI在创意和学术领域的应用潜力。整体上，这是一份诚意满满的礼物，适合开发者和AI爱好者探索和使用。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#六一宠粉节氪200刀乔帮主开源8个工具5个精选skill统统免费" class="toc-link">六一宠粉节：氪200刀，乔帮主开源8个工具、5个精选Skill，统统免费！</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#chrome插件" class="toc-link">Chrome插件</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木快捷提示词" class="toc-link">乔木快捷提示词</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木-tab" class="toc-link">乔木 Tab</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木-x-发布器" class="toc-link">乔木 X 发布器</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木单词学习" class="toc-link">乔木单词学习</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#各种网站" class="toc-link">各种网站</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#艺术家风格网" class="toc-link">艺术家风格网</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木音乐网" class="toc-link">乔木音乐网</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木博客" class="toc-link">乔木博客</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木html分享" class="toc-link">乔木HTML分享</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#乔木skill" class="toc-link">乔木Skill</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木论文解读" class="toc-link">乔木论文解读</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木阅读助手" class="toc-link">乔木阅读助手</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#suno音乐制作" class="toc-link">Suno音乐制作</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#suno-音乐-mv" class="toc-link">Suno 音乐 MV</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#notebooklm-处理器" class="toc-link">NotebookLM 处理器</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#其他工具和资料" class="toc-link">其他工具和资料</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#乔木脚本" class="toc-link">乔木脚本</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#geo相关" class="toc-link">GEO相关</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#两个小技巧" class="toc-link">两个小技巧</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#让你的codex越来越聪明" class="toc-link">让你的Codex越来越聪明</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#制作ppt小技巧" class="toc-link">制作PPT小技巧</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#写在后面" class="toc-link">写在后面</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="六一宠粉节氪200刀乔帮主开源8个工具5个精选skill统统免费">六一宠粉节：氪200刀，乔帮主开源8个工具、5个精选Skill，统统免费！</h1>
+<p>最近 AI 圈有点沉寂，前有 Gemini 3.5 Flash 拉胯，后有 Opus 4.8 不及预期。</p>
+<p>唯有 Codex App 最近几次更新深得我心。</p>
+<p>冲了 200 刀会员后，Vibe Coding了一堆自用小工具，做了几个新 Skill。下面逐个介绍，免费开源送给大家，工具超多，页面很长，建议收藏再看。</p>
+<h2 id="chrome插件">Chrome插件</h2>
+<h3 id="乔木快捷提示词">乔木快捷提示词</h3>
+<p>发现身边很多朋友还是不太会写提示词，于是写了个Chrome插件，把过去一年多写的提示词都放进去了。另外收录了好友苍何（canghe）整理的几百套 GPT-Image-2 提示词，自带效果预览。最后从 Github 精选了500个常用提示词，覆盖开发、设计、营销场景。</p>
+<p>你只需要一键复制粘贴，或简写自动补全就能在任意网站和 AI 平台用。也能添加日常快捷语，比如收货地址、邮箱等，任何有输入框的地方都能用。</p>
+<ul>
+<li>插件安装地址：https://chromewebstore.google.com/detail/乔木快捷提示词/ndfmbdiaclladmoeifbhlkacllmfhjej</li>
+<li>项目开源地址：https://github.com/joeseesun/Qiaomu-QuickPrompt</li>
+</ul>
+<h3 id="乔木-tab">乔木 Tab</h3>
+<p>每天上网，打开浏览器的次数是最多的，每次都要新开 Tab，这个页面值得好好利用。除了添加常用网站，也支持创建Todo、添加便签、查看天气预报、搜索查看最近关掉的 Tab页面、收藏夹等。每个模块都可以控制显示与否，也支持 Command + K 唤起，快速搜索或设置。</p>
+<p>如果选了ChatGPT，输入内容后按Enter，自动跳转官网获得答案，不需要二次复制回车。</p>
+<ul>
+<li>开源地址：https://github.com/joeseesun/qiaomu-tab</li>
+<li>预计本周上架 Chrome 应用商店</li>
+</ul>
+<h3 id="乔木-x-发布器">乔木 X 发布器</h3>
+<p>X（前Twitter）的文章发布工具太难用了，不支持Markdown表格渲染，图片要手动一张张传，相当耗时。改造了一版，把插件和自己的博客打通，同步博客文章，一键发布到 X。</p>
+<ul>
+<li>插件地址：https://chromewebstore.google.com/detail/xposter/iimkimodgdjnnmdopeolboakhjmhfbbj?authuser=0&amp;hl=zh-CN</li>
+<li>推荐关注小小东：https://x.com/xiaoxiaodong01</li>
+</ul>
+<h3 id="乔木单词学习">乔木单词学习</h3>
+<p>基于开源的类沉浸式翻译插件 read-frog，让Codex开发了一套单词学习系统。每天阅读英文网页收藏的单词，变成闪卡可复习，基于艾宾浩斯曲线遗忘曲线。增加单词学习模式，根据单词难度（如CET6+）旁边加上中文翻译，标记掌握情况。</p>
+<ul>
+<li>Read-frog项目：https://github.com/mengxi-ream/read-frog</li>
+<li>乔帮主改造版：https://github.com/joeseesun/qiaomu-english-learn</li>
+</ul>
+<h2 id="各种网站">各种网站</h2>
+<h3 id="艺术家风格网">艺术家风格网</h3>
+<p>调用 GPT-image-2 API，用几百个艺术家名字生图，然后整理成一个网站。</p>
+<ul>
+<li>https://style.qiaomu.ai/</li>
+<li>即梦版本：https://jm-style.qiaomu.ai/</li>
+<li>开源代码：https://github.com/joeseesun/qiaomu-artist-style</li>
+</ul>
+<h3 id="乔木音乐网">乔木音乐网</h3>
+<p>开发者以前是摇滚青年，组织过北京高校乐队演出，也曾在「无名高地」酒吧打工过一年。开发了个网站，放几十首自己精选的 Suno 生成音乐，后面歌曲会持续更新。</p>
+<ul>
+<li>https://music.qiaomu.ai/</li>
+<li>开源地址：https://github.com/joeseesun/qiaomu-music-player-web</li>
+</ul>
+<h3 id="乔木博客">乔木博客</h3>
+<ul>
+<li>https://blog.qiaomu.ai/</li>
+</ul>
+<h3 id="乔木html分享">乔木HTML分享</h3>
+<p>把 AI 生成的 HTML、Markdown、SVG、Mermaid 变成一个微信里能阅读的网页，一键免费部署到 Cloudflare。</p>
+<ul>
+<li>开源地址：https://github.com/joeseesun/quickshare-cloudflare</li>
+</ul>
+<h2 id="乔木skill">乔木Skill</h2>
+<h3 id="乔木论文解读">乔木论文解读</h3>
+<p>支持原始 TeX Source 格式，抽取图表更精准。只需提供 Huggingface 和 Arxiv 论文网页地址就行，不需要提供 PDF 地址也能解读。</p>
+<ul>
+<li>安装：<code>npx skills add joeseesun/qiaomu-paper-interpreter</code></li>
+<li>开源地址：https://github.com/joeseesun/qiaomu-paper-interpreter</li>
+</ul>
+<h3 id="乔木阅读助手">乔木阅读助手</h3>
+<p>用飞书 + AI 辅助读书，划线就能对话！</p>
+<ol>
+<li>让 Codex 或 Claude Code 把 Epub 电子书按章节写入飞书文档</li>
+<li>人肉阅读，有感触的地方划线、加粗，最好评论</li>
+<li>
+<p>让 Codex 读飞书文档中的标记和评论，让AI解释回复你</p>
+</li>
+<li>
+<p>安装：<code>npx skills add joeseesun/qiaomu-read-helper</code></p>
+</li>
+<li>开源地址：https://github.com/joeseesun/qiaomu-read-helper</li>
+</ol>
+<h3 id="suno音乐制作">Suno音乐制作</h3>
+<p>把任意想法变成一首歌，不用登录网站，通过CLI或Computer Use方式创作。Skill 内置了5000多种音乐风格和 Suno 歌词创作提示词。支持下载任意 Suno 歌曲，下载时可以带 LRC 歌词。</p>
+<ul>
+<li>开源地址：https://github.com/joeseesun/qiaomu-suno-master</li>
+<li>安装：<code>npx skills add joeseesun/qiaomu-suno-master</code></li>
+</ul>
+<h3 id="suno-音乐-mv">Suno 音乐 MV</h3>
+<p>用 Codex 生成图片，再结合 Hyperframe 生成幻灯片感 MV，配合 GASP 动效和字幕。</p>
+<ul>
+<li>安装：<code>npx skills add joeseesun/qiaomu-mtv-creator</code></li>
+</ul>
+<h3 id="notebooklm-处理器">NotebookLM 处理器</h3>
+<p>支持任意内容传到 NotebookLM 处理成播客、PPT、思维导图等，目前快 5k Star 了。</p>
+<ul>
+<li>开源地址：https://github.com/joeseesun/qiaomu-anything-to-notebooklm</li>
+</ul>
+<h2 id="其他工具和资料">其他工具和资料</h2>
+<h3 id="乔木脚本">乔木脚本</h3>
+<p>油猴脚本集，包括：Youtube网页一键复制字幕、小宇宙网页版倍速播放、小红书粘贴图片上传、公众号跳转即梦生成封面按钮等。</p>
+<ul>
+<li>开源地址：https://github.com/joeseesun/qiaomu-userscripts</li>
+</ul>
+<h3 id="geo相关">GEO相关</h3>
+<p>今年出版了《AI营销：从SEO到GEO》，也顺利举办了中国第一届GEO大会。最近整理了《GEO红皮书》《GEO蓝皮书》。</p>
+<ul>
+<li>GEO公开课资料：https://xiangyangqiaomu.feishu.cn/wiki/Bvx6wmAqAirtR1kWejmcFFrGn6f</li>
+</ul>
+<h2 id="两个小技巧">两个小技巧</h2>
+<h3 id="让你的codex越来越聪明">让你的Codex越来越聪明</h3>
+<p>阅读并检索所有 Codex 对话记录与执行日志，进行系统性复盘，提炼出可复用的经验文档，保存为独立文件并在 .agent 配置中引用加载。</p>
+<h3 id="制作ppt小技巧">制作PPT小技巧</h3>
+<ol>
+<li>GPT 5.5 Pro和Grok搜索获取参考资料</li>
+<li>让 Codex 或 CC 加工，提炼方法论、添加金句，写成经验贴，输出 Markdown</li>
+<li>把 Markdown 上传到 Youmind，先生成大纲，再生成20页高清PPT页面</li>
+<li>
+<p>导出zip图片压缩包，依次粘贴到Keynote中</p>
+</li>
+<li>
+<p>PPT生成提示词：https://xiangyangqiaomu.feishu.cn/wiki/QUmxwep0diOUOnkrdGscVa1PnE7</p>
+</li>
+</ol>
+<h2 id="写在后面">写在后面</h2>
+<blockquote>
+<p>幸运公式：<strong>做很多事 × 让很多人知道</strong></p>
+</blockquote>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBOeY7wTQ.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">AgentGuard——面向工具调用型智能体的访问控制框架</span>
+        </a>
+        
+        
+        <a href="recvmvBIXkQEpM.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">你抛弃的n8n工作流，Claude Code捡回来了，但最让我意外的不是这个</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

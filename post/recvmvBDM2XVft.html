@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>支付宝又推开了一扇门 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI支付</span>
+            
+            
+            <span class="topic-chip">支付宝</span>
+            
+            <span class="topic-chip">Agent商业</span>
+            
+            <span class="topic-chip">AI支付</span>
+            
+            <span class="topic-chip">ACT协议</span>
+            
+            <span class="topic-chip">AgentPayGuard</span>
+            
+            <span class="topic-chip">AI钱包</span>
+            
+            <span class="topic-chip">信任经济</span>
+            
+            <span class="detail-reading-time">约 8 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">支付宝又推开了一扇门</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>支付，</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>支付宝在杭州举办AI支付生态大会，发布AI付、AI收、ACT协议2.0和AgentPayGuard三大解决方案，覆盖Agent商业中支付的核心难题。文章回顾了支付史上三次关键突破——2003年担保交易、2011年二维码支付、2026年AI支付，指出AI支付正打破人力限制，推动商业从流量竞争转向信任竞争。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/wW5Zz-aO0oRM3lQkViJSyQ" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章以支付宝AI支付生态大会为切入点，系统梳理了Agent商业时代支付的三大核心难题：Agent如何替人付钱、收钱以及机器间的安全对话。支付宝给出的三把钥匙——AI付、AI收和ACT协议2.0——逻辑清晰，覆盖从授权到风控的全链路。文章最精彩之处在于将AI支付置于支付史的大框架中审视，与担保交易和二维码支付并列，赋予其历史纵深感。但文章整体偏向支付宝视角，对潜在风险如AI授权滥用、隐私边界等讨论有限，未来商业中信任机制如何真正落地仍需观察。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#支付宝又推开了一扇门" class="toc-link">支付宝又推开了一扇门</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#01-agent商业时代支付就像一道门" class="toc-link">01 · Agent商业时代，支付就像一道门</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#02-三把钥匙打开这扇门" class="toc-link">02 · 三把钥匙，打开这扇门</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#03-支付的历史就是不断解决交易可不可行" class="toc-link">03 · 支付的历史，就是不断解决&#34;交易可不可行&#34;</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#最后的话" class="toc-link">最后的话</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <blockquote>
+<p><strong>原文链接</strong>：https://mp.weixin.qq.com/s/wW5Zz-aO0oRM3lQkViJSyQ<br />
+<strong>来源</strong>：刘润<br />
+<strong>作者</strong>：刘润<br />
+<strong>发布日期</strong>：2026年5月27日<br />
+<strong>标签</strong>：#AI支付 #Agent商业 #支付宝</p>
+</blockquote>
+<hr />
+<h1 id="支付宝又推开了一扇门">支付宝又推开了一扇门</h1>
+<p>昨天，发生了一件很多人没太注意的大事。昨天下午，支付宝在杭州开了一场"AI支付生态大会"，公布了他们关于AI支付的一系列进展。这件事，可能比绝大多数人意识到的都要重要——它也许做到了一件事：把"Agent商业"的最后一块拼图，支付，彻底拼上了。</p>
+<hr />
+<h2 id="01-agent商业时代支付就像一道门">01 · Agent商业时代，支付就像一道门</h2>
+<p>很多人都认同，今天的商业世界，正在发生一个不小的转折：越来越多交易的主体，正在从"人"转向"Agent"。</p>
+<p>比如，AI购物。几个月前千问的大红包，已经让很多人第一次体验了AI购物的便利。比如，资料搜索。你让小龙虾去调研资料，它可能会遇到好几份付费材料，需要判断买不买。比如，智能驾驶。现在很多汽车都有"无感支付"功能，你在公共充电桩充完电可以转身就走，Agent会自动和电网对接，完成付款。</p>
+<p>这就是"Agent商业"。</p>
+<p><strong>支付，正在从交易的终点，变成交易的起点。</strong></p>
+<p>传统支付流程：你选→你付。Agent商业流程：你付→Agent想→Agent选。</p>
+<p>就像昨天大会上，蚂蚁集团AI支付业务的负责人朱林说的：支付不再只是"最后一步"——它正在成为一种从最初就嵌入其中的能力。</p>
+<p>但传统支付系统根本没有为这个时代改造过。过去的支付，无论是指纹、人脸、虹膜，总归是为"人在当场"设计的。但对Agent商业来说，支付方式就像一道门。如果每一步都必须人在当场，那它就会被挡在门外，就永远只能停在"建议"这一步，迈不进"执行"。这就是为什么说，支付，是Agent商业时代的"最后一块拼图"。</p>
+<hr />
+<h2 id="02-三把钥匙打开这扇门">02 · 三把钥匙，打开这扇门</h2>
+<p>Agent商业时代的支付这个大难题，可以拆解成三个小问题：</p>
+<p><strong>1、Agent怎么替你付钱？</strong><br />
+当一个AI跑来找商家买东西，商家怎么知道这个AI是真拿了主人的圣旨，还是个黑客伪装的"冒牌货"？</p>
+<p><strong>2、Agent怎么替你收钱？</strong><br />
+传统支付体系，是为"人类的消费频次"设计的，一个人一天撑死花几十笔。但Agent收钱的频次和逻辑，传统系统根本接不住。比如，Agent写一份报告，1秒钟内调用了天气AI（0.001元）、翻译AI（0.003元）、作图AI（0.005元）。如果手续费比交易额还高，网关当场就得瘫痪。</p>
+<p><strong>3、机器之间怎么对话与安全风控？</strong><br />
+如果没有一套通用的标准协议，智能体之间就像用不同方言谈生意。另外大模型是会幻觉的，万一AI陷入死循环直接给你订一趟顺丰专机空运，一秒钟刷掉两万块呢？</p>
+<p>支付宝给出了3把钥匙：</p>
+<p><strong>第一把钥匙：AI付</strong>——解决"Agent怎么替你付钱"<br />
+让AI智能体在用户授权范围内，向商家直接完成支付。授权千问买麦当劳套餐，50元以内；授权Rokid眼镜看一下就扫码支付；授权理想汽车出停车场自动交停车费。截至目前，支付宝AI付累计交易已突破3亿笔，覆盖95%的主流通用智能体框架。</p>
+<p><strong>第二把钥匙：AI收</strong>——解决"Agent怎么替你收钱"<br />
+给商家、给创作者装上的"自动收钱外挂"。按次数收、按月打包收、机器之间几厘钱的微型转账，全都能自动搞定。</p>
+<p><strong>第三把钥匙：ACT协议2.0 + AgentPayGuard</strong>——解决"机器之间怎么对话与安全风控"<br />
+ACT协议2.0是给机器人买卖建立的"共同语言"，联合阿里、小米、智谱、比亚迪、Rokid等20余家厂商。AgentPayGuard建立了身份安全、运行时安全、供应链安全、意图安全四层防护，通过信通院最高5级安全认证。</p>
+<p>同时，支付宝上线了"AI钱包"功能，让人类能看见"这个月AI帮你花了多少钱"，把授权边界设定、任务回溯、消费追溯等问题翻译成人类看得懂、管得住的操作台。</p>
+<hr />
+<h2 id="03-支付的历史就是不断解决交易可不可行">03 · 支付的历史，就是不断解决"交易可不可行"</h2>
+<p>支付的历史，就是不断解决"交易可不可行"。这件事在历史上已经发生过两次：</p>
+<p><strong>第一次：2003年，担保交易问世</strong></p>
+<p>2003年淘宝上线，但电商初期步履维艰——最关键原因：没有双方都信任的支付手段，信任就无法建立。</p>
+<p>2003年10月18日，支付宝担保交易上线。买家先把钱打到支付宝，支付宝通知卖家发货，买家确认没问题后，支付宝才把钱打到卖家账上。这看起来很笨，中间多一道手续。但这就像打开了一扇门——到2005年底，淘宝卖家突破100万，买家超2000万，整个中国被加速拉入电商时代。</p>
+<p><strong>第二次：2011年，二维码支付问世</strong></p>
+<p>2011年智能手机普及了，双十一已经第三届了，但线下小生意并没有一起红火起来——因为支付方式依旧缺席。</p>
+<p>2011年10月，支付宝推出二维码。每个卖家都能申请一个收款二维码，掏手机扫一下，叮咚，到账，3秒钟。这3秒，解锁了早餐摊、共享单车、街边打赏、地铁口烤红薯、便利店……2013年，中国第三方移动支付市场交易规模突破13010亿元，同比增长率高达800%。</p>
+<p><strong>第三次：2026年，AI支付问世</strong></p>
+<p>面对即将到来的Agent商业，支付宝又一次迈进了这扇门。</p>
+<hr />
+<h2 id="最后的话">最后的话</h2>
+<p>技术是干柴，但支付，是烈火。</p>
+<p>2003年，支付打破了空间限制，让你的东西可以卖给大江南北的陌生人。2011年，支付打破了时间限制，让3秒钟的线下扫码，解锁了随时随地的消费场景。而2026年这次，支付打破的是"人力"的限制。</p>
+<p>当商业决策权从人转向智能体，一个深刻的变化正在发生：<strong>过去靠流量，未来靠信任。</strong></p>
+<p>未来的商业竞争，可能不再是流量抢夺，而是看谁的店铺，能更安全、更丝滑地对接到千万个AI钱包里。</p>
+<p>未来，正呼啸而来。</p>
+<hr />
+<p><em>作者：刘润 | 主笔：歌平 | 编辑：歌平 | 版面：黄静</em></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBF9URwIs.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">编程、写作、AI 短剧，Opus 4.8 的 effort 怎么选</span>
+        </a>
+        
+        
+        <a href="recvmvBD5kIREn.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">小红书支持上传 skill 了，AI 创作者赚钱的时机到了</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

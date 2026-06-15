@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>Obsidian+Claude Code：我是如何把虚拟产品内容生产变成全自动的 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI内容创作</span>
+            
+            
+            <span class="topic-chip">Obsidian</span>
+            
+            <span class="topic-chip">Claude Code</span>
+            
+            <span class="topic-chip">内容自动化</span>
+            
+            <span class="topic-chip">一人公司</span>
+            
+            <span class="topic-chip">虚拟电商</span>
+            
+            <span class="topic-chip">AI知识库</span>
+            
+            <span class="detail-reading-time">约 14 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">Obsidian+Claude Code：我是如何把虚拟产品内容生产变成全自动的</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>AI</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>视觉设计师简哥分享了他用 Obsidian + Claude Code 搭建自动化内容生产系统的经验。针对 AI 批量生成内容时出现的&#39;失忆&#39;&#39;降智&#39;&#39;模板重复&#39;等问题，他通过将15年设计积累的规范、选题库、写作套路等沉淀为本地知识库，让 Claude Code 每次启动时自动加载规则而非依赖上下文记忆，实现了从选题、文案、封面到发布的全流程自动化，日产20-30篇小红书笔记，且内容越产越好。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/R6VMgxQOwrFP8AdvTmgsmQ" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章的核心洞察在于：AI 批量内容生产质量下降的根源不是提示词写得不好，而是上下文窗口有限导致的&#39;注意力稀释&#39;和&#39;模式坍缩&#39;。简哥的解决方案颇具启发性——将个人积累的创作规范沉淀为本地知识库文件，让 Claude Code 每次启动时强制读取规则，而非依赖对话上下文的记忆。这种&#39;规则驱动&#39;而非&#39;记忆驱动&#39;的思路，把 AI 从一个善忘的对话者变成了一个严格执行规范的自动化执行者。对于正在用 AI 做批量内容生产的人来说，这套 Obsidian + Claude Code 的方案值得借鉴，尤其是&#39;进化学习系统&#39;的设计，让 AI 能从历史修改中持续学习，越用越精准。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#obsidianclaude-code我是如何把虚拟产品内容生产变成全自动的" class="toc-link">Obsidian+Claude Code：我是如何把虚拟产品内容生产变成全自动的</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#part-1关于我一位极其爱折腾的设计师" class="toc-link">Part 1：关于我：一位极其爱折腾的设计师</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#part-2项目实操成果" class="toc-link">Part 2：项目实操成果</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#part-3搭建-obsidian-claude-code自动化内容生产工厂" class="toc-link">Part 3：搭建 Obsidian + Claude Code：自动化内容生产工厂</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#01-遇到的瓶颈产能不足" class="toc-link">01 遇到的瓶颈：产能不足</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#02-更深层的问题ai-会变笨" class="toc-link">02 更深层的问题：AI 会&#34;变笨&#34;</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#03-理解-ai-的本质局限" class="toc-link">03 理解 AI 的本质局限</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#04-为什么提示词再完美也解决不了" class="toc-link">04 为什么提示词再完美也解决不了</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#05-找到解决方案obsidian-claude-code" class="toc-link">05 找到解决方案：Obsidian + Claude Code</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#06-从0到1完整生成一套笔记" class="toc-link">06 从0到1：完整生成一套笔记</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#07-为什么-obsidian-claude-code-能解决问题" class="toc-link">07 为什么 Obsidian + Claude Code 能解决问题</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#08-时间被释放了" class="toc-link">08 时间被释放了</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#part-4给正在同行者的一点点建议" class="toc-link">Part 4：给正在同行者的一点点建议</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="obsidianclaude-code我是如何把虚拟产品内容生产变成全自动的">Obsidian+Claude Code：我是如何把虚拟产品内容生产变成全自动的</h1>
+<blockquote>
+<p>原文链接：https://mp.weixin.qq.com/s/R6VMgxQOwrFP8AdvTmgsmQ</p>
+</blockquote>
+<hr />
+<p>用AI批量生产内容，做着做着质量开始下滑——失忆、降智、反复套同一个模板。很多人以为是提示词的问题，其实不是。</p>
+<p>圈友简哥，视觉设计师，用Obsidian+Claude Code把这个问题彻底解决了。他把自己的小红书虚拟电商业务全部接进这套系统：写文案、做封面到发布，一句话启动整条流水线，一天稳定出20-30篇笔记，内容越产越好。</p>
+<p>如果你在用AI做内容，这篇建议你看完。</p>
+<h2 id="part-1关于我一位极其爱折腾的设计师">Part 1：关于我：一位极其爱折腾的设计师</h2>
+<p>大家好，我是简哥。</p>
+<p>我是一位视觉创意设计师，在一家普通的民营公司上班，主要负责电商、市场宣传方面的设计工作。</p>
+<p>下班时就是我个人的主场，拿起小红书电商项目就是干，从6点做到12点，一天14-15个小时，天天如此！</p>
+<p>励志要用 AI + 审美做一家一人公司。</p>
+<p>加入生财这一年多，前前后后也做过其他几个项目，小红书实物电商、AI自媒体等，都没有取得实质性的结果。</p>
+<p>后面看了大量的精华帖，禅定了好几天，最后选择了小红书虚拟电商赛道，慢慢的就做到了现在。</p>
+<p>原本以为实物电商是跟自己最匹配的项目，因为之前有做淘宝、抖音电商的经验，所以一开始就选择了小红书实物电商。</p>
+<p>但是高频次的外出拍照、不断的选品、不断的分类大量的手机照片live图，感觉每周都在做同样却不见正反馈的事情，而且发货、售后、退款一度搞的我店铺瘫痪，心力交瘁。</p>
+<p>不是说不能做，是虚拟电商可能更加的省力、省事，后端不用这么操心，做好前端就行。</p>
+<p>对于虚拟电商，我要做的就是静下心来潜心创作就行——不用发货、不用售后、不用外出、不用拍照、不用预约场地、不用每周整理700-800张的实拍图，我觉得非常省心了！</p>
+<h2 id="part-2项目实操成果">Part 2：项目实操成果</h2>
+<p>真实的数据，真实的我</p>
+<p>说实话，虽然参加了6次航海，但目前还没取得什么亮眼的成果。没有让人眼前一亮的数据，真的说起来有些惭愧，但我觉得，真实比完美更重要，所以还是选择坦诚分享。</p>
+<p>我手上一共4个账号，做的一拖三的模式，2部手机，做了3个月左右时间，累计发布567条笔记。</p>
+<p>截至4月15日的数据：</p>
+<p>第一个账号：累计发布 217 条笔记<br />
+第二个账号：累计发布 146 条笔记<br />
+第三个账号：累计发布 124 条笔记<br />
+第四个账号：累计发布 80 条笔记</p>
+<h2 id="part-3搭建-obsidian-claude-code自动化内容生产工厂">Part 3：搭建 Obsidian + Claude Code：自动化内容生产工厂</h2>
+<h3 id="01-遇到的瓶颈产能不足">01 遇到的瓶颈：产能不足</h3>
+<p>随着我手上的账号越来越多，从一个、两个、三个、四个增加到四个账号的时候，我就发现一个 Claude 账号不够用。因为很快它就限制了你的使用时间，这是 Claude 唯一的一个不足之处。</p>
+<p>所以它不能满足我四个账号每天生产笔记的基本要求。按照我的这几个 SOP 跑下来，它一个账号最多只能生成五到六篇笔记。而且这五到六篇笔记你不能怎么修改，如果修改的话，只能生成两到三篇。所以效率这一块就比较打折扣。</p>
+<p>所以我每次工作的时候，一个人同时操控三个 Claude 账号去生成笔记：</p>
+<p>每个账号可以跑 5 到 6 篇<br />
+三个账号一下子就能跑十几篇<br />
+一天下来可以跑 20 到 30 篇</p>
+<p>所以这个产量，相对来说我还是比较满意的。</p>
+<h3 id="02-更深层的问题ai-会变笨">02 更深层的问题：AI 会"变笨"</h3>
+<p>但当我渐渐地批量生产出更多笔记，从 30 篇、60 篇、90 篇增加到 100 篇、200 篇时，我就发现 Claude 有一个相对致命的缺陷。</p>
+<p>这其实不仅是 Claude 的问题，也是目前行业的通病，即上下文窗口的容量限制。</p>
+<p>Claude 的窗口比较小，很容易聊着聊着就满了，不像 Gemini 那样拥有上百万 Token 的大窗口。</p>
+<p>这就导致了一个问题：</p>
+<p>在同一个聊天窗口内，当生成到 20 到 30 篇笔记时，后续内容的质量就会出现"降智"。<br />
+AI 会出现"失忆"现象，开始机械地套用相同的模板，导致产出内容质量变差。<br />
+最要命的是，你必须手动去干预和调整，调完之后虽然能好一段，但再跑几十篇，它又会反复出现同样的问题。</p>
+<h3 id="03-理解-ai-的本质局限">03 理解 AI 的本质局限</h3>
+<p>它不是真的"遗忘"，是注意力被稀释了。</p>
+<p>你可以把 AI 的记忆想象成一张桌子。桌子大小是固定的，你们聊的东西越来越多，桌子就越来越满。新的东西放上来，旧的东西就会被推到边角，甚至掉到桌子外面。</p>
+<p>所以你第一轮说的那句"安全上限1630px"，到第二十轮的时候，AI 不是"不想记"，是那条信息已经被压到桌子边角了，它的注意力根本顾不到那里。</p>
+<p>它不是在偷懒，是在走"最省力的路"。</p>
+<p>AI 是靠大量数据训练出来的。它见过的东西越多，就越容易往"最常见的答案"上走。</p>
+<p>左右对比图、阶梯图、折线图——这些概念图结构它见过几百万次，生成起来最"顺手"。你不强制约束它，它就会自动滑回这条熟悉的轨道。</p>
+<p>这不叫偷懒，叫模式坍缩——就像一个人走路，总会不自觉走最熟的那条路，哪怕那条路你已经走过一百遍了。</p>
+<h3 id="04-为什么提示词再完美也解决不了">04 为什么提示词再完美也解决不了</h3>
+<p>这跟提示词的完美和 Skills 专业严密没有关系。</p>
+<p>提示词写得再完美、Skills 再严密，都解决不了底层的结构问题。</p>
+<p>原因很简单——提示词和 Skills 本质上是注入到上下文里的文字。它们占的是桌子上的空间，不是给 AI 装了一个新的 CPU。</p>
+<p>桌子还是那张桌子，大小还是那么大。</p>
+<h3 id="05-找到解决方案obsidian-claude-code">05 找到解决方案：Obsidian + Claude Code</h3>
+<p>怎么样解决这个问题呢？我又不能不用 AI，一用 AI 时间久了，我批量生成的时候又会出现这个问题。</p>
+<p>后面我不但翻阅了小红书，翻阅了深藏的很多帖子，直到这次的 AI 航海大会，我才真正找到了解决办法：借鉴焦波老师的"夜话"，用 Obsidian 搭建知识库这个点，我深入去挖掘了关于 Obsidian + Claude Code 这套方法，后面慢慢了解到，它确实可以用来沉淀、制作并生产很多的笔记。</p>
+<p>我现在一句话就能启动整条流水线。</p>
+<p>核心是我在电脑里搭了一套系统，把我15年做设计积累的所有东西——选题方法、关键词库、封面规范、写作套路——全部存进去了。</p>
+<p>AI 每次打开就自动加载这些内容，不用我反复解释背景。</p>
+<h3 id="06-从0到1完整生成一套笔记">06 从0到1：完整生成一套笔记</h3>
+<p><strong>第一步：选一个选题</strong><br />
+打开 Claude Code，直接说：「规划第X轮选题」<br />
+AI 会自动读取选题库，按照固定配比（3篇品牌拆解 + 7篇精准转化）给你筛出10个选题。</p>
+<p><strong>第二步：写文案</strong><br />
+确认完选题后，直接说：「写第X篇笔记，选题是：[选题名称]」<br />
+AI 会输出一套完整的东西：P1 封面文案、P2-P5 内容页文案、P6 总结页文案、小红书正文（700-800字）、话题标签（10个）、评论区文案。</p>
+<p><strong>第三步：去 Gemini 生成人设图</strong><br />
+在 Claude Code 外面做，AI 没法帮你生成真实照片。</p>
+<p><strong>第四步：做封面（P1-P6）</strong><br />
+人设图放好之后，回到 Claude Code，说：「做第N篇笔记的封面」<br />
+AI 会依次生成 6 个 HTML 文件。</p>
+<p><strong>第五步：截图出图</strong><br />
+HTML 做完之后，AI 会自动运行截图脚本（用 Playwright），把6个 HTML/SVG 文件批量截成 PNG。</p>
+<p><strong>第六步：优化思路：进化学习系统</strong><br />
+每做完几篇笔记，发出去跑一段时间之后，你会知道哪些写法效果好、哪些没用。<br />
+这时候可以做进化学习：说「执行进化学习」，AI 会自动对比原稿和你改过的终稿，提取你的修改规律，写进进化系统/修改规律.md。<br />
+下次再写新笔记时，AI 会先读这个文件，把你之前验证过有效的写法直接内化进去，越写越准。</p>
+<h3 id="07-为什么-obsidian-claude-code-能解决问题">07 为什么 Obsidian + Claude Code 能解决问题</h3>
+<p>因为这套系统不再依赖于 AI 的记忆，而是依赖于 Skill 的强制化的规则去运行。规则不会改变，但是记忆可能会越来越被稀释。</p>
+<p><strong>规范永远在，不会被稀释</strong><br />
+行宽安全上限1630px、概念图安全区坐标、字体路径——这些写成 .md 文件存在项目里。每次生成前 Claude Code 主动读取，不依赖上下文里还剩多少空间。</p>
+<p><strong>自检可以变成真正的自动化</strong><br />
+Claude Code 可以写成：生成一行正文 → 立刻跑验证 → 超出就直接重写，不进入下一步。<br />
+这个闭环不依赖 AI 的注意力，是程序级别的强制执行，不会"忘"。</p>
+<p><strong>历史修正记录可以真正保存</strong><br />
+你之前纠正过我的每一条——P7金句没居中、概念图文字叠加、字体未声明——这些都可以记录在我的进化日志 Skill 里，每次启动前自动读入，相当于给 AI 一份"踩坑备忘录"。</p>
+<h3 id="08-时间被释放了">08 时间被释放了</h3>
+<p>所以搭建完这套系统，我感觉自己的时间也被释放了。</p>
+<p>以前是坐在这边，我动 AI 才动，我不动 AI 就不动；而我现在下完指令之后，可以出去游荡一会儿再回来，AI 还在帮我制作东西，基本处于一个半自动化的状态。</p>
+<p>如果出了错，它会自己打回、自己修正，不断地自我进化。</p>
+<p>这套系统越用越活，会根据你自己的特点写出匹配你风格的文章，越用越像你。</p>
+<h2 id="part-4给正在同行者的一点点建议">Part 4：给正在同行者的一点点建议</h2>
+<p><strong>01 数据稳定的时候，尽量不要去修改详情页</strong><br />
+我之前踩过的一个坑，就是因为觉得详情页主图不够漂亮，我自己又设计了一套，然后大篇幅地去调整修改了，导致这个产品流量直线下降，花了很长时间才养回来。</p>
+<p><strong>02 如果客户申请仅退款，你就给他退吧</strong><br />
+因为你如果不退，他可能后面会投诉，一旦投诉，基本上很难申诉成功。<br />
+这时候你的店铺里就会多了一条"平台介入率"。这个平台介入率是考核你 90 天之内的投诉数量除以店铺的下单数量，非常影响搜索渠道的流量和搜索权重。</p>
+<hr />
+<p><em>来源：生财有术 | 作者：简哥 | 2026-05-15</em></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvBs5NuSao.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">用 AI 三年多，我发现这 6 种交付物可以完全交给 AI 了</span>
+        </a>
+        
+        
+        <a href="recvmvBqoIbCUd.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">我用 Codex 整理 AI 视频素材，终于不用到处翻电脑文件了！</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

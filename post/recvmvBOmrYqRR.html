@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>如何构建你自己的 Agent Harness？超越 Cursor/Codex/Claude Code，告别一次性 SDK 选型，15项职责独立各自可替换升级 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">Agent 工程化</span>
+            
+            
+            <span class="topic-chip">Agent Harness</span>
+            
+            <span class="topic-chip">Worker 架构</span>
+            
+            <span class="topic-chip">Trigger 总线</span>
+            
+            <span class="topic-chip">Fail-Closed 安全</span>
+            
+            <span class="topic-chip">可观测性</span>
+            
+            <span class="topic-chip">上下文压缩</span>
+            
+            <span class="topic-chip">人工审批流</span>
+            
+            <span class="detail-reading-time">约 11 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">如何构建你自己的 Agent Harness？超越 Cursor/Codex/Claude Code，告别一次性 SDK 选型，15项职责独立各自可替换升级</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>Har</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>文章提出 Agent Harness 不应是整包导入的框架，而应拆分为十余个职责明确的 worker，通过统一 trigger 总线协作。作者以 iii 项目为例，列出 15 项核心职责与 11 个 worker 实现，强调 Fail-Closed 安全设计、单一 tool call chokepoint 和反应式审批恢复机制，并对比传统框架模型与 worker 模型的差异。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/uswt6xz6MnZ607KhzhwLrQ" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>文章切中生产级 Agent 工程化的核心痛点——框架 bundling 导致扩展性锁死。worker + trigger 总线的解法在抽象层次上确实更优，可替换边界清晰，Fail-Closed 与单一 chokepoint 设计也值得借鉴。但需冷静看待：多 worker 运维、跨进程契约维护、Durable FSM 的 FIFO 成本都是真实代价，复杂度只是转移而非消失。适合中大型团队参考，小团队可借鉴其设计原则而非直接复刻架构。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#如何构建你自己的-agent-harness" class="toc-link">如何构建你自己的 Agent Harness？</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#核心主张" class="toc-link">核心主张</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#问题根源bundling而非缺功能" class="toc-link">问题根源：bundling，而非缺功能</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#iii-的解法worker-trigger-总线" class="toc-link">iii 的解法：worker + trigger 总线</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#生产栈一览11-个-worker" class="toc-link">生产栈一览（11 个 worker）</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#关键设计原则" class="toc-link">关键设计原则</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#fail-closed-安全设计" class="toc-link">Fail-closed 安全设计</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#单一工具调用-chokepoint" class="toc-link">单一工具调用 chokepoint</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#审批恢复反应式而非-per-call-resume" class="toc-link">审批恢复：反应式，而非 per-call resume</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#与现有框架生态的对照" class="toc-link">与现有框架生态的对照</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#与-anthropic-harness-研究的对照" class="toc-link">与 Anthropic harness 研究的对照</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#核心结论" class="toc-link">核心结论</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#一句话收束" class="toc-link">一句话收束</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#相关资源" class="toc-link">相关资源</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="如何构建你自己的-agent-harness">如何构建你自己的 Agent Harness？</h1>
+<p>原文链接：https://iii.dev/blog/how-to-build-your-own-agent-harness/</p>
+<h2 id="核心主张">核心主张</h2>
+<p>Agent harness 不应该是「整包导入的框架」，而应该是一组可独立替换、通过统一总线协作的 worker 组合。当把 harness 拆成 10 余个职责明确的 worker 后，「自建 harness」就不再等于 fork 某个框架，而是替换其中几个 worker。</p>
+<h2 id="问题根源bundling而非缺功能">问题根源：bundling，而非缺功能</h2>
+<p>一个生产级 agent harness 至少要承担 <strong>15 项</strong> 工作：</p>
+<p>| # | 职责 | 简要说明 |<br />
+|---|------|----------|<br />
+| 1 | 接收并持久化 turn 请求 | 客户端发起一次对话轮次 |<br />
+| 2 | 解析模型 provider 凭证 | 安全地获取 API key / token |<br />
+| 3 | 查询模型能力 | vision、tools、streaming、context window 等 |<br />
+| 4 | 驱动 per-turn 状态机 | provision → stream → tool → steer → teardown |<br />
+| 5 | 加载 skill 文档 | 描述每个 function 的请求格式、错误码、用法 |<br />
+| 6 | 组装 system prompt | mode、identity、working directory、默认 skills |<br />
+| 7 | 向客户端流式返回 token | 实时 UI 体验 |<br />
+| 8 | 工具调用策略检查 | policy engine，执行前拦截 |<br />
+| 9 | 人工审批 | 需要人决策的 tool call 暂停并恢复 |<br />
+| 10 | LLM 预算追踪 | workspace / agent 级别 spend cap |<br />
+| 11 | hook 机制 | tool call 前后 logging、redaction、副作用 |<br />
+| 12 | 分支式 session 存储 | 支持 fork、resume |<br />
+| 13 | context compaction | 上下文窗口满时压缩历史 |<br />
+| 14 | 事件流 | UI 订阅 agent 状态变化 |<br />
+| 15 | 分布式 tracing | OpenTelemetry，跨步骤串联调试 |</p>
+<h2 id="iii-的解法worker-trigger-总线">iii 的解法：worker + trigger 总线</h2>
+<ul>
+<li>每项职责对应一个独立 worker</li>
+<li>worker 通过 WebSocket 连到共享 engine</li>
+<li>worker 注册 function 和 trigger，彼此用 iii.trigger() 调用</li>
+<li>任意 worker 可独立版本化、独立替换、任意语言实现</li>
+</ul>
+<h2 id="生产栈一览11-个-worker">生产栈一览（11 个 worker）</h2>
+<p>| Worker | 职责 |<br />
+|--------|------|<br />
+| iii-directory | Skill 与 prompt 注册表 |<br />
+| harness | 元 worker：加载 permissions.yaml，暴露 policy 与 UI 事件面 |<br />
+| turn-orchestrator | 11 状态 FSM，驱动单次 turn 全生命周期 |<br />
+| approval-gate | 人工审批入口 |<br />
+| session | 分支式 session tree + per-session inbox |<br />
+| llm-budget | 14 个 budget 相关 function |<br />
+| hook-fanout | 通用 publish-collect |<br />
+| auth-credentials | 文件-backed 凭证 vault |<br />
+| models-catalog | 静态模型能力目录 |<br />
+| provider-* | Anthropic / OpenAI / Kimi 等 SSE 流式 provider |<br />
+| context-compaction | token 超阈值时压缩 session history |</p>
+<h2 id="关键设计原则">关键设计原则</h2>
+<h3 id="fail-closed-安全设计">Fail-closed 安全设计</h3>
+<ul>
+<li>policy worker 不可达或超时 → gate_unavailable denial</li>
+<li>hook fanout publish 失败 → 视为 deny</li>
+</ul>
+<h3 id="单一工具调用-chokepoint">单一工具调用 chokepoint</h3>
+<p>所有 tool call 经过 dispatchWithHook，其中 consultBefore 调用 policy::check_permissions（5 秒超时）。</p>
+<h3 id="审批恢复反应式而非-per-call-resume">审批恢复：反应式，而非 per-call resume</h3>
+<p>新设计改为：orchestrator 在 scope approvals 上注册唯一 turn::on_approval trigger。console 调用 approval::resolve → approval-gate 写入 state → state write 触发 trigger → 唤醒对应 session。</p>
+<h2 id="与现有框架生态的对照">与现有框架生态的对照</h2>
+<p><strong>文章说得对的地方：</strong><br />
+- 职责 bundling 是真实痛点<br />
+- 可替换边界是正确抽象方向<br />
+- Fail-closed + 单一 chokepoint 是安全 harness 的 baseline<br />
+- Observability 是一等公民</p>
+<p><strong>需要冷静看待的地方：</strong><br />
+- 复杂度转移，而非消失（单进程 vs 多 worker 运维）<br />
+- 「13 个 worker」本身是一种 opinionated 分解<br />
+- Durable FSM + FIFO 的运维成本</p>
+<h2 id="与-anthropic-harness-研究的对照">与 Anthropic harness 研究的对照</h2>
+<p>| Anthropic 方向 | iii 方向 |<br />
+|---------------|---------|<br />
+| 任务怎么拆、怎么评 | harness 怎么拆、怎么换 |<br />
+| 模型行为与 context | 系统边界与 enterprise 需求 |<br />
+| quality loop | governance + observability loop |</p>
+<h2 id="核心结论">核心结论</h2>
+<p>| 维度 | 传统框架模型 | iii worker 模型 |<br />
+|------|-------------|----------------|<br />
+| Harness 是什么 | 一个 import 的 package | 一组必须完成的 job |<br />
+| 自建含义 | Fork 或绕过框架 | 替换/增删 worker |<br />
+| 集成原语 | 框架 API + adapter | iii.trigger(function_id) |<br />
+| Thin/Thick | 选型时决定 | 运行时 slider |<br />
+| 可观测性 | 常作附加 | 从 trigger 入口贯穿 |<br />
+| 主要代价 | 扩展性锁死 | 多 worker 运维与契约维护 |</p>
+<h2 id="一句话收束">一句话收束</h2>
+<blockquote>
+<p>Harness 不是你要安装的东西，而是你的系统为了让 agent 持久、安全、可观测地运行所必须完成的工作集合。</p>
+</blockquote>
+<h2 id="相关资源">相关资源</h2>
+<ul>
+<li>文档：https://iii.dev/docs</li>
+<li>Engine：https://github.com/iii-hq/iii</li>
+<li>Worker registry：https://workers.iii.dev</li>
+<li>Harness bundle：https://github.com/iii-hq/workers/harness</li>
+</ul>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        
+        <a href="recvmvBOeY7wTQ.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">AgentGuard——面向工具调用型智能体的访问控制框架</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
