@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>Image2 + MiniMax CLI，一句话到成片。拆解 MiniMax CLI 的Agent 设计哲学 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI Agent</span>
+            
+            
+            <span class="topic-chip">公众号</span>
+            
+            <span class="topic-chip">Skill</span>
+            
+            <span class="topic-chip">Agent</span>
+            
+            <span class="topic-chip">CLI</span>
+            
+            <span class="topic-chip">Skills</span>
+            
+            <span class="topic-chip">微信公众号</span>
+            
+            <span class="topic-chip">Agent 工程化</span>
+            
+            <span class="detail-reading-time">约 13 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">Image2 + MiniMax CLI，一句话到成片。拆解 MiniMax CLI 的Agent 设计哲学</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>✨ &#34;传统 CLI 假设屏幕后面是人，所以它装饰；Agent CLI 假设屏幕后面是模型，所以它剥皮。&#34; ✨ &#34;接口不是替代，是叠加：每一代都让上游更懒，让下游更专。&#34; ✨ &#34;SKILL.md 不是消灭了容错，只是把容错从代码里搬进了文字里。文字错的概率，永远比代码大。&#34;</p>
+            </div>
+            
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/iimXaT-F-kVfo-d_FcFYeg" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>发芽 01 故事：1973 年 Ken Thompson 和 Dennis Ritchie 在贝尔实验室设计 Unix 管道时，他们假设坐在终端前的是一个会眨眼、会敲键盘的人。cat file.txt | grep error | sort | uniq 这条命令流，每一段的 stdout 既要能被人读懂（屏幕上能看），也要能被下游命令消费（管道符号能吃）。这是&#34;双重人格&#34;的输出——既是展示又是数据。半个世纪里没人觉得这有问题，因为人就是这条管道的最终消费者。但 2024 年起，这条管道前面坐下的不再是人了，是 LLM Agent。Agent 不眨眼、不欣赏 ANSI 颜色、不需要&#34;Press any key to continue&#34;。--quiet --output json 的本质，就是把这根管道劈成两半：左边那根继续给人类运维留色彩和进度，右边那根只送 --quiet 出来的干净 JSON。mmx-cli 不是在美化终端，它是在拆分终端的两种用途。
+
+发芽 02 故事：把时间轴拉直看：1969 年贝尔实验室的 Ken Thompson 把 PDP-7 上的 OS 简化成 Unix，让&#34;专家用键盘敲命令&#34;成了工程师的日常；1984 年苹果 Lisa 和 1985 年 Windows 1.0 把&#34;命令&#34;藏进了图标和菜单里，CLI 退到幕后；2000 年代 AWS S3 API 出现，&#34;调用资源&#34;这件事从 GUI 又被抽出来一次，给程序员写代码用；2024 年 OpenAI 的 function calling 和 Anthropic 的 tool use，宣告&#34;调用资源&#34;的下一站是给 LLM 看。每代接口都在做同一件事：让&#34;操作的下游消费者&#34;不用懂底层。GUI 替人类隐藏了 rm -rf 的危险，API 替开发者隐藏了 socket 三次握手，Agent Interface 替模型隐藏了 JSON Schema 的字段顺序。SKILL.md 在这条家谱里的位置很清楚——它是 API 文档的 Agent 化重写版，把&#34;开发者指南&#34;翻译成&#34;模型行为约束&#34;。
+
+发芽 03 故事：2023 年初 OpenAI 发布 function calling 那天起，整个行业就开始被同一个幻觉折磨：大家都以为只要给模型一份&#34;工具说明&#34;，它就会&#34;理解&#34;。但最早做这件事的工程师都记得，GPT-3.5 时代一份 200 行的工具描述，模型能稳定执行的大约只有 60%。错的那 40% 不是工具问题，是模型的&#34;理解&#34;在概率上就是会漂移。Anthropic 在 2024 年的 tool use 论文里专门画了一张&#34;工具描述越模糊、模型误用率越高&#34;的曲线，给出了&#34;description 至少要包含 N 个示例&#34;的工程经验。mmx-cli 的 SKILL.md 写得相当克制——能力说明、命令句式、参数、例子、返回结果五段式——但它仍然要假设模型不会跳过&#34;先读 SKILL.md 再调 CLI&#34;这一步。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#image2-minimax-cli一句话到成片拆解-minimax-cli-的agent-设计哲学" class="toc-link">Image2 + MiniMax CLI，一句话到成片。拆解 MiniMax CLI 的Agent 设计哲学</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#agent-是怎么做到的" class="toc-link">Agent 是怎么做到的</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#agent-怎么找到每一步的命令" class="toc-link">Agent 怎么找到每一步的命令</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#这条链为什么没卡住" class="toc-link">这条链为什么没卡住</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#缺参数会被问住" class="toc-link">缺参数会被问住</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#终端噪音太多" class="toc-link">终端噪音太多</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#失败了没有分类" class="toc-link">失败了没有分类</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#视频没生成完" class="toc-link">视频没生成完</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#以后怎么看一个工具行不行" class="toc-link">以后怎么看一个工具行不行</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="image2-minimax-cli一句话到成片拆解-minimax-cli-的agent-设计哲学">Image2 + MiniMax CLI，一句话到成片。拆解 MiniMax CLI 的Agent 设计哲学</h1>
+<p>我发了一句话："帮我做个视频"<br />
+Agent 自己拆任务<br />
+调 Image2 出图<br />
+调 MiniMax CLI 配音、配乐、把图变成视频<br />
+把结果取回来。</p>
+<p>MiniMax CLI 跑的那段<br />
+自动化程度非常高<br />
+中间没有停顿、没有报错、没有问我问题<br />
+等它交付成品就好<br />
+基本不用介入。</p>
+<p>MiniMax 的模型一直很强<br />
+OpenClaw 和 Hermes 都推荐使用<br />
+@steipete 说"their model slays"</p>
+<p>体验了他们的CLI<br />
+发现他们的 Agent 基建搭建，同样是国产第一梯队<br />
+值得拆解一遍。</p>
+<h2 id="agent-是怎么做到的">Agent 是怎么做到的</h2>
+<p>MiniMax CLI 是怎么让 Agent 做到的？</p>
+<p>在讨论这个问题之前<br />
+先看一个容易忽略的事</p>
+<p>以前人用 CLI 的时候，其实替工具做了四件事：</p>
+<ul>
+<li><strong>发现</strong>——搜文档，找到该用哪个工具、哪条命令</li>
+<li><strong>组装</strong>——凭经验填对参数，把命令串起来</li>
+<li><strong>解读</strong>——从终端输出里过滤噪音，读懂报错</li>
+<li><strong>应对</strong>——回答执行中弹出的提问，等长任务跑完</li>
+</ul>
+<p>以前这不是问题——用工具的是人，这四件事人天然就会。</p>
+<p>但现在用工具的变成了 Agent<br />
+发现、组装、解读、应对<br />
+人做的这四件事，没人教它怎么做。</p>
+<p><strong>人是工具的容错层。拿掉人，工具必须自己容错。</strong></p>
+<p>CLI 本身只管执行——文本、图片、视频、语音、音乐、看图、搜索，每项一条命令<br />
+它把调用门槛从写代码降成了填参数：</p>
+<ul>
+<li>网页端：人点</li>
+<li>API：Agent 先写一段连接代码</li>
+<li>CLI：Agent 直接填参数</li>
+</ul>
+<p>但光有 CLI 不够<br />
+CLI 是给人设计的——人知道该调哪条命令、参数怎么填、结果怎么接<br />
+直接把 CLI 扔给 Agent，它用不起来。</p>
+<p>后来去看它的文档<br />
+我发现 MiniMax 没有直接把 CLI 交给 Agent<br />
+它在 CLI 和 Agent 之间加了一层——一份叫 SKILL.md 的说明书<br />
+把人做的那些隐性工作翻译成 Agent 能理解的规则：</p>
+<h2 id="agent-怎么找到每一步的命令">Agent 怎么找到每一步的命令</h2>
+<p>人做的四件事里的前两件——<strong>发现</strong>和<strong>组装</strong>——全写在 SKILL.md 里。</p>
+<p>Agent 不是直接调 CLI<br />
+它先读 SKILL.md<br />
+从里面知道该用什么命令、参数怎么填、结果长什么样<br />
+然后才去调 CLI</p>
+<p><strong>首先，Agent 怎么知道该用这个工具。</strong></p>
+<p>Agent 的工具箱里有很多工具<br />
+你说"帮我做一个短视频"<br />
+它怎么知道该用 mmx-cli？</p>
+<p>答案在 SKILL.md 的第一行——工具简介里写了"当用户想生成文本、图片、视频、语音、音乐时，使用 mmx"<br />
+Agent 读到这句<br />
+就把 mmx-cli 从工具箱里拿出来了。</p>
+<p>人可以搜文档、问同事、试错<br />
+Agent 不行<br />
+如果工具没有在第一屏告诉 Agent "我能做什么"<br />
+Agent 就不知道这个工具存在。</p>
+<p><strong>然后，它要知道该用哪条命令。</strong></p>
+<p>Agent 决定用 mmx-cli 以后<br />
+你要它生成配音<br />
+用 speech synthesize 还是 text chat？</p>
+<p>SKILL.md 的 Commands 把能力逐项列出来了：</p>
+<p>一张摊开的能力地图——Agent 看一眼就知道哪个命令做哪件事，不需要猜。</p>
+<p><strong>接下来，参数怎么填。</strong></p>
+<p>选好命令以后<br />
+SKILL.md 里每条命令都用固定格式写：能力说明 → 命令句式 → 参数 → 例子 → 返回结果。</p>
+<p>比如生成配音：</p>
+<pre><code>mmx speech synthesize --text &quot;*****&quot; --output json --quiet# → audio file path
+</code></pre>
+<p>意思是：用 mmx 生成语音，文本填在 text 后面，结果以 JSON 格式返回</p>
+<p>视频生成、音乐生成也是同样的格式。Agent 不需要从零拼命令：</p>
+<ul>
+<li>能力说明告诉它"能做什么"</li>
+<li>命令句式告诉它"怎么调用"</li>
+<li>例子告诉它"完整调用长什么样"</li>
+<li>返回结果告诉它"下一步能拿到什么"</li>
+</ul>
+<p><strong>最后，这些命令能串成链。</strong></p>
+<p>每一步的输出是下一步的输入：</p>
+<p>Agent 能串起来，因为 Skills 告诉它每一步会返回什么：</p>
+<ul>
+<li>Image2 返回图片地址</li>
+<li>speech synthesize 返回音频文件</li>
+<li>video generate 接收图片 + 音频，返回任务号</li>
+</ul>
+<p>一步的输出就是下一步的输入。跨工具也能串成链。</p>
+<h2 id="这条链为什么没卡住">这条链为什么没卡住</h2>
+<p>调用的问题 SKILL.md 解决了<br />
+但执行之后呢？</p>
+<p>人做的四件事里还有后两件——<strong>解读</strong>和<strong>应对</strong><br />
+过滤噪音、读懂报错、回答提问、等长任务跑完<br />
+这些 SKILL.md 管不了<br />
+得靠 CLI 本身的设计来接。</p>
+<p>能串起来，不代表跑得通<br />
+四个会断的地方。</p>
+<h2 id="缺参数会被问住">缺参数会被问住</h2>
+<p>Agent 发出 mmx video generate 命令<br />
+如果 CLI 运行到一半问"Choose aspect ratio: 1) 16:9 2) 1:1"（选一个画面比例）<br />
+Agent 就卡了——它发的是一次完整命令调用，中间不答题。</p>
+<p>人看到提示会输入选项<br />
+Agent 不会<br />
+它只会停在"我发出的命令还没有结束"。</p>
+<p>mmx-cli 的做法：--non-interactive 缺参数直接失败，--yes 跳过确认。</p>
+<p>把"等人补充信息"的交互<br />
+变成"成功或失败"的状态<br />
+Agent 不需要回答终端问题<br />
+只需要根据状态决定下一步。</p>
+<h2 id="终端噪音太多">终端噪音太多</h2>
+<p>Agent 调用 speech synthesize 以后<br />
+终端可能输出进度条、提示语、耗时统计、报错信息、最终文件路径<br />
+人能自己跳过噪音找结果<br />
+Agent 不行。</p>
+<p>而且 Agent 的上下文是有成本的<br />
+终端输出越长，消耗的 token 越多<br />
+如果把进度、提示、耗时都塞进上下文<br />
+很快就被无关信息占掉了。</p>
+<p>mmx-cli 的做法：把输出分成两路——结果走一路，进度和提示走另一路<br />
+就像快递分拣，包裹走传送带，广告单走垃圾桶<br />
+--quiet 去掉装饰<br />
+--output json 返回机器可读结果<br />
+Agent 只看结果那一路，拿到路径，交给下一步。</p>
+<p>结果不是给人复制的，而是直接给下一步命令使用的：</p>
+<pre><code>AUDIO=$(mmx speech synthesize --text &quot;一段旁白&quot; --quiet)mmx video generate --image &quot;sunset.png&quot; --audio &quot;$AUDIO&quot; --quiet
+</code></pre>
+<p>第一行生成配音，把返回的音频路径存起来；第二行把音频和图片一起交给视频生成命令</p>
+<h2 id="失败了没有分类">失败了没有分类</h2>
+<p>如果 video generate 失败了<br />
+Agent 看到一段英文报错："authentication failed"（认证失败）<br />
+人能读懂<br />
+但 Agent 不应该靠理解一段英文来判断下一步。</p>
+<p>mmx-cli 的做法是退出码：</p>
+<pre><code>0  成功      2 参数错    3 认证错4  额度不足  5 超时     10 内容安全
+</code></pre>
+<p>每种失败对应一个数字，Agent 看数字就知道该怎么处理，不用读英文报错</p>
+<p>失败从"读一段自由文本"<br />
+变成"看一个标准状态"<br />
+Agent 先看数字做一级判断：是参数错就补参数，是认证错就提示用户，是额度不足就换策略。</p>
+<p>不靠一段报错文字自己联想原因。</p>
+<h2 id="视频没生成完">视频没生成完</h2>
+<p>这是任务链里最容易卡住的一步<br />
+视频生成需要几分钟<br />
+如果 CLI 一直等到完成，整条链就停了。</p>
+<p>mmx-cli 的做法是 --async：</p>
+<pre><code>mmx video generate --async --quiet       → taskIdmmx video task get --task-id &lt;id&gt;        → Processing / Successmmx video download --file-id &lt;id&gt;        → preview.mp4
+</code></pre>
+<p>三步：发起视频生成拿到任务号 → 用任务号查进度 → 完成后下载视频文件</p>
+<p>视频任务不是"等在终端前"<br />
+而是变成"拿到任务号，后面继续查和取"<br />
+task id 把长任务变成可管理对象：先发起，再查询，最后下载。</p>
+<p><strong>面向 Agent 的 CLI，不是把终端变好看。是把终端变成接口。</strong></p>
+<p>你可能会问：这个 SKILL.md 谁来写？<br />
+答案是 MiniMax 官方维护的，随 CLI 一起发布<br />
+你不需要自己写说明书<br />
+装好 mmx-cli，Agent 就能读到它。</p>
+<h2 id="以后怎么看一个工具行不行">以后怎么看一个工具行不行</h2>
+<p>MiniMax CLI 是一个案例<br />
+但"人是容错层"这件事是通用的——以后看一个工具适不适合 Agent<br />
+就看人做的那些隐性工作<br />
+有没有真正被工具自己替代：</p>
+<pre><code>调用前（Skills 层）  发现：Agent 能不能找到该用什么工具、什么命令  组装：能不能知道参数怎么填、命令怎么串执行后（CLI 层）  解读：结果干不干净、失败分不分类  应对：会不会中途问人、长任务能不能继续
+</code></pre>
+<p>三句话：Agent 拆任务。Skills 教调用。CLI 不中断、低 token、标准化交结果。</p>
+<p>MiniMax CLI 不是取代 Agent<br />
+它是 Agent 的多模态执行层。<br />
+下次让 Agent 用一个工具，先看一眼：<strong>它有 Skills 吗？</strong></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        
+        <a href="recvmvBOmrYqRR.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">如何构建你自己的 Agent Harness？超越 Cursor/Codex/Claude Code，告别一次性 SDK 选型，15项职责独立各自可替换升级</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
