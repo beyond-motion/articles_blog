@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>分享一套无AI味的内容工作流 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">自动化工作流</span>
+            
+            
+            <span class="topic-chip">Obsidian</span>
+            
+            <span class="topic-chip">自动化</span>
+            
+            <span class="topic-chip">内容创作</span>
+            
+            <span class="topic-chip">工作流</span>
+            
+            <span class="detail-reading-time">约 7 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">分享一套无AI味的内容工作流</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>&#34;灵感不是在写的时候产生的，是在没准备写的时候冒出来的——所以抓住它，比把它写好更重要。&#34; &#34;AI 擅长把已有的东西整理好，但不擅长判断哪个东西值得被整理——这个判断，是人的味道所在。&#34; &#34;持续积累制不是写得慢，是相信今天的碎片会在某天自己连成线——你只需要保证碎片还在。&#34;</p>
+            </div>
+            
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/OAwOs0mdOsvtmBDpUH97xg" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>3个发芽方向，分别从入口重量/三层漏斗/积累制vs完成制三个角度解读金三的内容工作流
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <p>我买了一张录音卡，花了七八百。</p>
+<p>买它的原因很简单：我灵感很多，但忘得更多。</p>
+<p>纯自费，后面来点真实测评一天下来脑子里会跑过很多想法。可能是走路的时候想到一句话，可能是刷到一个东西突然有个判断，也可能是跟别人聊天之后冒出来一个选题。</p>
+<p>但这些想法大多数都留不住。</p>
+<p>当时觉得挺好，觉得这个可以写，结果过一会儿就忘了。等真的坐下来要写东西的时候，只记得自己好像想过一个东西，但具体是什么，已经想不起来了。</p>
+<p>所以我现在更想先解决一个更前面的事：怎么把想法留下来。写得快不快，反而是后面的事。</p>
+<p>以前我也试过手机备忘录、语音备忘录这些方式，但对我来说都不太稳定。手机太容易分心，本来只是想记一句话，结果一打开手机就去看微信、小红书或者别的消息了。等看完回来，原来的想法也没了。</p>
+<p>而且很多记录方式都有一个问题，就是动作太重。</p>
+<p>要打开手机，要点开软件，要新建一条，要想一下怎么写。中间只要多几个步骤，我就很容易断掉。</p>
+<p>录音卡对我来说比较合适，是因为它的入口很轻。</p>
+<p>它可以全天开着，待机时间也够长。我不用每次都想"我要开始记录了"，也不用把这个动作弄得很正式。想到什么就说一嘴，没想到就不说。</p>
+<p>一天下来，可能有十几段碎碎念，也可能一段都没有。</p>
+<p>但至少那些突然冒出来的想法，有机会被留下来。</p>
+<p>我现在的流程大概是这样：</p>
+<p>录音卡全天开着有想法就随口说出来录音内容接入 Get 笔记Get 笔记再同步到我的 Obsidian（这一步是自动化的）Codex或者Cola 每天早上整理昨天的录音内容整理出来的灵感点、可发点和少量草稿，先放到一个试行区里大概就像这张图一样，感觉还是很清晰的：<br />
+这里面我最在意的一点是，AI 不是直接帮我写文章。</p>
+<p>我不太想让它一上来就把所有录音都写成稿子。因为很多录音本身只是一个碎片，还没有熟。硬写成文章就会很怪，也很容易变成那种很 AI 的内容。</p>
+<p>所以我现在先让它做整理。</p>
+<p>整理的逻辑暂时分成三层。</p>
+<p>第一层是灵感点。</p>
+<p>比如一句话、一个判断、一个体感、一个故事苗头，只要有一点价值，就先留下来。这个阶段不要求它完整，也不要求它能马上发布。</p>
+<p>第二层是可发点。</p>
+<p>如果某个想法已经有比较明确的观点，也能看出来适合写给谁看，有痛点或者有冲突，那就整理成一个选题卡。这个选题卡也不等于成稿，只是方便我之后判断要不要写。</p>
+<p>第三层才是试写草稿。</p>
+<p>只有当录音里已经有比较完整的内容，比如有主张、有展开、有一些真实细节，才让 AI 试着写一版草稿。这个草稿也只是候选，不是说写出来就直接发。</p>
+<p>我现在更倾向于先试行这个方式。</p>
+<p>因为我也不确定三层漏斗是不是最适合我。可能跑几天之后会发现，其实只要给我整理灵感点和可发点就够了，不需要写草稿。也可能会发现，有些录音内容本来就比较完整，可以直接写出一版。</p>
+<p>所以我现在没有把这些内容直接放进正式的待发选题里，而是在 Obsidian 里单独建了一个"录音卡灵感整理"的试行目录。</p>
+<p>先跑几天，看整理出来的东西到底有没有用。</p>
+<p>如果有用，再决定要不要把其中一些可发点移动到正式待发选题里。如果没用，就改规则。</p>
+<p>我后来看到小红书有个博主叫小盖，也在用类似的方式。</p>
+<p>他的方式是一次性口述一大段内容，可能三四千字，然后让 AI 帮他去掉口水话、整理逻辑，再自己手改。他还会用两个模型对比输出，取各自的长处。</p>
+<p>小盖的思路也很好，值得参考</p>
+<p>这个方法我觉得挺好，但我的情况和他不太一样。</p>
+<p>他更像是先讲出一篇完整底稿，再用 AI 做整理和润色。</p>
+<p>而我的写作逻辑不是这样。</p>
+<p>我现在更多是每天记录碎片，AI 先帮我从碎片里找点。点多了之后，再慢慢长成选题。选题再多了，里面一部分才会变成文章。</p>
+<p>也就是说，他更像是单篇完成制。</p>
+<p>我更像是持续积累制。</p>
+<p>对我来说，这个差别挺重要的。</p>
+<p>因为我不是每天都有精力完整讲一篇文章，但我每天都会有一些念头。如果这些念头不被留下来，它们就真的没了。</p>
+<p>录音卡在这个流程里的核心作用，就是先把入口打通。</p>
+<p>Get 笔记、Obsidian、Codex 这些东西，是后面的整理系统。</p>
+<p>我现在想要的也不是每天自动生成很多内容。我更想让它每天先把那些本来会消失的想法捞出来。</p>
+<p>等到我要写公众号、拍视频、发小红书的时候，我就不用从零开始想。</p>
+<p>我可以先去素材库里翻，看昨天、前天、上周到底留下了哪些点。</p>
+<p>有些点可能当时看着一般，过几天反而能串起来。</p>
+<p>有些点可能只是一个开头，但后面能长出一篇文章。</p>
+<p>这也是我觉得这个流程值得试的原因。</p>
+<p>它不是为了让我马上变得高产。</p>
+<p>它只是先解决一个很基础的问题：我脑子里那些想法，不要再来一下就没了。</p>
+<p>先留下来。</p>
+<p>后面再判断。</p>
+<p>后记：写完文章之后，发现和"葬AI"的咸鱼的一篇有点相似，但是我写完这篇文章之前，我没看过这篇文章，我觉得他的思路非常好，不同之处在于我比较初级，还在摸索中，可能以后再迭代，我就会出一个比较成熟的2.0版本了。超链接是他这篇，也很值得阅读：灵感式写作。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        
+        <a href="recvn8OALYx1Ey.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">Image2 + MiniMax CLI，一句话到成片。拆解 MiniMax CLI 的Agent 设计哲学</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
