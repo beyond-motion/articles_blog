@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>Codex 进阶，模型变强后，开发流程该怎么重做？ — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI开发</span>
+            
+            
+            <span class="topic-chip">Codex</span>
+            
+            <span class="topic-chip">Agent开发</span>
+            
+            <span class="topic-chip">产品经理5.0</span>
+            
+            <span class="topic-chip">/goal自驱</span>
+            
+            <span class="topic-chip">进化系统</span>
+            
+            <span class="topic-chip">文档驱动</span>
+            
+            <span class="detail-reading-time">约 32 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">Codex 进阶，模型变强后，开发流程该怎么重做？</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>把每一步怎么做还给模型，人只负责定目标、定标准、定边界。 4.0 是十一份各写各的详细流程，5.0 是一条通用的组织模式，加十一份验收标准。 5.0 删掉的从来不是约束，是那种模型不行、我得替它想好每一步的不信任。</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>本文介绍了“产品经理5.0”开发流程的重构思路。随着模型变强，开发流程应从4.0的详细步骤控制转向只定义目标、标准和边界，将执行过程交还模型。核心新增/goal自驱指令，配合更严的审查闭环、精简的子Agent和即时生效的短链进化系统，实现“模型负责聪明，结构负责可靠”的文档驱动开发。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/sARX6fa12Pv9Zph1-xHNng" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章极具前瞻性，精准抓住了AI Agent开发从“保姆式流程管控”向“目标导向放手”的演进趋势。作者提出的“产品经理5.0”框架，通过/goal自驱、强化审查与hook机制，巧妙解决了规则膨胀与模型能力进步之间的矛盾。尤其是“进化系统短链”和“文档驱动单session单功能”的实践，对当前大模型应用落地有极高的参考价值，是vibe coding走向工程化落地的进阶指南。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#codex-进阶模型变强后开发流程该怎么重做" class="toc-link">Codex 进阶，模型变强后，开发流程该怎么重做？</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#先从十一个-skill-说起" class="toc-link">先从十一个 Skill 说起</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#被问得最多的一个问题" class="toc-link">被问得最多的一个问题</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#写-goal-不写过程" class="toc-link">写 Goal 不写过程</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#我为什么敢删" class="toc-link">我为什么敢删</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#子-agent-从四个减到两个" class="toc-link">子 Agent 从四个减到两个</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#六个-hook" class="toc-link">六个 hook</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#进化系统这次改大了" class="toc-link">进化系统这次改大了</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#文档驱动一个-session-只干一件事" class="toc-link">文档驱动，一个 session 只干一件事</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#最后交代一下安装" class="toc-link">最后交代一下安装</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="codex-进阶模型变强后开发流程该怎么重做">Codex 进阶，模型变强后，开发流程该怎么重做？</h1>
+<p>这篇文章解决一个问题，模型已经会自己规划、自己纠错了，管它的那套系统该怎么跟着升级。我的答案是产品经理 5.0。核心思路一句话能说完，<strong>把每一步怎么做还给模型，人只负责定目标、定标准、定边界</strong>。听起来像偷懒，其实正相反，敢这么放手，是因为验收和门禁攥得比以前更紧。</p>
+<p>用过 4.0 的朋友，或者自己搭过 Agent 系统的，应该都有体会。规则这个东西是会上瘾的。AI 跳了一步，你加一条规则，它臆测了一次，你再加一条，规则库越写越厚，看起来越来越严密。直到某次模型升级，你发现它本来能用更聪明的办法解决问题，却被你的流程摁在原地，老老实实走你半年前设计的路线。维护 4.0 这段时间，我最深的体会就是<strong>写得越细的部分，过时得越快</strong>。</p>
+<p>举个具体的例子。4.0 的 bug-fixer，我写了一套完整的调试流程，先收集证据，再分析模式，接着提假设逐个验证，最后实施修复，每一步做什么、产出什么，安排得清清楚楚。5.0 的 bug-fixer 整个文件只有 41 行，过程全删了，留下的只有原则。不猜不试，没证据不下结论。一次只改一个地方，因为同时改多处就没法判断哪个是真修复。同一个 bug 反复修不好就强制停下，重新审视问题本身，那多半不是代码层面的事。至于具体怎么调试，它自己安排。我原本担心删成这样会翻车，实际跑下来，它组织调试的思路比我当年写的流程还合理。</p>
+<p>整个行业都在往同一个方向走，人从指挥每一步，退到定义什么算做完。大家现在聊的也不再是 vibe coding，是怎么让模型自己跑完一整段任务。</p>
+<p>废才产品经理 5.0 还是一套面向产品开发全流程的 Harness。这个概念 4.0 讲过，Agent 等于模型加 Harness，模型提供智能，Harness 让智能变得可用。前馈的 Guides 在行动前注入标准，反馈的 Sensors 在行动后检查结果，进化的 Steering Loop 让系统越用越好，这个骨架 5.0 一点没动，动的是每一层的内容物。Guides 从详细流程换成了目标、标准和边界，执行层的固定 Sub-Agent 从四个减到两个，进化系统从四层升级路径缩成当场拍板的短链，另外多了一样 4.0 完全没有的东西，把一整段开发交给模型自己跑完的 /goal 自驱。主控文件里的第一性原理写得很直接，讲规则、讲需求、讲标准，剩下你自己来，不需要把过程一步一步喂给你，那只会压低你的上限，规则只许更精炼、更准，不许膨胀。</p>
+<p>落到数字上更直观。5.0 的主控 AGENTS.md 一共 171 行，十一个 Skill 的主文件加起来 678 行，连进化规则和两个子 Agent 定义全算上，整套系统 928 行。个别 Skill 带着按需加载的附件，比如需求访谈的问题库，那是刻意留厚的，后面会讲为什么。你要做的只是描述想法，从需求文档到设计图到代码到发布，按标准自动推进，嫌一步一步看着烦，还可以把一整个阶段交出去，让它自己跑完。</p>
+<h2 id="先从十一个-skill-说起">先从十一个 Skill 说起</h2>
+<p>前馈控制的逻辑没变，在 Agent 动手之前注入标准，提高一次做对的概率。变的是注入的东西，4.0 注入方法论加执行流程，5.0 只注入目标、验收标准和边界，过程留白。产品开发还是拆成八个阶段，每个阶段对应一个 Skill，另有三个 Skill 在流水线之外，管这套体系本身。下面顺着流水线走一遍，看每个环节删掉了什么、留下了什么。删得并不平均，有的环节反而变厚了。</p>
+<p>product-spec-builder 负责需求收集。拿我手上的真实项目举例，这期视频做的 VibCut，一个跑在 Mac 上的视频剪辑 Agent，就是用这套流程开发的。我开口说想做个视频剪辑 Agent，它不接茬，先上网搜了一圈竞品回来问我，剪映的智能字幕已经很成熟了，你的差异在哪。我说痛点不在转字幕，在字幕出来之后，筛停顿、删废话、同步改时间线全靠手，一条 5 分钟的口播要剪一个小时，我要的是一个能自己判断该删哪里、动手改时间线、改完还能回滚的剪辑 Agent。它接着问第一版服务谁，所有人等于没有人。问到最后，Spec 里写下的第一版用户就一种人，剪口播的创作者。这个 Skill 是 5.0 里少数不减反增的，访谈分七个阶段，问题、用户、范围这些地基不过关，不解锁后面的细节，另外还有一张 AI 能力对照表，主动告诉你现在 AI 生视频、生图、配音各做到了什么程度，免得你不知道可以要什么。道理不复杂，执行过程模型自己会，你脑子里的需求它替你想不了，<strong>源头采集的质量决定后面所有环节，该厚的地方就得厚</strong>。</p>
+<p>design-brief-builder 管设计规范，问法是同一个路数。它的第一条原则是<strong>形态先于视觉</strong>，先认清你做的是网页、终端工具还是对话式 Agent，再谈好不好看，拿网页那套页面组件的思路去套终端工具，后面每一问都是错的。它从不问你想要什么风格，永远给选择题。高级感是哪种，苹果那种大留白，还是爱马仕那种深色配金。信息密度要 Linear 那种紧凑，还是 Notion 那种宽松。你说出的每个抽象词，都会被翻译成具体的设计属性再向你确认，简洁翻成大留白加克制配色加少字重，翻得不对，你当场就能纠正。</p>
+<p>到了设计图和开发计划这两步，留下的基本只剩规矩。design-maker 通过 Pencil 或 Figma 的 MCP 连接，直接在设计工具里生成整套设计稿，规矩有三条。Spec 里每个有 UI 的功能都要有页面，漏一个，开发就只能靠猜。每个页面不只画默认态，空状态、加载态、错误态都要有。先建可复用组件再拼页面，免得一个按钮画十遍、改一次改十处。页面里填的是真实内容，不是占位假文。dev-planner 这边，读完需求和设计先上网验证技术选型，框架版本、兼容性、有没有现成组件，确认完再按依赖关系把项目拆成有序的 Phase，基础设施先做，被依赖的先做，风险高的尽量排早。硬标准两条。每个 Phase 完成后必须能编译、能运行、能看到效果，不允许写一堆跑不起来的半成品。计划里不许出现待定、回头再补这类占位符，每个任务要完整到一个不了解项目背景的人也能照着开工。</p>
+<p>再往下是 dev-builder，删流程删得最狠的地方，留下来的全是纪律。改代码前先评估影响范围，删一个被多处引用的东西，先全项目搜一遍引用点，一次清干净。优先复用已有组件和样式，不自造轮子。按钮、数字、卡片必须代表真实数据和真实行为，不写死、不留装饰性的假功能。完成声明必须在同一条消息里附上刚跑的验证命令和输出，之前编译过了这种话不算数，<strong>没有当场验证就等于没有完成</strong>。</p>
+<p>bug-fixer 开头讲过了，从完整流程瘦身成 41 行原则。这里补一个细节，它形成假设时一次最多三个，按可能性排序逐个验证，被否定的记下原因不再重复验，连续三次修复失败强制停下重审。</p>
+<p>流水线的出口是审查和发布。code-review 两阶段闭环，是整套系统的质量底线，下面单独讲。release-builder 负责构建发布，它的出发点是一句很多人栽过跟头的话，dev 环境测通不等于打包出来能用，开发和打包后的运行环境，路径、依赖、权限全都不同，所以必须从安装包测起，不是从构建目录测。发布前有一道绝对底线叫隐私审计，对着构建产物逐项查开发者路径、数据库文件、环境变量、API Key、明文密码，查到任何一项立刻停下，修完重新构建再查。<strong>能构建，不等于能发布</strong>。</p>
+<p>流水线之外的三个，管的是体系本身。goal-creator 替你写自驱指令，5.0 最重要的新增，马上单独讲。evolution-engine 消化你的纠正，提炼成规则改进建议，进化那节细说。skill-builder 负责造新 Skill，只在进化系统提议、你点头之后才出手，它是最后手段，不是常规操作。</p>
+<h2 id="被问得最多的一个问题">被问得最多的一个问题</h2>
+<p>把流程删了，过程靠什么组织。5.0 的答案写在主控里，叫规划与执行，所有环节共用同一个模式，统共不到二十行。</p>
+<p>任何环节开工前，主 Agent 先把活拆成有序、可独立验收的步骤，每步写明目标和完成标准。然后看工作能不能隔离，选执行方式，彼此耦合的自己顺着做，互不依赖的并行做，能彻底隔离、需要干净上下文的，spawn 子 Agent 去做。执行中守三条标准。上下文自带，开工前把相关文档的原文读进来，不靠记忆和摘要。结果自检，产出对照完成标准，用证据说话。排障自驱，没达标就自己定位自己修，循环到达标，同一个问题反复卡住才来找你。</p>
+<p>这次瘦身可以这么理解，<strong>4.0 是十一份各写各的详细流程，5.0 是一条通用的组织模式，加十一份验收标准</strong>。要维护的知识从每个环节怎么做，收敛成了所有环节怎么组织，规则量就是这么掉下来一个量级的。</p>
+<h2 id="写-goal-不写过程">写 Goal 不写过程</h2>
+<p>最能体现 5.0 思路的，是这个 4.0 里完全不存在的玩法。</p>
+<p><strong>/goal</strong> 是一条自驱指令，把一个完整目标整段交出去，比如完成开发计划里的某个 Phase，模型就开始自己规划和执行，验证不过就换路子，直到目标达成，或者确实山穷水尽才回来找你，中途不用你盯着。</p>
+<p>这东西好用的前提是 Goal 本身写得好，而这恰恰是大多数人栽的地方。完成条件写成把功能做完，等于没写，模型说做完就算做完吗？/goal 的判定器只认看得见的证据，所以<strong>完成条件必须写成能自我证明的形式</strong>，跑了什么命令、贴出什么输出、产出哪些文件、清单逐项打勾。另外还有个硬限制，整条指令 4000 字符以内，每个字都得带信息，套话写进去纯属浪费额度。</p>
+<p>说实话，写好一条 Goal 比写好一段提示词难。所以 5.0 专门做了 goal-creator。你说一句接下来这个阶段让它自己跑，它结合当前项目状态和对话上下文，替你把整条指令写好，完成标准逐条可验证，验证方式写明跑什么查什么，约束只写真实存在的边界，不灌保持代码整洁这种放之四海皆准的废话。你过目，复制，发送，自驱就开始了。</p>
+<p>拿 VibCut 的开发计划举例，它生成的指令长这样。</p>
+<pre><code>/goal 完成 DEV-PLAN Phase 6，多轨时间线核心与手动编辑。
+</code></pre>
+<p>注意第二、三条完成标准，它把项目自己的验收门禁写进了 Goal。这是刻意的，自驱的完成条件必须覆盖项目门禁，不然模型干完活，会卡在没过审查不让收工的关卡上进退不得。</p>
+<p>两个边界提前说清。指令它替你写，发送必须你自己来，自驱的启动权永远在人手里。还有，不是所有环节都适合自驱，需求访谈这种要你来回拍板的事，交出去等于让模型猜你想要什么，<strong>猜得越流畅，错得越彻底</strong>。适合交出去的是标准清晰、证据可验的环节，开发阶段最典型。</p>
+<h2 id="我为什么敢删">我为什么敢删</h2>
+<p>回头看那条 Goal 的完成标准，第三条写着 code-reviewer 两阶段审查 PASS，现在讲的就是它。敢删过程的底气全在这一层，所以这一层不但没瘦，还更严了。框架里管它叫推理型传感器，做的是需要动脑的检查，纯机械的那部分归 hook，后面讲。</p>
+<p>闭环和 4.0 一致。功能开发完成，主 Agent 自动 spawn 独立的 code-reviewer 做两阶段审查，审查员是严格 QA 的人设，只报告不修复。Stage 1 查做对了没有，Spec 逐条对照代码，每条功能要么有实现并附文件行号，要么没有，不存在大致匹配这个选项。Stage 2 查做好了没有，代码质量、安全扫描、视觉还原。Stage 1 有高优先级问题就停在 Stage 1，不往下走。审查失败自动转修复，质量问题回 dev-builder，确属缺陷和安全漏洞才动用 bug-fixer，修完重新审，从 Stage 1 重来，循环到双过才允许提交。</p>
+<p>5.0 给审查加了两个新维度，都是开发 VibCut 时踩出来的。一个叫<strong>引导真实性</strong>，界面上的占位符和提示文案，必须对应真实存在的功能。VibCut 就被抓过现行，输入框的提示写着可以用某个符号唤起技能，代码里却没有一行处理那个符号的逻辑，这种引导一律按未实现处理。另一个叫<strong>测试真实性</strong>，不只看有没有测试，要看测试有没有真的证明行为是对的，用假前提把缺陷盖成预期、断言方向写反、只测顺畅路径从不碰故障路径，这些看着全绿、实际什么都没证明的测试，全会被点名。审查员的原则一句话，<strong>每个结论要么有证据，要么不成立</strong>。</p>
+<p>落到每个 Phase 上，收尾要过四关，审查、测试完整性、编译、功能测试，每一关都得拿出证据来。</p>
+<h2 id="子-agent-从四个减到两个">子 Agent 从四个减到两个</h2>
+<p>审查必须独立这件事，牵出执行层的一个问题，哪些活配得上固定角色。4.0 有四个固定 Sub-Agent，编码的、审查的、记反馈的、扫进化的，5.0 减到两个，留下审查的 code-reviewer 和消化进化的 evolution-runner。</p>
+<p>取舍标准只有一条，<strong>真正需要独立判断的工作，才值得单开一个隔离的上下文</strong>。审查必须独立，写代码的上下文去审自己的代码，会继承自己全部的错误假设，你写错的前提，自检时还是那个前提，审查的价值恰恰在于它不知道你怎么想的，只看代码和需求对不对得上。进化消化同理，它要冷静地把你的牢骚提炼成通用规则，不该被当前对话带着走。至于编码，普通的任务分解配不上一个常设角色，主 Agent 自己规划自己做，真需要隔离时临时 spawn 一个执行型子 Agent，用完即走。记反馈的那个直接去掉了，活儿被一个 hook 加主 Agent 顺手分掉。</p>
+<p>隔离原则一点没松。每个子 Agent 都是全新实例，不继承 session 历史，主 Agent 把 Spec 条目、交付清单、涉及文件、项目结构完整复制给它。执行型子 Agent 只编码和自检，不能再 spawn 子 Agent，也不能 commit，审查闭环和提交永远握在主 Agent 手里，一个子 Agent 的错误假设传不到下一个任务。有一点 Codex 用户要知道，Codex 只在主 Agent 显式请求时才 spawn 子 Agent，不会自己派，所以审查闭环、进化消化这些环节，规则里都写明了由主 Agent 主动 spawn，这是适配时要注意的点。</p>
+<h2 id="六个-hook">六个 hook</h2>
+<p>子 Agent 管的是判断要干净的活，另有一类事不需要任何判断，但必须每次都对，这类交给 hook。六个 hook，4.0 一个没删，5.0 一个没加。这层稳定的原因很简单，它管的是确定性判断，编译过没过、审没审查、推没推送，这种非黑即白的事跟模型聪不聪明无关，模型再升级，编译必须通过这件事也不会过时。</p>
+<p>pre-tool-shell 在 commit 前跑编译检查，不过就直接阻止提交，它还顺手管一件事，启动 dev server 前清掉占用端口，端口被占是很多灵异问题的来源。auto-push 在 commit 成功后自动推送远程，保护分支除外。配套的提交纪律是原子化，一个功能一个 commit。stop-gate 在 Agent 准备收工时拦一道，代码改了还没过审查的，回去审完再停。mark-review-needed 盯着代码文件，一有改动就标记待审查，和 stop-gate 配合，改了就跑不掉。detect-feedback-signal 监听你的消息，发现纠正和不满的措辞，把原话抓进进化队列。check-evolution 在每次新开 session 时看一眼队列，有积压就提醒先处理。</p>
+<p>取舍逻辑一句话，<strong>要判断的给模型，要保证的给 hook</strong>。规则写一百遍，模型也有走神的那一次，hook 是程序，程序不走神。</p>
+<h2 id="进化系统这次改大了">进化系统这次改大了</h2>
+<p>4.0 的进化走四层路径，反馈先静默记录，同一条出现三次以上才升级成正式规则。设计得挺稳重，用起来太慢，一条明明白白的教训，要眼睁睁看它犯满三次。</p>
+<p>5.0 改成短链。你纠正它，hook 把原话抓成信号入队，措辞隐晦没抓到的，主 Agent 自己识别自己补记。下次新开 session，主 Agent 第一件事 spawn evolution-runner，把积压的信号消化成具体的改动建议，回来当场逐条问你。同意，立刻改进对应的规则文件。否了，信号和建议一起删。<strong>点头即生效，没有缓冲期</strong>，也绝不背着你改规则。有个适配细节顺带交代，消化放在 session 启动时同步执行，是因为 Codex 的 hook 不支持异步后台任务，好在消化本身很轻，几分钟就还给你。</p>
+<p>比速度更重要的是两个新性质。先说双向，它不光往里加规则，还会扫描现有规则提议退休，你已经内化的、从没触发过的、和别条重复的，都是删除候选，判断标准是删了它会不会复现当初的失败，不会就删，规则总量要能往下走，不然用久了规则又会重新堆起来。再说分层，通用规律才进规则文件，项目专属的偏好，比如某个项目的文案口吻、某篇稿子的素材取舍，进的是用户记忆，框架不被单个项目的口味污染。</p>
+<p>举个新鲜的例子，就发生在写这篇稿子的过程里。前一个工作 session，我陆续提了八条修改意见。新 session 一开，它消化完直接来问我，有四条信号指向同一个问题，讲解类内容应该先给全景、再讲原理、最后落价值，要不要立成一条正式的写作规则。另外几条是一次性的措辞调整，现有规则已经覆盖，建议直接删。我点头的当场进了规则库，摇头的当场消失，全程几分钟。你现在读的这篇文章，就是带着那条新规则写出来的。</p>
+<h2 id="文档驱动一个-session-只干一件事">文档驱动，一个 session 只干一件事</h2>
+<p>这套系统里还藏着一个开发方法，值得单独拎出来。</p>
+<p>AI 是靠上下文驱动的，说白了就是靠文档驱动的。模型不记得上一个对话，每个新 session 对你的项目一无所知，它的全部理解来自当场读到的东西。Product Spec 和 DEV-PLAN 存在的意义就在这，新开一个 session，模型把文档读一遍，就知道做到哪了、接下来干什么。废才启动时的项目状态检测干的就是这件事，扫一遍文档和代码的存在状态，自动路由到当前该干的环节。</p>
+<p>顺着这个逻辑往下推，会得到一个很实用的开发节奏，<strong>一个 session 只开发一个功能</strong>。功能做完，文档更新，session 关掉，下一个功能开新的。原因不玄乎，上下文一长，模型的注意力会被稀释，前面聊的需求被挤出去，后面写的代码开始跑偏，所有长对话都这个毛病。一个 session 一个功能，每次的上下文量都可控，模型始终在注意力最好的状态下干活。代价是一个习惯，变更先改文档再动代码，文档是唯一事实来源，上游文档动了，主 Agent 会提醒你检查下游要不要跟着改，改不改由你拍板，它不擅自动手。</p>
+<p>4.0 时代，跨 session 接续是上下文不够用时的补救。5.0 把它倒过来，变成主动选择的开发节奏。我觉得这是整套方案里最值得学走的一个习惯，就算你不用废才，这招也通用。</p>
+<p>顺着文档再说一条 4.0 的老规矩，原样保留。设计稿权重最高，Design-Brief 次之，Product-Spec 管功能逻辑，UI 冲突时以设计稿为准。连带的纪律也还在，新增或修改 UI 必须同步更新设计稿，不然审查环节对照设计稿验收，新功能就成了盲区。写代码前，dev-builder 会从设计工具里读取页面的精确数值，宽高、间距、字号、颜色、圆角，每个任务都重新读，不凭记忆，写完再把代码实际值和设计值逐项对照，有偏差先修再提交。</p>
+<p>丑话说在前面。和 4.0 一样，别期待一步到位，完整产品不可能一个 session 跑完，靠文档接续，文档不更新它就接不上。设计图那步依赖支持 MCP 的设计工具，没有就跳过，靠 Design-Brief 兜底。/goal 自驱不替你做产品决策，需求没想清楚，<strong>它只会把错的东西高效地做完</strong>。这套流程是给认真要落地的产品准备的，随手搓个一次性 demo 犯不上。</p>
+<p>还有一句更要紧的，<strong>这套方案对模型的要求比 4.0 更高，不是更低</strong>。详细流程删掉之后，活怎么拆、做到什么程度算合格、卡住了怎么换路，全靠模型自己判断。需求访谈靠它追问出真需求，追问不到位，后面全在错误的基准上跑。开发执行靠它诚实自检，一个把没验证说成应该没问题的模型，会污染整条流水线。审查靠它逐条对照给证据，进化靠它从你的牢骚里提炼通用规律。底子不够的模型，撑不住这种程度的放手。所以模型建议直接用旗舰档，别用轻量档省钱，省下的会在返工里加倍还回去。Sub-Agent 各有独立上下文，token 消耗随任务量增长，心里要有数。初次上手建议先拿一个小项目跑通全流程，从一句想法跑到发布，确认各环节的产出质量符合预期，再投入正经项目。</p>
+<h2 id="最后交代一下安装">最后交代一下安装</h2>
+<p>真决定上手的话，这里只给个轮廓，完整的安装步骤和每个文件的说明在配置包文档里，不占文章的篇幅。这套方案我做了 Codex 和 Claude Code 两套适配，结构完全同构，Claude Code 版把 AGENTS.md 换成 CLAUDE.md，.codex 换成 .claude，hooks.json 换成 settings.json，其余一一对应。</p>
+<p>以 Codex 版为例，装完之后你的项目里多了这些东西。根目录一份 AGENTS.md 主控，Codex 启动会自动读它，171 行装下角色、第一性原理、执行模式和全部调度规则。.agents/skills/ 下十一个 Skill 各占一个文件夹，什么时候被自动触发由 SKILL.md 的 description 决定，也可以用 /skills 手动调用，访谈问题库这类重型附件放在 references/ 里按需加载，平时不占上下文。.codex/ 里是技术层，config.toml 配模型和 MCP，六个 hook 脚本加一份触发时机的绑定，两个 TOML 文件定义 code-reviewer 和 evolution-runner，进化规则写在 EVOLUTION.md，信号队列 signals.jsonl 和待拍板的 proposals.md 也在这。4.0 的 feedback 目录和一堆模板文件，到此正式退役。跑起来之后，Product-Spec、DEV-PLAN 这些文档会在对应环节自动生成在项目根目录，它们就是跨 session 接续的全部依据。</p>
+<p>把整套系统画成一张图，和 4.0 那张对照着看，能看出哪层瘦了、哪层换了、哪层一动没动。</p>
+<pre><code>┌────────────────────────────────────────────────────────┐
+</code></pre>
+<p>如果你想把这套思路搬去搭自己的 Agent 系统，判断标准浓缩成三条。给模型的知识写成 Skill，只写什么时候用、要什么输入、按什么标准验收、产出什么，过程让它自己定，重型知识拆出去按需加载，平时不占上下文。需要独立判断、干净上下文或真正并行的工作，才 spawn 子 Agent，单纯想给功能分类不算理由。必须每次都对的检查写成 hook，交给程序。</p>
+<p>一句话概括 5.0 的设计观，<strong>模型负责聪明，结构负责可靠</strong>。</p>
+<p>最后说一句。模型每升一级，你写的详细流程就过时一截，但什么算做好不会过时，验收标准不会过时，门禁不会过时。<strong>5.0 删掉的从来不是约束，是那种模型不行、我得替它想好每一步的不信任</strong>。</p>
+<hr />
+<p><img alt="图片" src="/static/article-images/recvmjEFuVtwmG-0-3be2099e37.webp" /></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmvB9QkNXzx.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">Nano Banana 2 震撼上线实测</span>
+        </a>
+        
+        
+        <a href="recvlXaFCnNZFG.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">啊？我刚开源的 Skills 已经 7K Star 了？！</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
