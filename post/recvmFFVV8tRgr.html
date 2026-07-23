@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>部署 HTML 页面从未如此简单！ — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">前端开发</span>
+            
+            
+            <span class="topic-chip">Markdown</span>
+            
+            <span class="topic-chip">Vibe Coding</span>
+            
+            <span class="topic-chip">HTML部署</span>
+            
+            <span class="topic-chip">Cloudflare Worker</span>
+            
+            <span class="topic-chip">静态页面</span>
+            
+            <span class="topic-chip">CI/CD</span>
+            
+            <span class="detail-reading-time">约 9 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">部署 HTML 页面从未如此简单！</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>Markdown 的本质就是从属于HTML的标记语言。 讨论谁取代谁没有任务意义，重点是场景。 最好是我把写好的 HTML 直接拖进去，它就自动上传、自动生成一个可以访问的链接。</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>本文探讨了Markdown与HTML的适用场景，指出HTML在视觉展示和分享上更具优势。作者为解决传统CI/CD部署静态页面流程繁琐的问题，开发了一款极简HTML部署工具，通过拖拽文件至Cloudflare Worker即可自动生成访问链接，实现零成本、无服务器的快速部署。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/83CwncE_X1ieNqVFQbjDkw" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章切中了开发者在部署轻量级静态页面时的痛点，传统CI/CD流程对于简单的分享页而言确实过于臃肿。作者基于Cloudflare Worker实现的“拖拽即部署”方案非常巧妙，不仅去除了服务器和数据库的依赖，还极大地缩短了部署链路。这种针对具体场景做减法的思路值得借鉴，尤其是对追求效率的独立开发者和AI时代下的快速原型验证极其友好。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#部署-html-页面从未如此简单" class="toc-link">部署 HTML 页面从未如此简单！</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="部署-html-页面从未如此简单">部署 HTML 页面从未如此简单！</h1>
+<p>之前有一个很无聊的讨论：到底应该用 Markdown，还是用 HTML？</p>
+<p>这个问题其实有点像在问到底是榴莲好吃，还是水果好吃？</p>
+<p>因为Markdown 的本质就是从属于HTML的标记语言。</p>
+<p>Markdown从设计之初就是为了忽略样式，为的是让人更快地书写内容，摆脱复杂的标签样式排版，把注意力放回文字本身。之前还写过专门的一个 Markdown 本地桌面端工具<a href="https://mp.weixin.qq.com/s?__biz=MzIzMzQyMzUzNw==&amp;mid=2247517878&amp;idx=1&amp;sn=e44ee858b6b2a661563509b78a8184c4&amp;scene=21#wechat_redirect">Grok Builder太香了！做了一个更趁手的Markdown工具</a>。</p>
+<p><img alt="图片" src="/static/article-images/recvmFFVV8tRgr-0-12f6e096d6.webp" /></p>
+<p>再后面又有了 MDX 这种东西，可以直接在 Markdown 里混合写HTML组件，甚至是交互逻辑。</p>
+<p>所以讨论谁取代谁没有任务意义，重点是场景。</p>
+<p>在AI 时代，Markdown 早已经是最通用的语言了。因为它足够简单，结构又足够清晰，最适合于提示词、文档、教程、知识库、训练样本、AI 编程的上下文。</p>
+<p>HTML 则更适合做最终展示，尤其是那些需要更强视觉表现、更复杂布局、更丰富交互的页面，比如在Vibe Coding展示各种架构图，组件和更直观的状态流转。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>像是SVG、图表、图片、卡片、按钮、二维码、富文本排版等等。</p>
+<p>HTML最方便还是它的分享属性。</p>
+<p>跨平台，多端可用，比如我说就用它来做分享群的二维码。</p>
+<p>https://art.bytenote.net/qrcode</p>
+<p>之前我处理这类 HTML静态页面，走的是一套很传统的 CI/CD 流程。</p>
+<p>本地改完文件之后，先 commit，再 push 到 GitHub。GitHub 收到代码之后，Cloudflare 再去拉取仓库，然后重新构建、部署，最后生成线上页面。</p>
+<p>这套流程当然没问题，但是，链路太长了。</p>
+<p>从本地提交，到 GitHub，再到 Cloudflare，中间任何一个环节出问题，都可能导致部署失败，为了确认它有没有部署成功，还得去看构建日志、看状态、看访问结果。要是再认真一点，还要配一套监控。</p>
+<p>对于一个正式项目来说，这样做没问题。对于一个简单的二维码分享页来说，就显得有点太重了。</p>
+<p>比如第一个群满了，我只是想换一张二维码图片，再生成一个新的分享页面。结果还要重新走一遍提交、推送、构建、部署。</p>
+<p>后来我就想，有没有一种更简单的方式？</p>
+<p>最好是我把写好的 HTML 直接拖进去，它就自动上传、自动生成一个可以访问的链接。</p>
+<p>不需要本地 Git，不需要 GitHub，不需要复杂的 CI/CD，也不需要每次都去看构建日志。</p>
+<p>于是我就写了这个非常轻量的部署工具，视频演示如下：</p>
+<p>它的操作很简单，我在后台页面里直接拖入一个 HTML 文件，系统接收之后，把它保存，然后通过 Cloudflare Worker 对外提供访问。</p>
+<p>这样一来，每次我要更新二维码页，就只需要重新生成一个 HTML 文件，然后拖进去。</p>
+<p>第二个群满了，我换一张二维码，再拖一次，页面就更新了，链接也可以继续分享。</p>
+<p>整个过程不需要服务器，不需要数据库，不需要传统构建流程，也几乎没有额外成本。</p>
+<p>因为整套东西都跑在 Cloudflare 上，之前我在<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIzMzQyMzUzNw==&amp;action=getalbum&amp;album_id=4076746904418385929&amp;from_itemidx=1&amp;from_msgid=2247517796#wechat_redirect">AI前端小课从零到全栈</a>的<a href="https://mp.weixin.qq.com/s?__biz=MzIzMzQyMzUzNw==&amp;mid=2247516263&amp;idx=1&amp;sn=4cb021fb98eacbcac849daff227fcdaa&amp;scene=21#wechat_redirect">开箱即用！Cloudflare 全家桶SaaS Template架手架</a>就已经对它做了详细的介绍。</p>
+<p>Cloudflare 提供了大量慷慨的使用额度，本身就提供了比较完整的生态，包括 Worker、路由和访问控制，本次源码的部署也可以在 Cloudflare上部署，完全 03 费用。</p>
+<p>源码下载：</p>
+<p>https://link.bytenote.net/note</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzIzMzQyMzUzNw==&amp;mid=2247518132&amp;idx=1&amp;sn=a13d91a140e47a264f56067538273fef&amp;scene=21#wechat_redirect">Anthropic 将强制执行身份验证！7 月生效</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzIzMzQyMzUzNw==&amp;mid=2247518117&amp;idx=1&amp;sn=5c87dab0e4715c3ada6011c216a64a83&amp;scene=21#wechat_redirect">全都要！ Claude Code、Codex的统一本地桌面 Vibe工作台</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzIzMzQyMzUzNw==&amp;mid=2247518126&amp;idx=1&amp;sn=6344635c0feebcbfb65c93d22e24b9d5&amp;scene=21#wechat_redirect">最强最贵的模型从来就不是用来写代码的！</a></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvn8OALYx1Ey.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">Image2 + MiniMax CLI，一句话到成片。拆解 MiniMax CLI 的Agent 设计哲学</span>
+        </a>
+        
+        
+        <a href="recvmEr0a0fmXH.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">AI 生成一堆素材后，怎么整理成好找又好用的视觉资产库？</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

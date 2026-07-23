@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>AI 生成一堆素材后，怎么整理成好找又好用的视觉资产库？ — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">知识管理</span>
+            
+            
+            <span class="topic-chip">飞书多维表格</span>
+            
+            <span class="topic-chip">视觉资产库</span>
+            
+            <span class="topic-chip">画册视图</span>
+            
+            <span class="topic-chip">AI素材管理</span>
+            
+            <span class="topic-chip">素材复用</span>
+            
+            <span class="detail-reading-time">约 17 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">AI 生成一堆素材后，怎么整理成好找又好用的视觉资产库？</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>以前我们面临的问题是缺素材，而现在，面临的问题可能是，被素材淹没。 图片如果要能够被复用，不能只存图，还要把这个图片的名称、标签、用途和状态给一起记录上。 AI 会不断帮我们生成内容，人在这个过程中，负责筛选；多维表格在这个过程中，负责记录名称、标签和状态；而画册视图，负责让图片重新被看见。</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>本期《信息美学家》介绍了如何利用飞书多维表格搭建轻量级视觉资产库。通过建立素材数据表、设计包含名称、标签及Prompt等关键字段，并切换为画册视图，解决AI时代素材泛滥、难以复用的痛点，让图片素材能够被统一收纳、快速检索和直观浏览。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/Lm7SJrGUaPYg3nIHT86SCQ" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章切中了AI时代内容创作者的一大痛点：素材管理混乱。作者提出的飞书多维表格+画册视图方案，不仅操作门槛低，而且逻辑清晰，从建立容器、完善元数据到可视化浏览，形成了一套完整的轻量级资产管理闭环。特别是强调记录Prompt和生成状态，极大提升了AI素材的复用率，非常适合个人创作者和小团队快速落地实践。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#ai-生成一堆素材后怎么整理成好找又好用的视觉资产库" class="toc-link">AI 生成一堆素材后，怎么整理成好找又好用的视觉资产库？</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="ai-生成一堆素材后怎么整理成好找又好用的视觉资产库">AI 生成一堆素材后，怎么整理成好找又好用的视觉资产库？</h1>
+<p>FOCUS ON US</p>
+<p><strong>点击上方卡片.发现更多产品🧙‍♀️</strong></p>
+<p><img alt="图片" src="/static/article-images/recvmEr0a0fmXH-0-423e3dae83.webp" /></p>
+<p><img alt="图片" src="/static/article-images/recvmEr0a0fmXH-1-bda73af811.webp" /></p>
+<p><strong>本周为大家带来《信息美学家》的第012期</strong></p>
+<p>这一期，我们用飞书多维表格做一个很小但很实用的场景：把 AI 生成的图片、项目截图、封面素材、灵感参考图等，整理成一个可以<strong>浏览</strong>、<strong>筛选</strong>、<strong>复用</strong>的视觉资产库。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>经常有小伙伴问小编：</p>
+<p>个人说明书里的画册视图是怎么做的？如果手上已经有很多图片、封面、海报、灵感图和项目截图，怎么整理成一个看起来舒服、用起来也顺手的画册视图？</p>
+<p>这个问题放到 AI 时代，会更明显。以前我们面临的问题是缺素材，而现在，面临的问题可能是，被素材淹没。</p>
+<p>AI 可以一次性生成几十张图，一个项目里也会不断出现封面、截图、参考图、版本图。</p>
+<p>如果它们只散落在聊天记录、下载文件夹和临时文档里，过几天再找，基本就要靠记忆力硬扛咯。</p>
+<div class="detail-image-missing" role="img" aria-label="这样的">这样的：来源内容未完整抓取</div>
+
+<p>这样的</p>
+<div class="detail-image-missing" role="img" aria-label="或者是这样的">或者是这样的：来源内容未完整抓取</div>
+
+<p>或者是这样的</p>
+<p>在日常写作中，图片如果要<strong>能够被复用</strong>，不能只存图，还要把这个图片的名称、标签、用途和状态给一起记录上。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>而在这期周刊中，我们要做的就是：</p>
+<p>把一批图片素材放进飞书多维表格，再用画册视图变成一个<strong>轻量素材库</strong>。</p>
+<p>这个轻量素材库，主要解决 3 个问题：</p>
+<ul>
+<li>
+<p>图片有统一入口，不用散落在各个文件夹里。</p>
+</li>
+<li>
+<p>图片有标签和用途，下次可以按场景找。</p>
+</li>
+<li>
+<p>图片可以被直接浏览，选图时不用一张张点开。</p>
+</li>
+</ul>
+<p>如果你平时会做<strong>公众号配图</strong>、<strong>小红书封面</strong>、<strong>课程素材</strong>、<strong>项目案例截图</strong>等等，都可以来搭下这个小系统。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>那具体怎么做呢？</p>
+<p>第一步：先建一个素材数据表  </p>
+<p>第一步，在文档里插入一个多维表格，先让<strong>素材</strong>进入到一个稳定的容器里，后面我们再慢慢补字段、分组和视图。</p>
+<div class="detail-image-missing" role="img" aria-label="插入一个表格">插入一个表格：来源内容未完整抓取</div>
+
+<p>插入一个表格</p>
+<div class="detail-image-missing" role="img" aria-label="空白数据表">空白数据表：来源内容未完整抓取</div>
+
+<p>空白数据表</p>
+<p>这一步做完之后，<strong>图片</strong>就有了一个可以继续扩展的地方。</p>
+<p>后面不管是 AI 生成的图片、还是项目截图、亦或是课程视觉素材，都能直接往这个多维表格里面存放。</p>
+<p>第二步：设计字段，让图片能被检索  </p>
+<p>接着，就是给<strong>空白视图</strong>补充上字段。基础版本可以先准备以下字段：</p>
+<ul>
+<li>
+<p><strong>素材名称：</strong></p>
+<p>这张图是什么。</p>
+</li>
+<li>
+<p><strong>素材标签：</strong></p>
+<p>它属于哪个主题、风格、项目或使用场景。</p>
+</li>
+<li>
+<p><strong>图片附件：</strong></p>
+<p>上传具体图片。</p>
+</li>
+<li>
+<p>……</p>
+</li>
+</ul>
+<div class="detail-image-missing" role="img" aria-label="准备素材库字段">准备素材库字段：来源内容未完整抓取</div>
+
+<p>准备素材库字段</p>
+<p>字段设计好之后，把自己的素材数据填进去。</p>
+<div class="detail-image-missing" role="img" aria-label="填充数据">填充数据：来源内容未完整抓取</div>
+
+<p>填充数据</p>
+<p>如果这批素材来自 <strong>AI 生成</strong>，那这里建议可以再加上「生成工具」「Prompt」「使用场景」「发布状态」等字段。</p>
+<p>这些字段以后会很有用，这样我们就能很快知道<strong>哪类 Prompt</strong> 出图稳定，<strong>哪批素材</strong>已经发布，哪些还可以继续改。</p>
+<p>PromptCopy Ready</p>
+<p><strong>这里有可以直接使用的 Prompt，供大家参考：</strong><br />
+请帮我为这批图片素材生成一套整理字段，包括素材名称、素材标签、适用场景、风格关键词、生成工具、Prompt 摘要、发布状态。字段要适合放进飞书多维表格，方便后续用画册视图浏览和筛选。</p>
+<p>第三步：切换成画册视图  </p>
+<p>表格里有基础数据后，新增一个<strong>画册视图</strong>。<strong>表格</strong>适合管理，<strong>画册</strong>适合浏览。切换之后，图片就会从表格字段变成一张张可以直接扫看的卡片。</p>
+<div class="detail-image-missing" role="img" aria-label="创建「画册视图」">创建「画册视图」：来源内容未完整抓取</div>
+
+<p>创建「画册视图」</p>
+<p>完成后，一个<strong>轻量版视觉资产库</strong>就跑起来啦！</p>
+<div class="detail-image-missing" role="img" aria-label="画册视图">画册视图：来源内容未完整抓取</div>
+
+<p>画册视图</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>知道怎么做<strong>素材视觉库</strong>之后，下面我们来了解下，这个<strong>素材视觉库</strong>适合谁来使用？以下五类场景供你参考：</p>
+<p>|<br />
+场景</p>
+<p>|</p>
+<p>可以沉淀什么</p>
+<p>|<br />
+| --- | --- |<br />
+|</p>
+<p>个人品牌</p>
+<p>|</p>
+<p>头像、封面、栏目视觉、作品集截图</p>
+<p>|<br />
+|</p>
+<p>内容团队</p>
+<p>|</p>
+<p>小红书封面、公众号配图、选题视觉参考</p>
+<p>|<br />
+|</p>
+<p>AI 创作</p>
+<p>|</p>
+<p>生成图、Prompt、版本对比、可发布素材</p>
+<p>|<br />
+|</p>
+<p>企业知识库</p>
+<p>|</p>
+<p>产品图、案例图、活动图、品牌素材</p>
+<p>|<br />
+|</p>
+<p>课程产品</p>
+<p>|</p>
+<p>课件封面、案例截图、模板展示图</p>
+<p>|</p>
+<p>它同样也适合替代专业素材管理系统，从最小的MVP版本，到更复杂的素材库管理，在多维表格</p>
+<p>尤其是素材还没多到需要复杂权限和版权流程时，多维表格就够用了。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>这一期从<strong>画册视图</strong>切入，让我们真正解决了<strong>素材复用</strong>问题。</p>
+<p>AI 会不断帮我们生成内容，人在这个过程中，负责筛选；多维表格在这个过程中，负责记录名称、标签和状态；而画册视图，负责让图片重新被看见。</p>
+<p>等图片被整理好、标上标签、放进固定视图里，下次要用的时候，就不用再靠记忆翻文件夹了。个人做内容、团队做项目，都能直接从这里把素材捞出来。</p>
+<p>如果你想系统学习如何用飞书搭建知识库、项目管理和内容系统，可以继续文末的《玩转飞书系统课程》；</p>
+<p>如果只是想先积累灵感，也可以把这一期放进你的<strong>「信息美学家」</strong>案例库里。</p>
+<p>以上就是本期的全部内容，我们下期见🍻🍻🍻</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>END</p>
+<p>内容排版 / 周一同学Zelina</p>
+<p>内容策划 / 周一同学Zelina</p>
+<p><img alt="图片" src="/static/article-images/recvmEr0a0fmXH-2-bdd9fe2464.webp" /></p>
+<p><img alt="图片" src="/static/article-images/recvmEr0a0fmXH-3-7541a04d7f.gif" /></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvmFFVV8tRgr.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">部署 HTML 页面从未如此简单！</span>
+        </a>
+        
+        
+        <a href="recvmvBOmrYqRR.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">如何构建你自己的 Agent Harness？超越 Cursor/Codex/Claude Code，告别一次性 SDK 选型，15项职责独立各自可替换升级</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
