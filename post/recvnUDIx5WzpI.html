@@ -91,18 +91,22 @@
         <!-- Meta -->
         <div class="detail-meta">
             
-            <span class="card-tag card-tag-primary">AI编程</span>
+            <span class="card-tag card-tag-primary">人工智能</span>
             
             
-            <span class="topic-chip">开源项目</span>
+            <span class="topic-chip">Hugging Face</span>
             
-            <span class="topic-chip">编程开发</span>
+            <span class="topic-chip">个人开发者</span>
             
-            <span class="topic-chip">AI编程</span>
+            <span class="topic-chip">编程助手</span>
             
-            <span class="topic-chip">独立开发者</span>
+            <span class="topic-chip">Agent</span>
             
-            <span class="detail-reading-time">约 1 分钟阅读</span>
+            <span class="topic-chip">本地模型</span>
+            
+            <span class="topic-chip">Gemma4</span>
+            
+            <span class="detail-reading-time">约 23 分钟阅读</span>
         </div>
 
         <!-- Title -->
@@ -114,9 +118,14 @@
             
             <div class="digest-block digest-block-quote">
                 <span class="digest-label">一句话总结</span>
-                <p>当所有人都在为头部 5% 卷算力时，剩下 95% 的沉默需求不是市场，是大陆——只是还没人把&#39;小&#39;做成护城河。 -- AI 不是治好 ADHD，而是把 ADHD 从&#39;病&#39;重新定义成&#39;生产函数&#39;——当世界越来越像多 Agent 协作，一个能在多任务间快速切换的人，本来就是天然的 orchestrator。 -- 个人开发者的护城河，从来不是&#39;更大的模型&#39;，而是&#39;大厂不愿意认真做的那个具体问题&#39;——赢得小池塘大鱼的，从来不是更大的鱼，是那个池塘里唯一的鱼。</p>
+                <p>隐私，免费。 我很高兴，但不是说我真的全面打败了他们，只是可能更认真一些。 真诚和坚持最重要</p>
             </div>
             
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>个人开发者逯雨鑫（yuxinlu1）凭借自研的12B GGUF模型登上Hugging Face热榜，力压众多大厂。该模型基于Gemma4-12B，通过蒸馏Fable 5等强模型，主打本地离线、隐私免费，在编程与Agent任务上表现优异。逯雨鑫自费耗时40小时完成训练，展现了个人开发者在细分领域专注解决痛点的独特优势。</p>
+            </div>
             
             
             <a class="source-link" href="https://mp.weixin.qq.com/s/_t8l80p1xqf2QF-OHyhqXA" target="_blank" rel="noopener">
@@ -130,19 +139,190 @@
         <!-- Review -->
         
         <div class="detail-review">
-            <strong>点评</strong>1980 Compaq 廉价 PC 兼容机 → 1995 Linux 免费内核 → 2007 OLPC → 2014 Firefox OS → 2026 yuxinlu1 12B GGUF，这条&#39;算力穷人革命&#39;的脉络一再证明：当所有人都押注头部时，押注沉默大多数的反而赢。1978 ADD 列入 DSM-III 是&#39;工业时代流水线注意力&#39;对神经多样性的规训；2023 GPT-4 + 2024 Agent 把信息检索和任务执行成本都压到 1/1000，yuxinlu1 的&#39;多模型同时跑 9 个公开模型 + 9 种微调 + 日均 3 小时回评论&#39;是 ADHD 作为新生产函数的活样本。1971 Thompson 写 Unix 自认是&#39;just a hobby&#39;，1999 Linus 写 Linux 自称&#39;just a hobby&#39;，2010 Vitalik 17 岁写 Ethereum 时只有 400 美元钱包——&#39;我很高兴，不是说真的打败了他们&#39;是 1971→1999→2010→2026 一脉相承的方法论。
+            <strong>点评</strong>逯雨鑫的成功并非偶然，而是精准抓住了本地模型“隐私、免费”的痛点。在大厂追求通用大模型时，他选择将编程与Agent能力蒸馏至12B小模型，让普通消费级显卡也能运行。这种不靠算力堆砌，而是靠高质量数据筛选与验证的“素人”打法，证明了个人开发者只要足够真诚和专注，在细分赛道上完全能与巨头掰手腕，也为开源社区注入了更多务实与创新的活力。
         </div>
         
 
         <!-- Table of Contents -->
         
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#抱抱脸模型top榜我现在只服yuxinlu1" class="toc-link">抱抱脸模型TOP榜，我现在只服yuxinlu1</a>
+                </li>
+                
+                <li class="toc-item level-5">
+                    <a href="#听雨-发自-凹非寺" class="toc-link">听雨 发自 凹非寺</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#素人模型冲上抱抱脸热榜" class="toc-link">“素人模型”冲上抱抱脸热榜</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#一个人40小时杀进大厂中间" class="toc-link">一个人，40小时，杀进大厂中间</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#原来还是个爱看网文的" class="toc-link">原来还是个爱看网文的…</a>
+                </li>
+                
+            </ul>
+        </div>
+        
 
         <!-- Content -->
         <div class="content-section-label">正文整理</div>
         <div class="detail-content">
-            <p>一位个人开发者，竟然在一众大厂中，杀进了抱抱脸Models Trending榜的前排？！这是普通的一天，我也普通地刷着抱抱脸的Trending榜。第一是GLM-5.2，智谱最新开源模型，老熟人了，下载量6万多，不足为奇。第二是百度的无限OCR，最近悄悄开源的，一口气能解析40多页文档，下载量也来到了7万。再往下看，突然出现了一个个人账号：yuxinlu1。</p>
-<p>逯雨鑫把 Fable 5 编程推理能力蒸进 Gemma4-12B，4.5GB 显存就能跑，本地、离线、零API成本。V1 是 Coder 版，V2 是 agentic 版，tau2-bench telecom 得分从 15% 提到 55%（3.5倍）。他用 1 万条 verified examples + 40 小时 V2 训练 + 9 个公开模型。一个人 40 小时杀进大厂中间。</p>
-<p>逯雨鑫承认自己患有 ADHD，反而说'AI 时代是 ADHD 的天下'。</p>
+            <h1 id="抱抱脸模型top榜我现在只服yuxinlu1">抱抱脸模型TOP榜，我现在只服yuxinlu1</h1>
+<h5 id="听雨-发自-凹非寺">听雨 发自 凹非寺</h5>
+<p>量子位 | 公众号 QbitAI</p>
+<p>一位个人开发者，竟然在一众大厂中，杀进了抱抱脸Models Trending榜的前排？！</p>
+<p>这是普通的一天，我也普通地刷着抱抱脸的Trending榜。</p>
+<p>第一是GLM-5.2，智谱最新开源模型，老熟人了，下载量6万多，不足为奇。</p>
+<p>第二是百度的无限OCR，最近悄悄开源的，一口气能解析40多页文档，下载量也来到了7万。</p>
+<p>再往下看，突然出现了一个个人账号：<strong>yuxinlu1</strong>。</p>
+<p><img alt="图片" src="/static/article-images/recvnUDIx5WzpI-0-26e1abc96f.webp" /></p>
+<p>嗯……嗯？！</p>
+<p>而且一占就是两个位置。</p>
+<p>再一看下载量——最新数据已高达20.7万和53.6万。好家伙，这是什么神仙模型来了？</p>
+<p>甚至在此前一周，这位个人开发者的模型一度霸榜抱抱脸，力压GLM-5.2一头，连智谱负责人都在X上公开推荐：</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>也就是说，在智谱、百度、Qwen、NVIDIA…这些名字中间，一个个人开发者账号硬生生挤进了TOP，而且下载量还这么高。</p>
+<p>不禁令人好奇：<strong>luyuxin究竟是谁？怎么能量这么大？</strong></p>
+<h2 id="素人模型冲上抱抱脸热榜">“素人模型”冲上抱抱脸热榜</h2>
+<p>这波Hugging Face热榜，前排基本是大厂、明星团队和热门赛道在卡位。</p>
+<p>比如智谱GLM-5.2，753B超大参数，国产明星大模型；百度Unlimited-OCR，踩中了最近很火的OCR和文档理解方向。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>再往下还有Qwen的AgentWorld、英伟达的 LocateAnything、微软的FastContext。</p>
+<p>国产开源大模型的熟面孔也都在列：MiniMax M3、Kimi-K2.7-Code、DeepSeek-V4-Pro。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>图像生成方向也有Krea，新模型Krea-2-Turbo和Krea-2-Raw都在榜上。</p>
+<p>结果里面还夹了两个<strong>luyuxin的12B GGUF模型</strong>。</p>
+<p>不er…<strong>luyuxin你也太醒目了吧…</strong></p>
+<p>仔细一看，这两个新模型，主要把<strong>Fable 5</strong>的编程推理能力，蒸进了一个本地能跑的<strong>Gemma4-12B</strong>小模型里。</p>
+<p>4.5GB显存就能跑，本地、离线、零API成本。普通玩家一张消费级显卡，甚至一台带统一内存的Mac，就能把它跑起来。</p>
+<p>两个模型的分工也不同。</p>
+<p>V1是<strong>Coder版</strong>，主打写代码、解题、生成可运行代码。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>据模型卡，它的训练数据是“可验证”的代码推理：每条思维链对应的代码，都得真跑过测试、通过了才留下。</p>
+<p>教师数据主要来自Cursor的<strong>Composer 2.5</strong>，外加<strong>Fable 5</strong>——Composer 2.5做错的题，会交给Fable 5重新推一遍，生成新的推理链和正确代码。</p>
+<p>V1发布后，曾连续多日霸榜抱抱脸Trending榜榜首。</p>
+<p>V2是agentic版，加了多步工具调用能力，能当本地Agent用，会自己读、推理、动手、再验证。</p>
+<p>作者还跑了benchmark——在tau2-bench的telecom子集上，基座gemma-4-12B得分15%，V2版模型得分55%，大概是基础性能的<strong>3.5倍</strong>。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>不过作者也表示，这是本地自测、单一领域、20个任务跑出来的相对值，不能跟官方榜直接比，他也坦白跟frontier大模型还有不小差距。</p>
+<p>作者还提到：Fable 5后来被下线了，只有他自己的数据集还保留着Fable 5“原始”的那份推理过程。</p>
+<p>而社区贡献数据里缺失的那部分reasoning，他改用Claude Opus 4.8(xhigh)重新生成、一条条补了回来。</p>
+<p>他也承认，重建出来的轨迹“可能和原版Fable 5有出入”，但这是当时唯一可行的方案。</p>
+<p>他还在discussion里透露，这套微调数据其实只有约1万条examples。他强调，数据量没有大家想象得那么重要，真正关键的是质量、筛选和验证。</p>
+<p>这套模型之所以能在抱抱脸上有这么高的热度，还有一个很现实的原因：<strong>本地能跑</strong>。</p>
+<p>这两个模型都是<strong>GGUF量化版</strong>。</p>
+<p>GGUF是llama.cpp生态里常见的本地模型格式，用户可以用llama.cpp、Ollama、LM Studio、Jan等工具直接加载。</p>
+<p>这对coding场景尤其有吸引力。毕竟写代码、看仓库、跑命令、调bug，经常涉及私有项目和本地环境。能在自己机器上跑，就意味着不用把代码传到云端，也不用每次都付API调用成本。</p>
+<p>更关键的是，它门槛不算高。</p>
+<p>V1模型卡里写到，最小的<strong>Q2_K</strong>版本约<strong>4.5GB</strong>，只要有约4.5GB显存或统一内存，就能跑一个私有、离线的编程助手。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>作者推荐的甜点位是<strong>Q4_K_M</strong>，大小约<strong>6.87GB</strong>；更高质量的Q8_0则约<strong>11.8GB</strong>。</p>
+<p>V2因为更偏agentic，作者没有放Q2_K。理由是压力测试没过，不够可靠。</p>
+<p>所以V2的最小可靠版本从<strong>Q3_K_M</strong>开始，约<strong>5.7GB</strong>；推荐的<strong>Q4_K_M</strong>依然是约<strong>6.87GB</strong>。</p>
+<p>作者还提前剧透了后续计划——V3已经在路上。</p>
+<p>他表示，V3仍然会沿着12B这条线继续做coding+agentic方向。作者说，自己也没想到这次后训练的提升会这么大，所以接下来会继续往前推。</p>
+<p>尤其是在tau2-bench telecom上，V2还有一些“过度尝试、反复retry”的问题，V3会继续通过更多训练来改。</p>
+<p>另一方面，他还在做一个更大的版本：<strong>Qwen3.6-27B</strong>。相当于把同一套coding+agentic配方放到更大的底座上，给显存更宽裕的用户用。</p>
+<h2 id="一个人40小时杀进大厂中间">一个人，40小时，杀进大厂中间</h2>
+<p>能单枪匹马冲上抱抱脸热榜，下载量加起来超70万，在一众大厂机构间杀出一席之地。</p>
+<p>这位作者究竟是何方神圣？</p>
+<p>量子位与作者取得联系后，也得知了他的故事。</p>
+<p>他叫<strong>逯雨鑫</strong>，目前是美国一所高校在读的AI方向研究生，本科念的是数据与商业分析，中间还专门去补过一轮全栈开发，把前后端、软件开发、数据处理都学了。</p>
+<p>这两个爆火模型，并不是他的主业，而是纯自费的个人项目。</p>
+<p>“开源这东西其实只是花钱，并不会让你有任何收入。”他很清楚这一点，因此他做V1的最初动机，反而是“自我提升”：</p>
+<p>学校教的知识更新太慢，他读研时教授讲的还是两三年前的内容，而AI日新月异，他干脆拿这个项目来逼自己追上最新的东西。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>为了做这些模型，他烧掉了整整一个Claude Max 20×套餐，单是V2就花了40多个小时。</p>
+<p>一条条合成数据、手动清洗、训练、评测、再训练，几乎全是一个人扛下来的。</p>
+<p>硬件上，他用的是一张RTX 5090，显存为32GB VRAM；另外还有约96GB的本地SSD资源可配合使用。实际能调动的资源规模大约在128GB左右。</p>
+<p>对个人开发者来说不算差，但跟大厂和AI Lab的算力池完全不是一个量级。</p>
+<p>他告诉量子位，整个过程里最耗时的其实不是训练，而是数据处理。</p>
+<p>尤其是agentic数据，真实对话往往很长，一个任务可能有十几步，几千甚至几万个token。但受限于显存，他训练时一次最多只能喂2048 token。</p>
+<p>所以他做了类似“滑动窗口”的处理：在每段多轮会话里，以最近一次用户消息为锚点，围绕一次工具调用，把上下文裁到预算以内。</p>
+<p>V1和V2都以Gemma 4-12B为底座。选它不是因为好做，恰恰相反，Gemma 4的格式和工具协议都比较特殊，适配起来很麻烦，甚至很多客户端支持并不完善。</p>
+<p>逯雨鑫表示，一方面是挑战自己；另一方面，是因为12B这个尺寸很有吸引力。</p>
+<p>他算过，如果量化到3bit左右，很多8GB统一内存的Mac用户也能跑起来，还能留出一定上下文窗口。</p>
+<blockquote>
+<p>我现在知道，很多人使用的电脑还是8GB左右的统一内存。所以我想在最大可能的参数量下，让更多人使用到。</p>
+</blockquote>
+<p>逯雨鑫把本地模型的价值总结成两个词：</p>
+<p><strong>隐私，免费。</strong></p>
+<p>他觉得，很多人只是想让AI帮自己整理文件、处理数据、做PPT，或者体验一下agent，并不一定愿意每个月为Claude、GPT付费。</p>
+<blockquote>
+<p>人可能就是想玩一玩，为什么非得要收费呢？</p>
+</blockquote>
+<p>V1发布后，他一开始没太关注榜单，只是像往常一样在模型卡里说：如果大家喜欢、下载量和likes多，他就继续做V2。</p>
+<p>没想到两三天后，模型突然从不知道多少名跳到第八；睡了一觉，又冲到第一。</p>
+<p>随后，评论和issue大量涌进来。</p>
+<p>他几乎每条都看。最多的时候，每天花三四个小时看Hugging Face评论、回复问题、测试用户反馈，再把结果告诉对方。</p>
+<p>他表示：“社区有需求，我是真的在去做，这才是最关键的。”</p>
+<h2 id="原来还是个爱看网文的">原来还是个爱看网文的…</h2>
+<p>在HF上，逯雨鑫总共发布了9个公开模型，除了两个爆火模型，他还做过“直接蒸Claude”的模型。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>比如gemma-4-12B-it-Claude-4.6-4.8-Opus-GGUF，可以理解成通用版Gemma4-12B蒸馏模型。</p>
+<p>它不只限定编程，更像是在把Claude Opus的回答风格、推理习惯、thinking能力，往这个12B本地模型里压。</p>
+<p>另一个模型则干脆换上JetBrains的编程模型Mellum2当底座，专做推理蒸馏。</p>
+<p>再继续往下看…</p>
+<p>等等，怎么还有网文的微调模型啊？</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>好家伙，还分了四个题材，都是中文网文LoRA，而且全都基于Qwen3.6。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>逯雨鑫告诉量子位，这其实是他最早开始做Hugging Face模型的入口。</p>
+<p>因为他自己本来就喜欢看小说。追一本没完结的小说时，读者焦虑；作者日更码字也很辛苦。</p>
+<p>于是，他想做一整套免费的小说生成pipeline，用不同风格的中文小说LoRA，让作者能用AI提速，读者也能更快看到内容。</p>
+<p>但中文小说LoRA在HF上并不算热门，后来他发现用户更关注coding和agentic，于是方向慢慢转到了现在这条线上。</p>
+<p>当问及他对其他个人开发者有什么建议时，逯雨鑫说：<strong>真诚和坚持最重要</strong>。</p>
+<p>真诚，是不要夸大模型能力。哪里强，哪里弱，都说清楚。</p>
+<blockquote>
+<p>你要如实告诉大家。我骗你说我这有多强，但真实使用下来出现很多问题，下次我一发东西，你就不相信我了。</p>
+</blockquote>
+<p>坚持，则是开源作者必须接受这件事：你一定会遇到不好的声音。</p>
+<p>模型火了以后，逯雨鑫也遇到过质疑，但他还是决定坚持下去。</p>
+<p>在他看来，开源这条路本来就很难。</p>
+<p>就算登顶Hugging Face热榜，也不会直接带来收入。更多时候，是自己花钱买算力、花时间处理数据、回复评论、修bug，然后还要面对少数负面声音。</p>
+<p>而支撑他一路做下来的，还有一种很个人的工作节奏。</p>
+<p>逯雨鑫提到，自己患有ADHD。</p>
+<p>过去这可能意味着很难长期按部就班推进一件事，但在AI这个变化极快的领域，快速切换兴趣、迅速进入hyperfocus，反而成了某种优势。</p>
+<p>他甚至认为：“AI时代是ADHD的天下。”因为一个方向凉下来后，如果还一直钻在里面，等再转去学新的东西，可能已经晚了。</p>
+<p>聊到最后，我们也抛出了那个最初的问题：</p>
+<p><strong>作为个人开发者，凭什么能在大厂中间挤进前排？</strong></p>
+<p>逯雨鑫的回答很中肯。</p>
+<p>他认为大厂当然能做得更好，有更多researcher，也有更强算力。</p>
+<p>但大厂发布开源小模型，往往还承担品牌宣传、API引流等目标；而个人开发者没有这些包袱，反而可以更专注地解决一个具体痛点。</p>
+<blockquote>
+<p>我很高兴，但不是说我真的全面打败了他们，只是可能更认真一些。</p>
+</blockquote>
+<p>在他看来，这正是个人开源作者的机会：不必做全能模型，而是把一个足够具体的问题做到好用。</p>
+<p>如果你也想体验一下这款本地模型，链接已经放在下方。</p>
+<p>温馨提示：目前最适配的平台是llama.cpp，优先推荐大家使用~</p>
+<p>HF地址：https://huggingface.co/yuxinlu1</p>
+<p><strong>一键三连</strong><strong>「点赞」「转发」「小心心」</strong></p>
+<p><strong>欢迎在评论区留下你的想法！</strong></p>
+<p>— <strong>完</strong> —</p>
+<p><strong>🌟 点亮星标 🌟</strong></p>
+<p><strong>科技前沿进展每日见</strong></p>
         </div>
     </article>
 

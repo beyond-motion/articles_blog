@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>人生周报v078：鱼 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">读书笔记</span>
+            
+            
+            <span class="topic-chip">人生周报</span>
+            
+            <span class="topic-chip">鱼不存在</span>
+            
+            <span class="topic-chip">主题阅读</span>
+            
+            <span class="topic-chip">AI教育</span>
+            
+            <span class="topic-chip">寻找谜题</span>
+            
+            <span class="topic-chip">分类与虚构</span>
+            
+            <span class="detail-reading-time">约 7 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">人生周报v078：鱼</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>「长大这件事，就是学着不再轻信别人对自己的评价。」 ship 出去的，才叫作品；build 出来没有 ship 的，只能叫草稿。 很多人的痛苦不是解不了题，是根本没有属于自己的题。</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>本期《人生周报》以“鱼”为主题，分享了近期读到的好句子与个人思考。作者探讨了自媒体的真谛、时代如操作系统般的迭代、寻找自己痴迷的谜题的重要性，以及AI对孩子学习的帮助。最后推荐了《鱼不存在》一书，指出松开强加的分类与虚构的分界线，世界反而会变得更大更温柔。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/kpM6uFXRX2NhYHfyZXpWVg" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>作者以“读”与“说”的双轨记录生活，既有对时代更迭、自媒体本质的敏锐洞察，也有对寻找自我谜题、AI教育落地的深度思考。最动人的是对《鱼不存在》的解读：我们强加的秩序与分类往往是虚构的，真正的自由在于松开那些自以为确信的界线。这种“放掉鱼”的哲学，不仅是对抗混沌的解药，更是让内心安顿、让世界变温柔的良方。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#人生周报v078鱼" class="toc-link">人生周报v078：鱼</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#读" class="toc-link">读</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#说" class="toc-link">说</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#书" class="toc-link">书</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="人生周报v078鱼">人生周报v078：鱼</h1>
+<blockquote>
+<p>《剑来》里，陈平安遇到眼前一亮的句子，会一笔一画刻在竹简上，时不时拿出来晒晒太阳，翻拣重读。</p>
+<p>以陈平安为师，我想记录一下每周在这世上遇到的好句子。</p>
+<p>每周读到的好句子，收下来晾一晾——是以有「读」。</p>
+<p>心里总有话忍不住想对这个世界讲，——是以有「说」。</p>
+</blockquote>
+<hr />
+<h2 id="读">读</h2>
+<blockquote>
+<p>大多数人不爱玩地球 online 主要还是因为没有明确的天赋系统和成就系统</p>
+<p>即刻 @西元 Levy</p>
+<p>今天吱吱和我说了自媒体的真谛：</p>
+<p>“一个人只要性格底色足够强烈，他就能做好自媒体。他一定要有个人的魅力，这个个人魅力是超过所有东西的一切的。”</p>
+<p>即刻 @姜旭</p>
+<p>时代就像操作系统， 历史就是 ChangeLog， 版本一直在迭代， 有小迭代，有大迭代， 一代版本一代神。</p>
+<p>即刻 @ChatV</p>
+<p>ship 出去的，才叫作品；build 出来没有 ship 的，只能叫草稿。</p>
+<p>即刻 @启师傅今天逛动物园了吗</p>
+<p>看纳瓦尔访谈，给我挺大的阅读启发：</p>
+<p>反复读，最经典的 100 本书籍。</p>
+<p>即刻 @老黄牛</p>
+<p>If your success or failure is judged by other people, rather than by nature or free markets, you’re playing a game, albeit a reified and social one.</p>
+<p>X @naval</p>
+<p>Society is a script for comfort. Most people don’t know they’re acting.</p>
+<p>X @MoZarrinsadaf</p>
+<p>「当你做某件事的时候，一旦想要求快，就表示你再也不关心它，只想去做别的事。」</p>
+<p>《禅与摩托车维修艺术》</p>
+<p>「长大这件事，就是学着不再轻信别人对自己的评价。」</p>
+<p>《鱼不存在》</p>
+</blockquote>
+<h2 id="说">说</h2>
+<blockquote>
+<p>problem &gt; solutions</p>
+<p>人很容易爱上自己的解决方案，而忘记了「问题」才是我们的目标。</p>
+<p>新开了一个旅游的有限游戏：</p>
+<p>以冰箱为画布，以每个省博物院代表文创为要素，完成拼图🧩。</p>
+<ol>
+<li>
+<p>模型很喜欢说「想象一下」</p>
+</li>
+<li>
+<p>现在很多 Agent 都支持多模态能力</p>
+</li>
+</ol>
+<p>可以加一条规则：「每当你输出“想象一下”时，直接生成配图，并在图中标注信息，方便直观呈现你想要表达的画面」。</p>
+<p>很多人的痛苦不是解不了题，是根本没有属于自己的题。每天在解别人出的题：老板的、社会的、家庭的。</p>
+<p>找到自己为之痴迷一生的谜题，好像就拥有了一方小天地，随时可以钻入其间，不断思考它，琢磨它，推进它。</p>
+<p>那颗躁动不安的心，被安顿下来了。</p>
+<p>每个月做一个「主题阅读」，可以把自己泡在该学科领域的语境 context 之中，体验下来，有两个收获：</p>
+<ol>
+<li>
+<p>掌握该学科的地图（有哪些主要问题、分别有什么结论）</p>
+</li>
+<li>
+<p>用该学科视角来看待世界。信息在该学科中是如何分析处理的。<br />
+</p>
+</li>
+</ol>
+<p>AI 对 孩子的帮助，至少有三个角度可以立马落地：</p>
+<ol>
+<li>
+<p>媒介：把要学习的知识，通过各种媒介形态（图片、视频、游戏），多角度加深理解</p>
+</li>
+<li>
+<p>梯度：针对每个孩子对要学习知识的理解水平，生成符合「最近发展区」难度的题目，让孩子可以收获最大的学习信号</p>
+</li>
+<li>
+<p>Build：边学边玩边创造。把自己所学到的，再创造出游戏、网页、小程序等等，分享给他的同学们，收获正反馈，养成 build 的心态和习惯。<br />
+</p>
+</li>
+</ol>
+<p>所谓「在场」：全然地处于此时此地，而非活在对过去的反刍或对未来的焦虑中。</p>
+<p>一个作者写得笨拙但真诚，那个笨拙本身就在告诉我们：他想说的比他能说的更多，他在语言的边界上够不着某个东西。</p>
+<p>这个「够不着」的姿态是动人的。</p>
+<p>人事合一时，人不去想“意义”，做事就是做事，想做就做了。“哪那么多矫情”</p>
+<p>人与事出现割裂时，那个间隙，让人开始琢磨“意义”问题。“我是谁？我在哪？”</p>
+<p>我的笔记系统中有一个文件，记录一些没想明白的问题，比如：</p>
+<ol>
+<li>
+<p>未来，AI 的入口会在哪里？</p>
+</li>
+<li>
+<p>Agent 想要什么？<br />
+</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="书">书</h2>
+<p>本周推荐书籍《鱼不存在》。</p>
+<p>Lulu Miller 的父亲从小告诉她，宇宙没有意义，“混沌是唯一确定的事”，「你不重要」。虚无主义向她袭来袭来，她需要自救寻找解药。</p>
+<p>她找到一个看起来从不绝望的人当样本：David Starr Jordan，一个一生给鱼命名、收藏一次次被砸碎、却一次次重建的人。Miller 想搞清楚：这种不被混沌打倒的本事，是不是有解、值不值得学。</p>
+<p>之前大家以为“秩序、笃定、分类”是对抗混沌的解药和美德；Miller 说：不对——你强加的分类（鱼、人的等级）是虚构，而那份不容置疑的确信正是作恶的引擎；松开分类、“放掉鱼”，才是自由与善的所在。</p>
+<p>「鱼不存在」这四个字的真正意思是：你最确信的那些分界线——包括那条给人的价值排高下的线——是你自己画上去的虚构。松开它们，世界不是塌了，是变大了，变温柔了，变真了。Miller 说，放掉“鱼”那一刻，她得到的是天空、是海、是此前那条线挡在外面的一整片。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvnUDFxIYSbp.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">抱抱脸模型TOP榜，我现在只服yuxinlu1</span>
+        </a>
+        
+        
+        <a href="recvnhLQFA5gC5.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">分享一套无AI味的内容工作流</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
