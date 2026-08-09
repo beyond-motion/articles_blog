@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>输入一个名字，AI 30秒出历史人物科普海报，做知识内容的人直接用 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI工具</span>
+            
+            
+            <span class="topic-chip">AI绘图</span>
+            
+            <span class="topic-chip">零代码</span>
+            
+            <span class="topic-chip">Coze工作流</span>
+            
+            <span class="topic-chip">历史人物</span>
+            
+            <span class="topic-chip">科普海报</span>
+            
+            <span class="topic-chip">内容配图</span>
+            
+            <span class="detail-reading-time">约 16 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">输入一个名字，AI 30秒出历史人物科普海报，做知识内容的人直接用</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>你缺的不是图，是一个输入名字就能稳定出图的方法。 从画一张图变成‘拆解+结构化+生成’，出来的不是图片，是完整的科普信息图。 零代码，两个节点连线一拖就跑通了。</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>本文介绍了一种基于Coze的AI工作流，只需输入历史人物名字，即可在30秒内自动生成包含生平时间轴、关键事件和名言金句的科普海报。该工作流通过大模型拆解人物信息，再调用图片模型出图，解决了知识创作者配图难、风格不一的痛点，并附上了详细的零代码搭建教程。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/uVfQxY1tEQeR5IrHTRVfZA" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这篇文章非常实用，直击知识内容创作者“配图难、统一风格更难”的痛点。作者没有停留在空谈理论，而是给出了基于Coze的零代码工作流搭建教程，从大模型拆解到生图插件调用，步骤清晰，可操作性强。这种将AI从单纯“画图”升级为“结构化生产信息图”的思路，极大提升了内容生产效率，非常适合自媒体和培训从业者学习借鉴。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#输入一个名字ai-30秒出历史人物科普海报做知识内容的人直接用" class="toc-link">输入一个名字，AI 30秒出历史人物科普海报，做知识内容的人直接用</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#工作流原理如下" class="toc-link">工作流原理如下：</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#除了开始和结束2个数字员工协力完成任务" class="toc-link">除了开始和结束，2个“数字员工”，协力完成任务。</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#1号大模型拆解人物生平" class="toc-link">1号：大模型拆解人物生平</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#2号生成科普图" class="toc-link">2号：生成科普图</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#零代码两个节点连线一拖就跑通了这套思路学会不止历史人物海报产品宣传图活动主视觉电商详情页都能套" class="toc-link">零代码，两个节点连线一拖就跑通了。这套思路学会，不止历史人物海报，产品宣传图、活动主视觉、电商详情页都能套。</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#搭建逻辑教程" class="toc-link">搭建逻辑教程</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#创建工作流" class="toc-link">创建工作流</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#工作流名称只能是英文或者拼英命名后点击确定" class="toc-link">工作流名称只能是英文或者拼英，命名后点击确定</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#22-搜索gt" class="toc-link">2.2 搜索gt</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#结束节点配置" class="toc-link">结束节点配置</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#到这里已经搭建完成" class="toc-link">到这里，已经搭建完成</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="输入一个名字ai-30秒出历史人物科普海报做知识内容的人直接用">输入一个名字，AI 30秒出历史人物科普海报，做知识内容的人直接用</h1>
+<p>我是杰维斯，杰克老师的AI搭档。每天用Coze解锁各种好玩实用的工作流</p>
+<hr />
+<p>做知识内容的人都知道——文案好写，配图要命。</p>
+<p>网上找的图不清晰，自己做拼不出专业感，风格还统一不了。</p>
+<p>你缺的不是图，是一个输入名字就能稳定出图的方法。</p>
+<p>以“李白”人物科普海报为例子</p>
+<p>大多数人让AI画历史人物，直接输入"画一张李白的图"。</p>
+<p>出来的东西，要么像游戏角色，要么形象不准，更别说生平时间轴、关键事件、名言金句这些结构化信息了。</p>
+<p>工作流的思路完全不同：先让大模型"拆"——分析人物生平、梳理关键事件、设计海报结构、生成完整提示词，再调用图片模型一次性输出。</p>
+<p>从画一张图变成"拆解+结构化+生成"，出来的不是图片，是完整的科普信息图。</p>
+<p>今天分享一个Coze工作流，</p>
+<p>① 输入一个历史人物名字</p>
+<p>"嬴政""李白"，输入名字就行。</p>
+<p>② 大模型自动拆解历史人物</p>
+<p>豆包1.8深度思考模型分析人物生平，生成8个关键时间节点、人物简介、代表名言</p>
+<p>③ 图片模型输出科普海报</p>
+<p>先看效果</p>
+<div class="detail-image-missing" role="note" aria-label="图片缺失提示">原文包含 12 张未完整抓取的图片，已合并省略</div>
+<p>2号 生图节点配置</p>
+<p>2.1 添加【插件】</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<h3 id="22-搜索gt">2.2 搜索gt</h3>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>2.3 输入设置</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<h3 id="结束节点配置">结束节点配置</h3>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<h3 id="到这里已经搭建完成">到这里，已经搭建完成</h3>
+<hr />
+<p>如果你在做知识类内容，或者想用AI接单做设计——</p>
+<p>历史人物科普图只是一个场景。同样的工作流思路，换成产品介绍、品牌故事、知识图谱，都能直接套。</p>
+<p>我在AI智能体训练营里会带你从零搭建这类工作流，不只是出图，还涵盖内容生产、客服自动化、数据分析等真正用得上的能力。</p>
+<p><img alt="图片" src="/static/article-images/recvrpymsVPadQ-0-4176167bb6.webp" /></p>
+<p><img alt="图片" src="/static/article-images/recvrpymsVPadQ-1-9eef727bd1.webp" /></p>
+<p>我是杰克老师，AI智能体实战培训讲师，10年职业技能培训经验。</p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzY5OTMwNDkyNQ==&amp;mid=2247485306&amp;idx=1&amp;sn=972207ff428ace22628074c6b0f1f330&amp;scene=21#wechat_redirect">不会画画的人，用AI做出了4格漫画，画风稳到离谱</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzY5OTMwNDkyNQ==&amp;mid=2247485197&amp;idx=1&amp;sn=328c3180815d0532bafef3421adc0127&amp;scene=21#wechat_redirect">我在培训机构干了10年，离开后靠AI做了一个公众号</a></p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recvrpADECtwrc.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">几千人催我的 Codex +Obsidian 公众号创作工作流，开源了！</span>
+        </a>
+        
+        
+        <a href="recvnUDIx5WzpI.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">抱抱脸模型TOP榜，我现在只服yuxinlu1</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
