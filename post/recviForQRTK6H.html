@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>五一节爆了！DeepSeek 版 Claude Code开源了！ — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            <span class="card-tag card-tag-primary">AI编程工具</span>
+            
+            
+            <span class="topic-chip">DeepSeek</span>
+            
+            <span class="topic-chip">Claude Code</span>
+            
+            <span class="topic-chip">AI Agent</span>
+            
+            <span class="topic-chip">开源</span>
+            
+            <span class="topic-chip">Rust</span>
+            
+            <span class="topic-chip">终端工具</span>
+            
+            <span class="detail-reading-time">约 8 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">五一节爆了！DeepSeek 版 Claude Code开源了！</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            <div class="digest-block digest-block-quote">
+                <span class="digest-label">一句话总结</span>
+                <p>「鲸鱼兄弟们，谢谢你们。」 安装一行命令搞定：npm install -g deepseek-tui DeepSeek-TUI的设计很简单：Claude Code的形态，DeepSeek的内核</p>
+            </div>
+            
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>Datawhale五一特辑：美国独立开发者Hunter Bown开源了DeepSeek-TUI——一个用Rust编写的终端AI编程助手，底层使用DeepSeek V4模型。作者特意使用中文README、阿里云/腾讯云OSS托管发布包，以感谢将其项目推上GitHub热榜的中国开发者。虽然Hunter非计算机科班出身（音乐教育+MBA+专利法），但他借助AI辅助编程，实现了Claude Code类似的功能，包括文件操作、Git集成、MCP服务器支持以及RLM多模型调度设计。</p>
+            </div>
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/NI0bkHc4QS-Lk0zKsShB2A" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>这个开源项目体现了AI工具民主化的趋势。非科班出身的开发者利用现有AI工具（Claude、Copilot等）创造了又一个AI编程助手，实现了模型层面的&#39;降本增效&#39;。RLM设计巧妙地利用V4 Flash价格优势，通过并发调度16个子任务降低使用成本。项目在中国和海外开发者社区引发的互动，也展现了技术无国界的开源精神。不过，从技术成熟度来看，这种&#39;用AI创造AI工具&#39;的递归模式可能还存在代码质量和维护的挑战。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#五一节爆了deepseek-版-claude-code开源了" class="toc-link">五一节爆了！DeepSeek 版 Claude Code开源了！</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#它是-deepseek-版的-claude-code" class="toc-link">它是 DeepSeek 版的 Claude Code</a>
+                </li>
+                
+                <li class="toc-item level-3">
+                    <a href="#作者没有学过计算机" class="toc-link">作者没有学过计算机</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="五一节爆了deepseek-版-claude-code开源了">五一节爆了！DeepSeek 版 Claude Code开源了！</h1>
+<p>Datawhale干货 </p>
+<p><strong>开源项目：DeepSeek-TUI</strong></p>
+<p>「鲸鱼兄弟们好」</p>
+<p>这个五一假期，一个美国独立开发者发了张图，用中文写了一句：</p>
+<blockquote>
+<p>鲸鱼兄弟们，谢谢你们。</p>
+</blockquote>
+<p>「鲸鱼兄弟」是 DeepSeek 粉丝的自称。他用这个词，感谢了一群把他的开源项目推上 GitHub 热榜的中国开发者，现在已经星标 <strong>2.7k+</strong>。</p>
+<p><img alt="图片" src="/static/article-images/recviForQRTK6H-0-10a152275c.webp" /></p>
+<p>他叫 <strong>Hunter Bown</strong>，一个美国人，不是 DeepSeek 团队的人。</p>
+<p>但他写的项目，叫 <strong>DeepSeek-TUI</strong>。</p>
+<p>就是 <strong>DeepSeek 版的 Claude Code</strong>：一个用 Rust 写的、住在终端里的编程 Agent，背后跑的是 DeepSeek V4。</p>
+<p>国内开发者过去一年对 Claude Code 的心情，大概可以用一个词概括：<strong>眼馋</strong>。</p>
+<p>现在有个老外，用 DeepSeek 做了一个同款——开源，免费。</p>
+<p>更让人意外的是这些细节。</p>
+<p>打开 release 页面，发布包<strong>托管在阿里云 OSS 和腾讯云 COS 上</strong>——GitHub Release 在国内下载有多慢，开发者都懂。Hunter 不在中国，但他研究过这件事。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p>他还用 DeepSeek 把宣传推文翻译成了中文，给国内用户写了专门的中文 README。</p>
+<p>他在推特上说，这是他人生中<strong>最疯狂的两天</strong>。</p>
+<h3 id="它是-deepseek-版的-claude-code">它是 DeepSeek 版的 Claude Code</h3>
+<p>DeepSeek-TUI 的设计很简单：<strong>Claude Code 的形态，DeepSeek 的内核</strong>。</p>
+<p><strong>Claude Code 那一套，它都搬过来了</strong>——文件操作、shell、git、网页搜索、子智能体、MCP 服务器，连 Anthropic 主推的 SKILL.md 技能机制都原样支持。操作模式三档：<strong>Plan</strong>（只读探索）、<strong>Agent</strong>（每步确认）、<strong>YOLO</strong>（全自动放行），工作区有 Git 快照兜底，翻车了也不慌。</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p><strong>而 DeepSeek 的特性，它用满了</strong>：</p>
+<p><strong>思维链直接流式输出</strong>——你能在终端里看着它一边想一边写代码。</p>
+<p><strong>1M token 上下文默认开</strong>——跑长任务不断片。</p>
+<p><strong>一个叫 RLM 的设计很「DeepSeek」</strong>——既然 V4 Flash 价格只有 Pro 的三分之一，那就让一个主模型并发指挥 <strong>16 个 Flash 子任务同时跑</strong>。便宜的活交给便宜的模型，账单立刻下来一截。</p>
+<p>安装一行命令搞定：</p>
+<pre><code>npm install -g deepseek-tui
+</code></pre>
+<p>Linux、macOS、Windows 都有预编译二进制。</p>
+<p>再翻一下这个项目的提交记录,贡献者列表里有 Claude、Gemini、Qwen、Cursor、GitHub Copilot。</p>
+<p>其中 Claude 一个就提了 150 多次 commit。</p>
+<p>一个独立开发者，用 AI 辅助编程，给 AI 写了个辅助编程框架。</p>
+<h3 id="作者没有学过计算机">作者没有学过计算机</h3>
+<p>到这里你大概会以为，能把 DeepSeek 玩出这种花样的，应该是个程序员。</p>
+<p>他不是。</p>
+<p><strong>Hunter 没学过计算机。</strong></p>
+<p>**</p>
+<div class="detail-image-missing" role="img" aria-label="图片">图片：来源内容未完整抓取</div>
+
+<p><strong>他学的是音乐：</strong>音乐教育专业，本科加硕士，毕业之后真的去当了三年乐队指挥。</p>
+<p>后来他读了 MBA，又拐去<strong>法学院专攻专利法</strong>。</p>
+<p>写代码是更后来的事。他自己说，这不是转行，"<strong>更像是几条线最终汇到了一起</strong>"。</p>
+<p>而他的曾祖父，<strong>是贝尔实验室的研究</strong><strong>副总裁</strong><strong>、无线电先驱</strong>——业余时间喜欢自制蜡筒，跑去卡内基音乐厅录音。一个搞科学的，业余玩音乐。</p>
+<p>一百年后，他的曾孙在专利法的课堂上意识到，自己正走在一条和先祖<strong>反过来</strong>的路上。</p>
+<p>他在自己的个人网站上，留了这样一句话：</p>
+<blockquote>
+<p>他是科学家，爱音乐；我是音乐家，爱科学。</p>
+</blockquote>
+<p>GitHub 地址：</p>
+<p>https://github.com/Hmbown/DeepSeek-TUI</p>
+<p><img alt="图片" src="/static/article-images/recviForQRTK6H-1-4cf6d6d34d.webp" /></p>
+<p><strong>一起“</strong>点<strong><em>*赞”</em></strong><em>三连</em><em>↓</em>*</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="recviXAZmmTzKc.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">我用3周研究怎么做AI网红，把所有干货整理在这里了</span>
+        </a>
+        
+        
+        <a href="recvikqHEUjU3T.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">OpenAI Codex 完整教程 2026：100 分钟，四个关键概念 + 六个实战项目</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
