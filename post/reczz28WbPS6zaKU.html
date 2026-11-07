@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>旧安卓手机的新用武之地：变身 24 小时 AI 助手 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            
+            <span class="detail-reading-time">约 1 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">旧安卓手机的新用武之地：变身 24 小时 AI 助手</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704082&amp;idx=1&amp;sn=7823c84cf432e6fc7b2cc4d7389e0a79&amp;chksm=bcf12aadce9aa3c97cedd805ae90466e724c7afb9bfcbb16dcdad6477709c45632c2559d8a71" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>读完会改变“旧手机只能吃灰或必须刷机才能再利用”的旧认知，更关键的是看到端侧 Agent 与模型推理可以解耦：低配设备做连接、调度、审批，算力放到云端或局域网。这个思路可迁移到家庭自动化、消息机器人、定时抓取、个人日历维护等场景。下一步可验证旧手机的续航、发热、断网重连、后台保活和命令审批安全性，并评估长期运行成本是否真低于买小主机。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <p>文章介绍轻量级 AI Agent 工具 Nouride，可在闲置安卓手机上通过 Termux 安装 Debian 后部署，无需 Root 或刷机。其引擎最低约 64MB 内存，支持 OpenAI、Anthropic、Ollama 等接口，可连接 Telegram、Discord、WhatsApp，并具备多 Agent、定时任务、工具调用和网页控制台。作者认为它可替代部分小主机，但实际用途仍有限。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="reczz28WbPpyehdz.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">Punk Skill：把内容和照片，变成统一视觉</span>
+        </a>
+        
+        
+        <a href="reczz28WbP1qJ2AK.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">这个视频 Skill，效果真惊艳</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

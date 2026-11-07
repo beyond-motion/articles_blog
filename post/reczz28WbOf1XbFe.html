@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>把Figma当草稿纸！Apple合作设计师教你如何用Codex打造高级感作品 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            
+            <span class="detail-reading-time">约 1 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">把Figma当草稿纸！Apple合作设计师教你如何用Codex打造高级感作品</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s?__biz=MzYzMzEyMTU5NA==&amp;mid=2247485074&amp;idx=1&amp;sn=971be348cfc1b32968515d7df2c9d4f6&amp;chksm=f142fda18b46227ec43c8c72946bb1ea055a8047fefa5014b059327d7588c4e805237f6e9051" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>旧认知是「提示词写得越长越精确越好」，本文推翻它：语言根本不是描述空间关系与动作时序的好媒介，越描述越糊。真正的解法是把隐性标准外化成 AI 可读的中间物——一张草图、一份等高线地形图、一个能拖的滑块。第二个增量是不要把 AI 当执行者而要当诊断师：让它解释另一个 AI 为什么失败，比让它重做更有效。第三个增量是加法免费的时代，减法成为稀缺能力，这与创作、汇报、产品功能取舍完全同构。下一步可验证：给自己的下一个动效或原型先做三个参数滑块，再动提示词。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <p>文章转述 YC 播客中 Shopify 设计负责人 Marvin（曾与 Apple、Google 合作）的团队工作流：Figma 退化为草稿纸，想法先用几何形状画出来交给 AI 生成可真机交互的原型，原型取代需求文档。作者提炼出三个实操技巧——用草图描述说不清的动作时序、让另一个 AI 当诊断师并补上结构骨架、把模糊感觉做成实时调参滑块；以及审美三法则：一页只有一个主角、别用动效遮丑、敢删才是真本事。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="reczz28WbP1qJ2AK.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">这个视频 Skill，效果真惊艳</span>
+        </a>
+        
+        
+        <a href="reczz28WVDpDMrjv.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">“好视图优于下一词预测”的小规模复现：仅用人类标注与 11M 参数编码器</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
