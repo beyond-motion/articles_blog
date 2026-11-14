@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>一群 Grok bot 的员工手册：怎么带好 AI 团队 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            
+            <span class="detail-reading-time">约 1 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">一群 Grok bot 的员工手册：怎么带好 AI 团队</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s?__biz=MzYzNTUyNjI5Ng==&amp;mid=2247484065&amp;idx=1&amp;sn=4e400b9c7a082a6f01ff8b147a6ff178&amp;chksm=f1a9ccf67411a14454a4ee3e3e5fa8a96b3efe1d110cb30b97b457e186d3515afe4e6592a60d" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>旧认知是用 AI 就是不断优化 prompt，bot 越多越全能越好。读完后会发现，多 agent 的瓶颈不在模型能力，而在组织设计：汇报线、入职文档、职责边界、审批权限才决定产能。「bot 在精不在多」，明确「不做什么」比罗列「能做什么」更重要；「不可逆的事批一条只做一条」防止一次授权被当成长期授权。这些可迁移到任何多 agent 流水线、外包团队或跨部门接口。下一步可验证：给现有 agent 加一份行为准则和 leader 路由，观察人类决策次数、错误汇报是否下降。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <p>作者用 9 个 Grok bot 组成运营团队，覆盖 8 个社交与内容平台，人类负责人只有一个。短时间内，这些 bot 自主向开发侧提交 13 个需求单，其中 8 个已上线。文章总结了几条做法：给默认 bot 起名让它当 leader、作为唯一入口；用 dr eggbot 建新 bot 并给团队做健康检查；让 bot 使用自己的邮箱；由 leader 维护新员工手册和十条行为准则；并开源 cavil-loop 打通运营与开发 AI 的双向协作。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="reczz28ZII0IQeNs.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">DSH 记忆插件 × 免费 Embedding 模型：让项目拥有长期记忆</span>
+        </a>
+        
+        
+        <a href="reczz28ZC6cWv8kn.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">自动化之后的生活</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

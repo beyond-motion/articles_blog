@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>TorchTitan 在 384 块 GH200 上训练约 1T MoE — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            
+            <span class="detail-reading-time">约 1 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">TorchTitan 在 384 块 GH200 上训练约 1T MoE</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            
+            
+            <a class="source-link" href="https://www.reddit.com/r/MachineLearning/comments/1xvce5h/scaling_to_1t_moe_on_torchtitan_p/" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>读完后，原有认知从“扩到 1T 靠堆并行策略”转为“吞吐由最慢的那条带宽链路和分配器细节共同决定”。旧认知容易把 MFU 低归因于计算或通信算法，而这里 21 GiB 显存滞留在侧流、优化器步 42 秒、最慢 rank 是均值 7.9 倍，都是框架与内存层面的隐性税。可迁移场景：任何共享超算上的大模型训练、MoE 推理部署、以及 PyTorch 自定义算子的显存排查。下一步可验证三件事：unshard_async_op 修复在自有集群的复现收益、组限制路由对下游质量的实际影响、以及把专家并行度从 4 提到 8 时节点内带宽是否仍是护城河。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <p>作者在 JUPITER 的 384 块 GH200 上把 TorchTitan/PyTorch 扩展到约 1T 参数 MoE，达到每 GPU 约 1300 tokens/s、较起点提升 14 倍（自述工程案例）。方案为 384 路 FSDP 加 4 路专家并行、专家并行限制在节点内，并放弃流水线并行以规避微批导致的长步时。关键优化包括：全量激活检查点经 900 GB/s C2C 卸载到 Grace、改用 Muon 优化器把序列长度推到 64k、FlexShard 整专家分片配合 GPU 版 Newton-Schulz 把优化器步从 42 秒降到约 2 秒、按注意力成本分桶使最慢 rank 从均值的 7.9 倍降到 1.15 倍、专家梯度 bf16 all-to-all 加本地 fp32 累加、FP8 专家 all-gather，以及修复 CUDA 流分池导致的显存滞留。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="reczz28ZIJEozXt8.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">逆向工程 Coway 空气净化器以摆脱云端依赖</span>
+        </a>
+        
+        
+        <a href="reczz28ZIIk7UYe0.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">DeepSeek 发布全家桶应用 API</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

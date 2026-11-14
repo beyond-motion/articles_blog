@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>医疗保健公司 Headway：自建了一款买不到的 AI 工具 — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            
+            <span class="detail-reading-time">约 1 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">医疗保健公司 Headway：自建了一款买不到的 AI 工具</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            
+            
+            <a class="source-link" href="https://every.to/p/the-healthcare-company-that-built-the-ai-tool-it-couldn-t-buy" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+        <div class="detail-review">
+            <strong>点评</strong>读完后被修正的旧认知是：自建还是采购，不是能力高低的比较，而是对&#34;维护责任&#34;的定价——自建并不省钱，它等于买下一款买不到的产品，同时接手供应商原本承担的工作（可靠性、延迟、跟进外部创新、需求排队）。可迁移之处：任何要在敏感数据上放开 agent 自主权的场景，都可用&#34;沙箱化＋最小连接＋外发拦截&#34;把审批成本转成架构成本；内部工具的推广靠产物质量和连接器覆盖，而非自上而下的强制。下一步可验证：先让靠近前沿的三四名工程师用一个季度探索而非固定路线图，法务、合规、安全早期入场划定访问边界，工程试点跑通后再扩面；同时为每项外部新功能设定&#34;直接使用还是复刻进内部&#34;的定期复盘机制。
+        </div>
+        
+
+        <!-- Table of Contents -->
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <p>心理健康医疗公司 Headway 在通用 AI 产品无法同时满足其安全、合规与工作流约束的情况下，基于 Claude Code SDK 在自有 AWS 环境自建内部 AI 助手 Eddy：每段对话运行在一次性的 Docker 容器中，数据只读、外发受限，因此 agent 可以自主行动而不必逐步请求批准。900 名员工中 650 人每天使用，累计约 26 万次对话。代价是自行承担可用性、启动延迟、功能迭代与安全维护，作者据此给出"等待—购买—自建"的判断框架。</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        <a href="reczz28ZIK1G6YgO.html" class="article-nav-link prev">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">为AI写作辩护</span>
+        </a>
+        
+        
+        <a href="reczz28ZIJEozXt8.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">逆向工程 Coway 空气净化器以摆脱云端依赖</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
