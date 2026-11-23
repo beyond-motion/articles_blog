@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>全双工语音交互到底能怎么玩？来 MOSS-Live Dev Meetup 面对面交流！ — 拾读库</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
+</head>
+
+<body>
+    <!-- Reading Progress Bar (detail page only) -->
+    
+<div class="progress-bar" id="progressBar"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-mark">拾</span>
+                <span class="nav-brand-text">拾读库</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn desktop-only" id="searchBtn" aria-label="搜索" title="搜索">
+                    <span aria-hidden="true">⌕</span>
+                </button>
+                <button class="nav-btn desktop-only" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="nav-btn menu-toggle" id="menuToggle" aria-label="打开菜单">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="关闭菜单">×</button>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">导航</div>
+            <a href="../index.html" class="mobile-theme-btn">首页</a>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">搜索</div>
+            <button class="mobile-theme-btn" id="mobileSearchBtn">搜索文章</button>
+        </div>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">外观</div>
+            <button class="mobile-theme-btn" id="mobileThemeToggle">深色模式</button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-container">
+            <div class="search-input-wrap">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题、摘要、标签或金句..."
+                    autocomplete="off">
+                <button class="search-close" id="searchClose" aria-label="关闭搜索">Esc</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-hint">输入关键词开始搜索</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+<div class="detail-wrapper">
+    <!-- Top Bar: Back + Share -->
+    <div class="detail-top-bar">
+        <a href="../index.html" class="back-link">
+            <span aria-hidden="true">←</span>
+            返回首页
+        </a>
+        <button class="share-btn" id="shareBtn">
+            分享
+        </button>
+    </div>
+
+    <!-- Article -->
+    <article class="detail-container" id="articleContent">
+        <!-- Meta -->
+        <div class="detail-meta">
+            
+            
+            <span class="detail-reading-time">约 8 分钟阅读</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="detail-title">全双工语音交互到底能怎么玩？来 MOSS-Live Dev Meetup 面对面交流！</h1>
+
+        <!-- Digest -->
+        
+        <section class="digest-panel">
+            
+            
+            
+            <a class="source-link" href="https://mp.weixin.qq.com/s/J6oQATHE9GKlCLEn0c2XKg" target="_blank" rel="noopener">
+                <span>查看原文</span>
+                <strong>原文链接</strong>
+            </a>
+            
+        </section>
+        
+
+        <!-- Review -->
+        
+
+        <!-- Table of Contents -->
+        
+        <div class="toc" id="toc">
+            <div class="toc-header" id="tocHeader">
+                <span class="toc-title">目录</span>
+                <span class="toc-toggle" aria-hidden="true">⌄</span>
+            </div>
+            <ul class="toc-list">
+                
+                <li class="toc-item level-1">
+                    <a href="#全双工语音交互到底能怎么玩来-moss-live-dev-meetup-面对面交流" class="toc-link">全双工语音交互到底能怎么玩？来 MOSS-Live Dev Meetup 面对面交流！</a>
+                </li>
+                
+                <li class="toc-item level-2">
+                    <a href="#活动议程" class="toc-link">活动议程</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <!-- Content -->
+        <div class="content-section-label">正文整理</div>
+        <div class="detail-content">
+            <h1 id="全双工语音交互到底能怎么玩来-moss-live-dev-meetup-面对面交流">全双工语音交互到底能怎么玩？来 MOSS-Live Dev Meetup 面对面交流！</h1>
+<p>Original 模思智能 <em>Nov 20, 2026, 1:55 AM</em></p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-0-2cba0d90d8.webp" /></p>
+<p>我们的 <a href="https://mp.weixin.qq.com/s?__biz=Mzk4ODk0Mzc5MA==&amp;mid=2247485465&amp;idx=1&amp;sn=a3b900ad162defb6cb2f8a49f8595b42&amp;scene=21#wechat_redirect">全双工语音交互系统 MOSS-Live 上线</a> 后，在社群里获得了很多反馈，也看到了大家基于 MOSS-Live 做的各种 Demo。</p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-1-1b4c09b5af.webp" /></p>
+<p>光在线上交流好像还不够热闹🤔。</p>
+<p>所以下周六，我们决定在上海办一场线下 MOSS-Live <strong>Dev</strong> <strong>Meetup</strong> ！这次不光有技术分享，我们还准备了不少好玩的 Demo 展示。</p>
+<p>这两年，全双工从一个前沿技术概念，逐渐变成了大家聊实时语音交互时绕不开的词。但这个概念，可能仍然没有被充分理解。</p>
+<ul>
+<li>
+<p><strong>AI 能被打断，就算全双工了吗？</strong> 其实不一定。传统的半双工对话也可以通过VAD语音活动检测来实现打断，关键在于 AI 被打断时，能不能在继续输出的同时，真正听见并理解用户的新输入。</p>
+</li>
+<li>
+<p><strong>不会被「嗯嗯」这类简短附和打断，就算全双工了吗？</strong> 简单的附和反馈，并不代表模型真的具备边说边听的能力。</p>
+</li>
+<li>
+<p><strong>AI 说话时，你一开口它就停下来，这就是真正的实时交互吗？</strong> 这可能只是把对话轮次切换做得更灵敏了一些。真正的全双工，需要 AI 在输出语音的同时持续接收、理解用户输入。</p>
+</li>
+</ul>
+<p>而全双工语音交互到底能带来什么更好的体验，也还有待开发者们基于真实场景的探索。</p>
+<p>MOSS-Live 上线之后，我们在社区里看到了不少有意思的实践。不少开发者从自身应用场景出发，把全双工能力接入各种应用和硬件设备，给我们带来了不少惊喜。</p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-2-7686495eba.webp" /></p>
+<p>如果你想更深入地理解全双工、探索应用落地，或者已经有了一些关于实时语音交互的想法，欢迎来 <strong>MOSS-Live</strong> <strong>Dev</strong> <strong>Meetup</strong> 现场跟我们交流！</p>
+<p>如果你还期待 MOSS 其他模型团队的核心成员来现场，可以在评论区告诉我们。</p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-3-f5474f96e4.png" /></p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-4-6e5daca031.webp" /></p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-5-a55fa01772.webp" /></p>
+<p>活动信息</p>
+<p><strong>活动时间：</strong> 11月28日（星期六）13:30 - 16:00</p>
+<p><strong>活动地点：</strong> 上海漕河泾（具体地址会在报名审核通过后告知）</p>
+<p><strong>报名链接：</strong> https://luma.com/mgytrdnb</p>
+<p>🎟️ 报名小提醒：本次活动采用审核制。审核通过后，小助手会通过微信联系你，拉你进活动群。</p>
+<h2 id="活动议程">活动议程</h2>
+<p><strong>13:30-14:00｜签到</strong></p>
+<p><strong>14:00-15:20｜MOSS-Live 技术分享与 Demo Show</strong></p>
+<ul>
+<li><strong>MOSS-Live 技术分享 &amp; 全双工概念深入讨论</strong></li>
+<li><strong>🤖 Demo Show</strong></li>
+</ul>
+<p><strong>15:20-16:00｜模型体验与自由交流</strong></p>
+<p>这场 Meetup 适合谁来</p>
+<ul>
+<li>关注全双工语音、多模态大模型及实时交互技术的研究者</li>
+<li>对 AI 语音交互及其应用落地感兴趣的技术爱好者</li>
+<li>正在开发 Voice Agent、实时语音助手及语音交互应用的开发者</li>
+<li>正在探索机器人、智能眼镜等具身智能与智能硬件应用的开发者</li>
+</ul>
+<p>我们还准备了 MOSS 开发者周边和现场抽奖，期待和你在线下见面！</p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-6-6743bc6268.webp" /></p>
+<p><strong>报名方式</strong> <strong>：</strong> https://luma.com/mgytrdnb <strong>（或点击「阅读原文」报名）</strong></p>
+<p><em>🎟️</em> <em>报名小提醒：本次活动采用审核制，审核通过后，小助手会联系你，拉你进活动群。</em></p>
+<p>＜ 本次活动场地图 · S-CAVE ＞</p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-7-73487383fc.webp" /></p>
+<p>S创中国是源自 Slush China 的科技创新平台，经过11年的发展，现已成为亚洲备受瞩目的科技创新盛会之一。S创中国汇聚全球创新资源，推动科技企业与投资人深度交流，致力于为下一代改变世界的创新者提供成长的舞台。</p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-8-e89e2398e9.webp" /></p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-9-0f1cbed41f.webp" /></p>
+<hr />
+<p>添加小助手微信加入 MOSS-Live 交流群：</p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-10-eb20814d83.webp" /></p>
+<p><img alt="Image" src="/static/article-images/reczz28dCGa8EJDz-11-71e3330576.webp" /></p>
+<p>Read more</p>
+        </div>
+    </article>
+
+    <!-- Prev / Next Navigation -->
+    
+    <nav class="article-nav">
+        
+        
+        <a href="reczz28dBKA6CI4e.html" class="article-nav-link next">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">氛围检查：Opus 4.8——Anthropic 本该直接叫 5 的</span>
+        </a>
+        
+    </nav>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top: 48px;">
+        <p>© 2026 拾读库 · 由 <a href="https://www.feishu.cn" target="_blank">飞书多维表格</a> 驱动</p>
+    </footer>
+</div>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Article Data for Search (injected by templates) -->
+    
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
