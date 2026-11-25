@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="拾读库 — 收藏过的微信公众号文章，一页读懂">
     <meta name="theme-color" content="#f4f7f2">
-    <title>这个开源项目把整本书翻译做成了一条流水线 — 拾读库</title>
+    <title>微信公众号文章（正文待验证） — 拾读库</title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23c62f36'/><text x='50' y='66' text-anchor='middle' font-size='54' fill='white'>拾</text></svg>">
@@ -91,17 +91,32 @@
         <!-- Meta -->
         <div class="detail-meta">
             
+            <span class="card-tag card-tag-primary">微信文章</span>
+            
+            
+            <span class="topic-chip">环境异常</span>
+            
+            <span class="topic-chip">验证页面</span>
+            
+            <span class="topic-chip">公众号文章</span>
+            
+            <span class="topic-chip">正文缺失</span>
             
             <span class="detail-reading-time">约 1 分钟阅读</span>
         </div>
 
         <!-- Title -->
-        <h1 class="detail-title">这个开源项目把整本书翻译做成了一条流水线</h1>
+        <h1 class="detail-title">微信公众号文章（正文待验证）</h1>
 
         <!-- Digest -->
         
         <section class="digest-panel">
             
+            
+            <div class="digest-block">
+                <span class="digest-label">核心摘要</span>
+                <p>页面当前仅显示环境验证提示，要求完成验证后继续访问，未呈现可供摘要的文章标题、正文、作者或核心观点。现有信息不足以判断文章主题与内容价值。</p>
+            </div>
             
             
             <a class="source-link" href="https://mp.weixin.qq.com/s?t=pages%2Fimage_detail&amp;from_masonry=1&amp;__biz=MzIxNTE3NzY1OA%3D%3D&amp;mid=2247486117&amp;idx=1&amp;sn=2d06a29bce2a489cacb0d63ae7192089&amp;sharer_shareinfo_first=f1b9bdd3b8045b9c0f1927015b120ad3&amp;sharer_shareinfo=f1b9bdd3b8045b9c0f1927015b120ad3" target="_blank" rel="noopener">
@@ -115,7 +130,7 @@
         <!-- Review -->
         
         <div class="detail-review">
-            <strong>点评</strong>读完会改变一个旧认知：以为 AI 翻译的上限取决于模型语言能力，实际上瓶颈在于上下文管理、状态持久化和一致性约束这些工程层设计。可迁移的场景很广：长文档摘要、代码库级重构、多章节内容生成、批量数据清洗，凡是「超过一个上下文窗口 + 需要中断续跑 + 需要跨段一致」的任务，都可以套用这套四段式模板——归一化、切块、并行单职责执行、哈希校验合并。下一步可验证的是：把术语表换成风格指南或 API 约定，看这套管道能否用于跨文件的一致性问题；也可以实测并发度与质量的权衡曲线，以及 manifest 加哈希这套状态机制在失败重试上的实际收益。
+            <strong>点评</strong>当前材料只有微信验证页提示，缺少文章正文、标题、作者和配图说明，无法据此提炼观点或判断论证质量。完成验证并补充正文后，才能进一步生成可靠摘要、筛选金句并判断是否适合入库；现阶段建议暂缓收录，避免将验证提示误作文章内容。
         </div>
         
 
@@ -125,7 +140,7 @@
         <!-- Content -->
         <div class="content-section-label">正文整理</div>
         <div class="detail-content">
-            <p>开源项目 translate-book 本质是给 Claude Code 写的一个 Skill，把「用 AI 翻整本书」拆成一条可验证的流水线：先把 PDF、DOCX、EPUB 统一转成 Markdown，按长度切成 chunk，再派多个 subagent 并行翻译（默认并发 8 个），每个只负责自己那一段；翻完用 manifest 加 SHA-256 哈希做完整性校验，因此中断后可续跑；最后合并导出 HTML、DOCX、EPUB、PDF。术语一致性靠全书共享一份术语表，并在每个子任务里附带目标语言与相邻 chunk 的少量上下文来实现。项目脱胎于 claude_translater 的 shell 脚本，现重构为 agent skill，需 Python 3、Pandoc 与 Calibre 的 ebook-convert，MIT 协议。</p>
+            <p>页面当前仅显示环境验证提示，要求完成验证后继续访问，未呈现可供摘要的文章标题、正文、作者或核心观点。现有信息不足以判断文章主题与内容价值。</p>
         </div>
     </article>
 
@@ -141,7 +156,7 @@
         
         <a href="reczz28bI990N2D6.html" class="article-nav-link next">
             <span class="article-nav-label">下一篇 →</span>
-            <span class="article-nav-title">Super Kanban：自动整理会话任务的 DSH 插件</span>
+            <span class="article-nav-title">微信公众号文章（标题待确认）</span>
         </a>
         
     </nav>
